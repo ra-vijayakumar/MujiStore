@@ -49,6 +49,7 @@ namespace MujiStore.BLL
                 method != null ? (method.Name ?? String.Empty) : String.Empty,
                 method != null && method.ReflectedType != null ? (method.ReflectedType.FullName ?? String.Empty) : String.Empty
                 );
+            // test 2020-01-06 02
         }
 
         /// <summary>
