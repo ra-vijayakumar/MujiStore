@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/MujiStore/config
+/MujiStore/ffmpeg
+/MujiStore/FtpVideo
+/MujiStore/Video

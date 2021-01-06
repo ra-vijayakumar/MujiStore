@@ -41,7 +41,7 @@ namespace MujiStore.Controllers
                 Log.Error(LogInfo.LogMsg, ex);
                 return View("Error", new HandleErrorInfo(ex, LogInfo.ControllerName, LogInfo.ActionName));
             }
-        
+        // test message 2020-01-06 03
         }
 
         [HttpPost]
