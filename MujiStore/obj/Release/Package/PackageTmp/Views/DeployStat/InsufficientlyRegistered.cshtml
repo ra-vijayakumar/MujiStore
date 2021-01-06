@@ -1,0 +1,61 @@
+﻿@{
+    //var test = (System.Data.DataTable)ViewData["VidDistStatus"];
+
+    var snlist = ViewData["snlist"] as IEnumerable<MujiStore.Models.tblSubnet>;
+    var sslist1 = ViewData["sslist1"] as IEnumerable<MujiStore.Models.tblStreamServer>;
+    var sslist2 = ViewData["sslist2"] as IEnumerable<MujiStore.Models.tblStreamServer>;
+    var storelist = ViewData["storelist"] as IEnumerable<MujiStore.Models.tblStore>;
+    var IsRecExists = ViewData["RecExists"];
+}
+<div class="content">
+
+    <h2>@MujiStore.Resources.Resource.Itemsthatseemtobeinsufficientlyregistered</h2>
+    <div class="content">
+        @MujiStore.Resources.Resource.IwilllisttheitemsthatIthinkarenotenoughregistratio
+        
+        <br></br>
+        @if (snlist != null && snlist.Count() > 0)
+        {
+            foreach (var item in snlist)
+            {
+        <p style="color:red">
+            @MujiStore.Resources.Resource.subnetID @item.SubnetID @MujiStore.Resources.Resource.associatedwithanystore
+        </p>
+            }
+        }
+
+        @if (sslist1 != null && sslist1.Count() > 0)
+        {
+            foreach (var item in sslist1)
+            {
+                <p style="color:red">
+                    @MujiStore.Resources.Resource.Thedistributionserver @item.SSServer  @MujiStore.Resources.Resource.isnotconfiguredtodistributetoanysubnet 
+                </p>
+            }
+        }
+        @if (sslist2 != null && sslist2.Count() > 0)
+        {
+            foreach (var item in sslist2)
+            {
+                <p style="color:red">
+                    @MujiStore.Resources.Resource.Thesubnettowhichdistributionserver
+                    @item.SSServer @MujiStore.Resources.Resource.belongsdoesnotexis
+                </p>
+            }
+        }
+        @if (storelist != null && storelist.Count() > 0)
+        {
+            foreach (var item in storelist)
+            {
+                <p style="color:red">
+                    @MujiStore.Resources.Resource.Store @item.StoreID :@item.StoreName @MujiStore.Resources.Resource.doesnotcontainasubnet 
+                </p>
+            }
+        }
+    </div>
+    @if (Convert.ToBoolean(IsRecExists) == false)
+    {
+        <p><span style="color:blue">@MujiStore.Resources.Resource.underregistered</span></p>
+
+    }
+</div>

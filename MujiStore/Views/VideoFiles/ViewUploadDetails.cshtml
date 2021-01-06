@@ -1,0 +1,90 @@
+﻿
+
+@using MujiStore.Models;
+@{
+    //Layout = null;
+    var Studtl = ViewData["VideoFileDetails"] as IEnumerable<MujiStore.Models.tblVideoDemo>;
+    var FielDtl = (MujiStore.Models.tblVideoDemo)ViewData["FileDetails"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View Video Upload Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+
+       
+        <div class="row">
+            @if (FielDtl != null)
+            {
+                <div class="col-sm-3 col-md-6 col-lg-7" style="background-color:yellow;">
+                    <div class="title">@FielDtl.Title
+                    
+                    </div>
+                    <div class="video-frame">
+                        <video playsinline style="width:40%; height:50%;"  controls="controls" controlsList="nodownload" id="myVideoOne">
+                            <source src="@Url.Content("~/Video/" + Model.Video +"")" type="video/mp4" />
+                            @*<source src="@Url.Content("/VideoFileUpload/320x240.m4v")" type="video/ogg; codecs=theora, vorbis" />
+                                <source src="@Url.Content("/VideoFileUpload/320x240.m4v")" type="video/webm; codecs=vp8, vorbis" />*@
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                </div>
+            }
+            else
+            {
+                <div class="col-sm-3 col-md-6 col-lg-7" style="background-color:yellow;">
+                    <div class="title"></div>
+                    <div class="video-frame">
+                        <video style="width:40%; height:50%;" controls controlsList="nodownload" id="myVideoOne">
+                            <source src="" type="video/mp4" />
+
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                </div>
+            }
+            <div class="col-sm-9 col-md-6 col-lg-3" style="background-color:pink;">
+                @foreach (var item in Studtl)
+                {
+                    <div class="row">
+
+
+                        @*<div class="col-sm-4 col-md-4 col-xs-12">*@
+
+                        <div class="title">@item.Title</div>
+                        <div class="title">@item.Description</div>
+                        <div class="title">
+                            <img src="@Url.Content("~/Video/" + item.Thumbnail +"")" alt="" style="width:25px;height:25px" />
+                            @Html.ActionLink("" + item.Title + "", "ViewUploadDetailsByID", new { id = item.VideoId })
+                        </div>
+
+
+                        @*<div class="video-frame">
+
+                                <video style="width:100%; height:100%;" controls controlsList="nodownload" id="myVideoOne">
+                                    <source src="@Url.Content(@item.FilePath)" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>*@
+                        @*</div>*@
+
+                    </div>
+                    <br>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

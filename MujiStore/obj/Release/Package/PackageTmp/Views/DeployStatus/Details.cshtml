@@ -1,0 +1,106 @@
+﻿@model MujiStore.Models.tblDeployStatu
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblDeployStatu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DSServer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DSServer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MediaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MediaID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsExists)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsExists)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DELFG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserIPAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserIPAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblFormat.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblFormat.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DeployStatusID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

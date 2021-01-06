@@ -1,0 +1,202 @@
+﻿@model MujiStore.Models.tblStreamServer
+@{
+    //var test = (System.Data.DataTable)ViewData["VidDistStatus"];
+    int nWidth = 400;
+    var vpage = (string)ViewData["Viewpage"];
+    var vdolog = ViewData["VidDelLog"] as IEnumerable<MujiStore.Models.tblDeployLog>;
+}
+<style>
+    .pad{
+        padding-top:10px;
+    }
+    .padleft {
+        padding-top: 10px;
+        padding-left:20px;
+    }
+</style>
+<div class="content">
+    <h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Distributionserverdetails</h2>
+
+    <div class="content">
+        <table>
+            <tbody>
+                <tr ><th  class="pad">@MujiStore.Resources.Resource.ServerName</th> <td class="padleft">@Model.SSServer</td></tr>
+                <tr><th  class="pad">@MujiStore.Resources.Resource.Instalisationstore</th> <td  class="padleft">@Model.StoreID  @Model.StoreName (@Model.StoreGroupName)</td></tr>
+                <tr><th  class="pad">@MujiStore.Resources.Resource.IPaddress</th> <td  class="padleft">@Model.IPAddress</td></tr>
+                <tr><th  class="pad">@MujiStore.Resources.Resource.Deliveryschedule</th > <td  class="padleft">@Model.DeployScheduleName</td></tr>
+                <tr>
+                    <th  class="pad">@MujiStore.Resources.Resource.CUsagestatus</th>
+                    <td  class="padleft">
+                        @{
+                            double nTotal2 = Convert.ToDouble(Model.DriveCTotal) + Convert.ToDouble(Model.DriveDTotal);
+                            double nTotal = Convert.ToDouble(Model.DriveCTotal);
+                            double nFree = Convert.ToDouble(Model.DriveCFree);
+                            double nUsed = nTotal - nFree;
+
+                            <div style="height: 16px; width: @(Convert.ToInt64((nUsed * nWidth) / nTotal2)+"px"); background: #DD6655; float: left; padding: 0; margin: 0;"></div>
+                            <div style="height: 16px; width: @(Convert.ToInt64((nFree * nWidth) / nTotal2)+"px"); background: #55BBDD; float: left; padding: 0; margin: 0;"></div> @( Convert.ToInt64(nUsed / 1024 / 1024) ); @("/") @( Convert.ToInt64(nTotal / 1024 / 1024)); @("MB")
+                        }
+                        @*<div style="height: 16px; width: 33px; background: #DD6655; float: left; padding: 0; margin: 0;"></div>
+                            <div style="height: 16px; width: 99px; background: #55BBDD; float: left; padding: 0; margin: 0;"></div>&nbsp;0MB / 0MB*@
+                    </td>
+                </tr>
+                <tr>
+                    <th  class="pad">@MujiStore.Resources.Resource.DUsagestatus</th>
+                    <td  class="padleft">
+                        @{
+                            double nTotalD = Convert.ToDouble(Model.DriveDTotal);
+                            double nFreeD = Convert.ToDouble(Model.DriveDFree);
+                            double nUsedD = nTotalD - nFreeD;
+                            double nTotal2D = Convert.ToDouble(Model.DriveCTotal) + Convert.ToDouble(Model.DriveDTotal);
+
+                            <div style="height: 16px; width: @(Convert.ToInt64((Model.ExistsFileSize * nWidth) / nTotal2D)+"px"); background: #66DD55; float: left; padding: 0; margin: 0;"></div>
+                            <div style="height: 16px; width: @(Convert.ToInt64(((nUsedD - Model.ExistsFileSize) * nWidth) / nTotal2D)+"px"); background: #DD6655; float: left; padding: 0; margin: 0;"></div>
+                            <div style="height: 16px; width: @(Convert.ToInt64((nFreeD * nWidth) / nTotal2D)+"px"); background: #55BBDD; float: left; padding: 0; margin: 0;"></div>
+                            @( Convert.ToInt64(nUsedD / 1024 / 1024) ); @("/") @( Convert.ToInt64(nTotalD / 1024 / 1024)); @("MB")
+                        }
+
+
+
+
+                        @*<div style="height: 16px; width: 1011px; background: #66DD55; float: left; padding: 0; margin: 0;"></div>
+        <div style="height: 16px; width: -932px; background: #DD6655; float: left; padding: 0; margin: 0;"></div>
+        <div style="height: 16px; width: 186px; background: #55BBDD; float: left; padding: 0; margin: 0;"></div>&nbsp;0MB / 0MB*@
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@if (((System.Data.DataTable)ViewBag.VidDistStatus).Rows.Count > 0)
+{
+    <h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-top:30px; margin-bottom:14px;">@MujiStore.Resources.Resource.Videodistributionstatus</h2>
+    <div class="content">
+        <table border="1" cellpadding="5">
+            <thead>
+                <tr  style="background-color:#bf5e6e; color:#ffffff;">
+                    @foreach (System.Data.DataColumn col in ViewBag.VidDistStatus.Columns)
+                    {
+                        <th>@col</th>
+                    }
+                </tr>
+            </thead>
+            <tbody style="width:100%">
+
+                @foreach (System.Data.DataRow row in ViewBag.VidDistStatus.Rows)
+                {
+                    int i = 0;
+                    <tr  style="background-color:#EEE;">
+
+                        @foreach (var cell in row.ItemArray)
+                        {
+
+                            if (i >= 3)
+                            {
+                                if (@cell.ToString().ToUpper() == "UnConfirmed".ToUpper())
+                                {
+                                    <td style="background: #AAAAAA">@cell.ToString()</td>
+                                }
+                                else if (@cell.ToString().ToUpper() == "Not applicable for delivery".ToUpper())
+                                {
+                                    <td style="background: #DDCC99">@cell.ToString()</td>
+                                }
+                                else if (@cell.ToString().ToUpper() == "UnDelivered".ToUpper())
+                                {
+                                    <td style="background: #EEAAAA">@cell.ToString()</td>
+                                }
+                                else if (@cell.ToString().ToUpper() == "Delivered".ToUpper())
+                                {
+                                    <td style="background: #BBBBEE">@cell.ToString()</td>
+                                }
+                                else
+                                {
+                                    <td style="background: #ff0000">@cell.ToString()</td>
+                                }
+
+                            }
+                            else
+                            {
+                                <td>@cell.ToString()</td>
+                            }
+                            i += 1;
+                        }
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+}
+@if (vdolog.Count() > 0)
+{
+    <h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-top:30px; margin-bottom:14px;">@MujiStore.Resources.Resource.Videodeliverylog</h2>
+    <div class="content">
+        <table class="table" style="background-color:#ffffff; ">
+            <tr style="background-color:#bf5e6e; color:#ffffff;">
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.Dateandtime)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.Video)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.Targetfilesize)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.Processingtimeseconds)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.Copyresult)
+                </th>
+
+            </tr>
+            <tbody>
+                @foreach (var item in vdolog)
+                {
+                    <tr tr style="background-color:#EEE;">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UPDCD)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ElapsedTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CopiedBytes)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CRTCD)
+                        </td>
+
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+    
+}
+
+@if (vpage == "1")
+{
+    <p style="margin-left:-3px;margin-top:-5px;">
+        <a style="padding:0px; font-size:19px;" href=@Url.Action("Index","DeployStat")>
+            @MujiStore.Resources.Resource.BackTothelist
+        </a>
+    </p>
+}
+else if (vpage == "2")
+{
+    <p style="margin-left:-3px;margin-top:-5px;">
+        <a style="padding:0px; font-size:19px;" href=@Url.Action("ViewExpectedDelTime","DeployStat")>
+            @MujiStore.Resources.Resource.BackTothelist
+        </a>
+    </p>
+}
+
+
+
+

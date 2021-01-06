@@ -1,0 +1,90 @@
+﻿@model MujiStore.Models.tblMediaFormatInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblMediaFormatInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FormatID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FormatID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FileSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FileSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DELFG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IPAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblMedia.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblMedia.Title)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MediaFormatInfoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

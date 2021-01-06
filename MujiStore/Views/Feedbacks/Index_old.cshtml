@@ -1,0 +1,106 @@
+﻿@model IEnumerable<VideoSample.Models.tblFeedback>
+
+@{
+    ViewBag.Title = "Feedback Details";
+}
+
+<h2>Feedback Details</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Movie Title")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.FileName)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </th>
+
+        @*<th>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.WriterName)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.WriterDatetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MediaTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.FileName)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.IPAddress)
+        </td>
+
+        @*<td>
+            @Html.DisplayFor(modelItem => item.CRTDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRTCD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDCD)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.WriterName)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.WriterDatetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DELFG)
+        </td>
+        <td>
+
+            @if (Session["Role"].ToString() == "A")
+            {
+                @Html.ActionLink("Approval", "Edit", new { id = item.FeedbackID })
+            }
+            else
+            {
+                @Html.ActionLink("View", "Edit", new { id = item.FeedbackID })
+            }
+
+            @* |@Html.ActionLink("Details", "Details", new { id=item.FeedbackID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FeedbackID })*@
+        </td>
+    </tr>
+}
+
+</table>

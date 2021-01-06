@@ -1,0 +1,1639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MujiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tblDeployLog">
+          <Key>
+            <PropertyRef Name="DeployLogID" />
+          </Key>
+          <Property Name="DeployLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Server" Type="nvarchar" MaxLength="64" />
+          <Property Name="MediaID" Type="int" />
+          <Property Name="FormatID" Type="int" />
+          <Property Name="ElapsedTime" Type="int" />
+          <Property Name="CopiedBytes" Type="bigint" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="Result" Type="int" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblDeploySchedule">
+          <Key>
+            <PropertyRef Name="DeployScheduleID" />
+          </Key>
+          <Property Name="DeployScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" />
+          <Property Name="Schedule" Type="nvarchar" MaxLength="510" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblDeployStatus">
+          <Key>
+            <PropertyRef Name="DeployStatusID" />
+          </Key>
+          <Property Name="DeployStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DSServer" Type="nvarchar" MaxLength="64" />
+          <Property Name="MediaID" Type="int" />
+          <Property Name="FormatID" Type="int" />
+          <Property Name="IsExists" Type="bit" />
+          <Property Name="DateTime" Type="datetime" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserIPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblFeedback">
+          <Key>
+            <PropertyRef Name="FeedbackID" />
+          </Key>
+          <Property Name="FeedbackID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MovieID" Type="int" Nullable="false" />
+          <Property Name="WriterName" Type="nvarchar" MaxLength="200" />
+          <Property Name="Comments" Type="text" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="1020" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="WriterDatetime" Type="datetime" Nullable="false" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" Nullable="false" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblFolder">
+          <Key>
+            <PropertyRef Name="FolderID" />
+          </Key>
+          <Property Name="FolderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ParentID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="510" Nullable="false" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" Nullable="false" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblFormat">
+          <Key>
+            <PropertyRef Name="FormatID" />
+          </Key>
+          <Property Name="FormatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" />
+          <Property Name="RequiredBandWidth" Type="real" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblMedia">
+          <Key>
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="MediaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Video" Type="nvarchar" MaxLength="500" />
+          <Property Name="Thumbnail" Type="nvarchar" MaxLength="500" />
+          <Property Name="IpAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="FolderID" Type="int" Nullable="false" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UploadType" Type="nvarchar" MaxLength="1" />
+          <Property Name="ViewCount" Type="int" Nullable="false" />
+          <Property Name="PhysicalDELFG" Type="bit" Nullable="false" />
+          <Property Name="PhysicalDELFGCRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhysicalDELFGCRTDT" Type="datetime" />
+          <Property Name="PhysicalDELIpAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileSize" Type="bigint" />
+          <Property Name="Registerer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Accepter" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApprovalStatus" Type="int" />
+          <Property Name="ConvertStatus" Type="int" />
+          <Property Name="Duration" Type="int" />
+        </EntityType>
+        <EntityType Name="tblMediaFormatInfo">
+          <Key>
+            <PropertyRef Name="MediaFormatInfoID" />
+          </Key>
+          <Property Name="MediaFormatInfoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MediaID" Type="int" />
+          <Property Name="FormatID" Type="int" />
+          <Property Name="FileSize" Type="bigint" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblMediaViewLog">
+          <Key>
+            <PropertyRef Name="MediaViewLogID" />
+          </Key>
+          <Property Name="MediaViewLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MediaID" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ClientIP" Type="nvarchar" MaxLength="60" />
+          <Property Name="UserAgent" Type="nvarchar" MaxLength="2048" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" Nullable="false" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="StoreIPAddress" Type="nvarchar" MaxLength="60" />
+          <Property Name="StoreName" Type="nvarchar" MaxLength="500" />
+          <Property Name="StoreID" Type="int" Nullable="false" />
+          <Property Name="FormatID" Type="int" />
+          <Property Name="ClientSubnetID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblRobocopyExitcode">
+          <Key>
+            <PropertyRef Name="RobocopyExitcodeID" />
+          </Key>
+          <Property Name="RobocopyExitcodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Content" Type="varchar" MaxLength="128" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblStore">
+          <Key>
+            <PropertyRef Name="StoreID" />
+          </Key>
+          <Property Name="StoreID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StoreName" Type="nvarchar" MaxLength="500" />
+          <Property Name="AddressLine1" Type="nvarchar" MaxLength="500" />
+          <Property Name="AddressLine2" Type="nvarchar" MaxLength="500" />
+          <Property Name="City" Type="nvarchar" MaxLength="500" />
+          <Property Name="State" Type="nvarchar" MaxLength="500" />
+          <Property Name="Zip" Type="nvarchar" MaxLength="500" />
+          <Property Name="Country" Type="nvarchar" MaxLength="500" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+          <Property Name="StoreIPAddress" Type="nvarchar" MaxLength="60" />
+          <Property Name="StoreGroupID" Type="int" />
+        </EntityType>
+        <EntityType Name="tblStoreGroup">
+          <Key>
+            <PropertyRef Name="StoreGroupID" />
+          </Key>
+          <Property Name="StoreGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="64" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblStoreGroupFolder">
+          <Key>
+            <PropertyRef Name="StoreGroupFolderID" />
+          </Key>
+          <Property Name="StoreGroupFolderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StoreGroupID" Type="int" />
+          <Property Name="FolderID" Type="int" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblStoreSubnet">
+          <Key>
+            <PropertyRef Name="StoreSubnetID" />
+          </Key>
+          <Property Name="StoreSubnetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Store" Type="int" Nullable="false" />
+          <Property Name="Subnet" Type="int" Nullable="false" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblStreamServer">
+          <Key>
+            <PropertyRef Name="StreamServerID" />
+          </Key>
+          <Property Name="StreamServerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SSServer" Type="nvarchar" MaxLength="64" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+          <Property Name="BelongingSubnet" Type="int" />
+          <Property Name="DeploySchedule" Type="int" />
+          <Property Name="Status" Type="int" />
+          <Property Name="LastDeployDate" Type="datetime" />
+          <Property Name="LastStatusCheckDateDatetime" Type="bigint" />
+          <Property Name="DriveCTotal" Type="bigint" />
+          <Property Name="DriveCFree" Type="bigint" />
+          <Property Name="DriveDTotal" Type="bigint" />
+          <Property Name="DriveDFree" Type="bigint" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserIPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblStreamServerFormat">
+          <Key>
+            <PropertyRef Name="StreamServerFormatID" />
+          </Key>
+          <Property Name="StreamServerFormatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SSFServer" Type="nvarchar" MaxLength="64" />
+          <Property Name="FormatID" Type="int" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblStreamServerSubnet">
+          <Key>
+            <PropertyRef Name="StreamServerSubnetID" />
+          </Key>
+          <Property Name="StreamServerSubnetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SSSServer" Type="nvarchar" MaxLength="64" />
+          <Property Name="Subnet" Type="int" />
+          <Property Name="FormatID" Type="int" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblSubnet">
+          <Key>
+            <PropertyRef Name="SubnetID" />
+          </Key>
+          <Property Name="SubnetID" Type="int" Nullable="false" />
+          <Property Name="SNIPAddress" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="SubnetMask" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="WANBandWidth" Type="float" Nullable="false" />
+          <Property Name="LANBandWidth" Type="float" Nullable="false" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="50" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="60" />
+          <Property Name="Authority" Type="int" Nullable="false" />
+          <Property Name="Authority1" Type="bit" Nullable="false" />
+          <Property Name="Authority2" Type="bit" Nullable="false" />
+          <Property Name="Authority4" Type="bit" Nullable="false" />
+          <Property Name="Authority8" Type="bit" Nullable="false" />
+          <Property Name="Authority16" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblVideoLogReport">
+          <Key>
+            <PropertyRef Name="VideoLogID" />
+          </Key>
+          <Property Name="VideoLogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StoreName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="30" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="25" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+          <Property Name="MenuClick" Type="nvarchar" MaxLength="50" />
+          <Property Name="DELFG" Type="bit" Nullable="false" />
+          <Property Name="CRTDT" Type="datetime" />
+          <Property Name="CRTCD" Type="nvarchar" MaxLength="100" />
+          <Property Name="UPDDT" Type="datetime" />
+          <Property Name="UPDCD" Type="nvarchar" MaxLength="100" />
+          <Property Name="Comments" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <Association Name="FK_tblDeployLog_MediaID">
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="0..1" />
+          <End Role="tblDeployLog" Type="Self.tblDeployLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMedia">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="tblDeployLog">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblDeployLog_Result">
+          <End Role="tblRobocopyExitcode" Type="Self.tblRobocopyExitcode" Multiplicity="0..1" />
+          <End Role="tblDeployLog" Type="Self.tblDeployLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRobocopyExitcode">
+              <PropertyRef Name="RobocopyExitcodeID" />
+            </Principal>
+            <Dependent Role="tblDeployLog">
+              <PropertyRef Name="Result" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblDeployStatus_FormatID">
+          <End Role="tblFormat" Type="Self.tblFormat" Multiplicity="0..1" />
+          <End Role="tblDeployStatus" Type="Self.tblDeployStatus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblFormat">
+              <PropertyRef Name="FormatID" />
+            </Principal>
+            <Dependent Role="tblDeployStatus">
+              <PropertyRef Name="FormatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblFeedback_MovieID">
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="1" />
+          <End Role="tblFeedback" Type="Self.tblFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMedia">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="tblFeedback">
+              <PropertyRef Name="MovieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblMedia_tblFolder">
+          <End Role="tblFolder" Type="Self.tblFolder" Multiplicity="1" />
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblFolder">
+              <PropertyRef Name="FolderID" />
+            </Principal>
+            <Dependent Role="tblMedia">
+              <PropertyRef Name="FolderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblMediaFormatInfo_MediaID">
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="0..1" />
+          <End Role="tblMediaFormatInfo" Type="Self.tblMediaFormatInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMedia">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="tblMediaFormatInfo">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblMediaViewLog_MediaID">
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="1" />
+          <End Role="tblMediaViewLog" Type="Self.tblMediaViewLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMedia">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="tblMediaViewLog">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStore_tblStore">
+          <End Role="tblStoreGroup" Type="Self.tblStoreGroup" Multiplicity="0..1" />
+          <End Role="tblStore" Type="Self.tblStore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStoreGroup">
+              <PropertyRef Name="StoreGroupID" />
+            </Principal>
+            <Dependent Role="tblStore">
+              <PropertyRef Name="StoreGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStoreGroupFolder_tblFolder">
+          <End Role="tblStoreGroup" Type="Self.tblStoreGroup" Multiplicity="0..1" />
+          <End Role="tblStoreGroupFolder" Type="Self.tblStoreGroupFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStoreGroup">
+              <PropertyRef Name="StoreGroupID" />
+            </Principal>
+            <Dependent Role="tblStoreGroupFolder">
+              <PropertyRef Name="StoreGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStoreGroupFolder_tblFolder1">
+          <End Role="tblFolder" Type="Self.tblFolder" Multiplicity="0..1" />
+          <End Role="tblStoreGroupFolder" Type="Self.tblStoreGroupFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblFolder">
+              <PropertyRef Name="FolderID" />
+            </Principal>
+            <Dependent Role="tblStoreGroupFolder">
+              <PropertyRef Name="FolderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStoreSubnet_tblStore">
+          <End Role="tblStore" Type="Self.tblStore" Multiplicity="1" />
+          <End Role="tblStoreSubnet" Type="Self.tblStoreSubnet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStore">
+              <PropertyRef Name="StoreID" />
+            </Principal>
+            <Dependent Role="tblStoreSubnet">
+              <PropertyRef Name="Store" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStoreSubnet_tblSubnet">
+          <End Role="tblSubnet" Type="Self.tblSubnet" Multiplicity="1" />
+          <End Role="tblStoreSubnet" Type="Self.tblStoreSubnet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSubnet">
+              <PropertyRef Name="SubnetID" />
+            </Principal>
+            <Dependent Role="tblStoreSubnet">
+              <PropertyRef Name="Subnet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStreamServer_DeploySchedule">
+          <End Role="tblDeploySchedule" Type="Self.tblDeploySchedule" Multiplicity="0..1" />
+          <End Role="tblStreamServer" Type="Self.tblStreamServer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDeploySchedule">
+              <PropertyRef Name="DeployScheduleID" />
+            </Principal>
+            <Dependent Role="tblStreamServer">
+              <PropertyRef Name="DeploySchedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStreamServer_tblSubnet">
+          <End Role="tblSubnet" Type="Self.tblSubnet" Multiplicity="0..1" />
+          <End Role="tblStreamServer" Type="Self.tblStreamServer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSubnet">
+              <PropertyRef Name="SubnetID" />
+            </Principal>
+            <Dependent Role="tblStreamServer">
+              <PropertyRef Name="BelongingSubnet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStreamServerSubnet_tblSubnet">
+          <End Role="tblSubnet" Type="Self.tblSubnet" Multiplicity="0..1" />
+          <End Role="tblStreamServerSubnet" Type="Self.tblStreamServerSubnet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSubnet">
+              <PropertyRef Name="SubnetID" />
+            </Principal>
+            <Dependent Role="tblStreamServerSubnet">
+              <PropertyRef Name="Subnet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MujiModelStoreContainer">
+          <EntitySet Name="tblDeployLog" EntityType="Self.tblDeployLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDeploySchedule" EntityType="Self.tblDeploySchedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblDeployStatus" EntityType="Self.tblDeployStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFeedback" EntityType="Self.tblFeedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFolder" EntityType="Self.tblFolder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblFormat" EntityType="Self.tblFormat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMedia" EntityType="Self.tblMedia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMediaFormatInfo" EntityType="Self.tblMediaFormatInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMediaViewLog" EntityType="Self.tblMediaViewLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblRobocopyExitcode" EntityType="Self.tblRobocopyExitcode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStore" EntityType="Self.tblStore" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStoreGroup" EntityType="Self.tblStoreGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStoreGroupFolder" EntityType="Self.tblStoreGroupFolder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStoreSubnet" EntityType="Self.tblStoreSubnet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStreamServer" EntityType="Self.tblStreamServer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStreamServerFormat" EntityType="Self.tblStreamServerFormat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblStreamServerSubnet" EntityType="Self.tblStreamServerSubnet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblSubnet" EntityType="Self.tblSubnet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblUser" EntityType="Self.tblUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblVideoLogReport" EntityType="Self.tblVideoLogReport" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tblDeployLog_MediaID" Association="Self.FK_tblDeployLog_MediaID">
+            <End Role="tblMedia" EntitySet="tblMedia" />
+            <End Role="tblDeployLog" EntitySet="tblDeployLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblDeployLog_Result" Association="Self.FK_tblDeployLog_Result">
+            <End Role="tblRobocopyExitcode" EntitySet="tblRobocopyExitcode" />
+            <End Role="tblDeployLog" EntitySet="tblDeployLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblDeployStatus_FormatID" Association="Self.FK_tblDeployStatus_FormatID">
+            <End Role="tblFormat" EntitySet="tblFormat" />
+            <End Role="tblDeployStatus" EntitySet="tblDeployStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblFeedback_MovieID" Association="Self.FK_tblFeedback_MovieID">
+            <End Role="tblMedia" EntitySet="tblMedia" />
+            <End Role="tblFeedback" EntitySet="tblFeedback" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblMedia_tblFolder" Association="Self.FK_tblMedia_tblFolder">
+            <End Role="tblFolder" EntitySet="tblFolder" />
+            <End Role="tblMedia" EntitySet="tblMedia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblMediaFormatInfo_MediaID" Association="Self.FK_tblMediaFormatInfo_MediaID">
+            <End Role="tblMedia" EntitySet="tblMedia" />
+            <End Role="tblMediaFormatInfo" EntitySet="tblMediaFormatInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblMediaViewLog_MediaID" Association="Self.FK_tblMediaViewLog_MediaID">
+            <End Role="tblMedia" EntitySet="tblMedia" />
+            <End Role="tblMediaViewLog" EntitySet="tblMediaViewLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStore_tblStore" Association="Self.FK_tblStore_tblStore">
+            <End Role="tblStoreGroup" EntitySet="tblStoreGroup" />
+            <End Role="tblStore" EntitySet="tblStore" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStoreGroupFolder_tblFolder" Association="Self.FK_tblStoreGroupFolder_tblFolder">
+            <End Role="tblStoreGroup" EntitySet="tblStoreGroup" />
+            <End Role="tblStoreGroupFolder" EntitySet="tblStoreGroupFolder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStoreGroupFolder_tblFolder1" Association="Self.FK_tblStoreGroupFolder_tblFolder1">
+            <End Role="tblFolder" EntitySet="tblFolder" />
+            <End Role="tblStoreGroupFolder" EntitySet="tblStoreGroupFolder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStoreSubnet_tblStore" Association="Self.FK_tblStoreSubnet_tblStore">
+            <End Role="tblStore" EntitySet="tblStore" />
+            <End Role="tblStoreSubnet" EntitySet="tblStoreSubnet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStoreSubnet_tblSubnet" Association="Self.FK_tblStoreSubnet_tblSubnet">
+            <End Role="tblSubnet" EntitySet="tblSubnet" />
+            <End Role="tblStoreSubnet" EntitySet="tblStoreSubnet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStreamServer_DeploySchedule" Association="Self.FK_tblStreamServer_DeploySchedule">
+            <End Role="tblDeploySchedule" EntitySet="tblDeploySchedule" />
+            <End Role="tblStreamServer" EntitySet="tblStreamServer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStreamServer_tblSubnet" Association="Self.FK_tblStreamServer_tblSubnet">
+            <End Role="tblSubnet" EntitySet="tblSubnet" />
+            <End Role="tblStreamServer" EntitySet="tblStreamServer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStreamServerSubnet_tblSubnet" Association="Self.FK_tblStreamServerSubnet_tblSubnet">
+            <End Role="tblSubnet" EntitySet="tblSubnet" />
+            <End Role="tblStreamServerSubnet" EntitySet="tblStreamServerSubnet" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MujiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tblDeployLog">
+          <Key>
+            <PropertyRef Name="DeployLogID" />
+          </Key>
+          <Property Name="DeployLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Server" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="MediaID" Type="Int32" />
+          <Property Name="FormatID" Type="Int32" />
+          <Property Name="ElapsedTime" Type="Int32" />
+          <Property Name="CopiedBytes" Type="Int64" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="Result" Type="Int32" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblMedia" Relationship="Self.FK_tblDeployLog_MediaID" FromRole="tblDeployLog" ToRole="tblMedia" />
+          <NavigationProperty Name="tblRobocopyExitcode" Relationship="Self.FK_tblDeployLog_Result" FromRole="tblDeployLog" ToRole="tblRobocopyExitcode" />
+        </EntityType>
+        <EntityType Name="tblDeploySchedule">
+          <Key>
+            <PropertyRef Name="DeployScheduleID" />
+          </Key>
+          <Property Name="DeployScheduleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Schedule" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblStreamServers" Relationship="Self.FK_tblStreamServer_DeploySchedule" FromRole="tblDeploySchedule" ToRole="tblStreamServer" />
+        </EntityType>
+        <EntityType Name="tblDeployStatu">
+          <Key>
+            <PropertyRef Name="DeployStatusID" />
+          </Key>
+          <Property Name="DeployStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DSServer" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="MediaID" Type="Int32" />
+          <Property Name="FormatID" Type="Int32" />
+          <Property Name="IsExists" Type="Boolean" />
+          <Property Name="DateTime" Type="DateTime" Precision="3" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserIPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblFormat" Relationship="Self.FK_tblDeployStatus_FormatID" FromRole="tblDeployStatus" ToRole="tblFormat" />
+        </EntityType>
+        <EntityType Name="tblFeedback">
+          <Key>
+            <PropertyRef Name="FeedbackID" />
+          </Key>
+          <Property Name="FeedbackID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MovieID" Type="Int32" Nullable="false" />
+          <Property Name="WriterName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="FileName" Type="String" MaxLength="1020" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WriterDatetime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblMedia" Relationship="Self.FK_tblFeedback_MovieID" FromRole="tblFeedback" ToRole="tblMedia" />
+        </EntityType>
+        <EntityType Name="tblFolder">
+          <Key>
+            <PropertyRef Name="FolderID" />
+          </Key>
+          <Property Name="FolderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ParentID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="510" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblMedias" Relationship="Self.FK_tblMedia_tblFolder" FromRole="tblFolder" ToRole="tblMedia" />
+          <NavigationProperty Name="tblStoreGroupFolders" Relationship="Self.FK_tblStoreGroupFolder_tblFolder1" FromRole="tblFolder" ToRole="tblStoreGroupFolder" />
+        </EntityType>
+        <EntityType Name="tblFormat">
+          <Key>
+            <PropertyRef Name="FormatID" />
+          </Key>
+          <Property Name="FormatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="RequiredBandWidth" Type="Single" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblDeployStatus" Relationship="Self.FK_tblDeployStatus_FormatID" FromRole="tblFormat" ToRole="tblDeployStatus" />
+        </EntityType>
+        <EntityType Name="tblMedia">
+          <Key>
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="MediaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Video" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Thumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FolderID" Type="Int32" Nullable="false" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UploadType" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="ViewCount" Type="Int32" Nullable="false" />
+          <Property Name="PhysicalDELFG" Type="Boolean" Nullable="false" />
+          <Property Name="PhysicalDELFGCRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhysicalDELFGCRTDT" Type="DateTime" Precision="3" />
+          <Property Name="PhysicalDELIpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FileSize" Type="Int64" />
+          <Property Name="Registerer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Accepter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ApprovalStatus" Type="Int32" />
+          <Property Name="ConvertStatus" Type="Int32" />
+          <Property Name="Duration" Type="Int32" />
+          <NavigationProperty Name="tblDeployLogs" Relationship="Self.FK_tblDeployLog_MediaID" FromRole="tblMedia" ToRole="tblDeployLog" />
+          <NavigationProperty Name="tblFeedbacks" Relationship="Self.FK_tblFeedback_MovieID" FromRole="tblMedia" ToRole="tblFeedback" />
+          <NavigationProperty Name="tblFolder" Relationship="Self.FK_tblMedia_tblFolder" FromRole="tblMedia" ToRole="tblFolder" />
+          <NavigationProperty Name="tblMediaFormatInfoes" Relationship="Self.FK_tblMediaFormatInfo_MediaID" FromRole="tblMedia" ToRole="tblMediaFormatInfo" />
+          <NavigationProperty Name="tblMediaViewLogs" Relationship="Self.FK_tblMediaViewLog_MediaID" FromRole="tblMedia" ToRole="tblMediaViewLog" />
+        </EntityType>
+        <EntityType Name="tblMediaFormatInfo">
+          <Key>
+            <PropertyRef Name="MediaFormatInfoID" />
+          </Key>
+          <Property Name="MediaFormatInfoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MediaID" Type="Int32" />
+          <Property Name="FormatID" Type="Int32" />
+          <Property Name="FileSize" Type="Int64" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblMedia" Relationship="Self.FK_tblMediaFormatInfo_MediaID" FromRole="tblMediaFormatInfo" ToRole="tblMedia" />
+        </EntityType>
+        <EntityType Name="tblMediaViewLog">
+          <Key>
+            <PropertyRef Name="MediaViewLogID" />
+          </Key>
+          <Property Name="MediaViewLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MediaID" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClientIP" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="UserAgent" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="StoreIPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="StoreName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="StoreID" Type="Int32" Nullable="false" />
+          <Property Name="FormatID" Type="Int32" />
+          <Property Name="ClientSubnetID" Type="Int32" />
+          <NavigationProperty Name="tblMedia" Relationship="Self.FK_tblMediaViewLog_MediaID" FromRole="tblMediaViewLog" ToRole="tblMedia" />
+        </EntityType>
+        <EntityType Name="tblRobocopyExitcode">
+          <Key>
+            <PropertyRef Name="RobocopyExitcodeID" />
+          </Key>
+          <Property Name="RobocopyExitcodeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Content" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblDeployLogs" Relationship="Self.FK_tblDeployLog_Result" FromRole="tblRobocopyExitcode" ToRole="tblDeployLog" />
+        </EntityType>
+        <EntityType Name="tblStore">
+          <Key>
+            <PropertyRef Name="StoreID" />
+          </Key>
+          <Property Name="StoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StoreName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Zip" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="StoreIPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="StoreGroupID" Type="Int32" />
+          <NavigationProperty Name="tblStoreGroup" Relationship="Self.FK_tblStore_tblStore" FromRole="tblStore" ToRole="tblStoreGroup" />
+          <NavigationProperty Name="tblStoreSubnets" Relationship="Self.FK_tblStoreSubnet_tblStore" FromRole="tblStore" ToRole="tblStoreSubnet" />
+        </EntityType>
+        <EntityType Name="tblStoreGroup">
+          <Key>
+            <PropertyRef Name="StoreGroupID" />
+          </Key>
+          <Property Name="StoreGroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblStores" Relationship="Self.FK_tblStore_tblStore" FromRole="tblStoreGroup" ToRole="tblStore" />
+          <NavigationProperty Name="tblStoreGroupFolders" Relationship="Self.FK_tblStoreGroupFolder_tblFolder" FromRole="tblStoreGroup" ToRole="tblStoreGroupFolder" />
+        </EntityType>
+        <EntityType Name="tblStoreGroupFolder">
+          <Key>
+            <PropertyRef Name="StoreGroupFolderID" />
+          </Key>
+          <Property Name="StoreGroupFolderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StoreGroupID" Type="Int32" />
+          <Property Name="FolderID" Type="Int32" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblFolder" Relationship="Self.FK_tblStoreGroupFolder_tblFolder1" FromRole="tblStoreGroupFolder" ToRole="tblFolder" />
+          <NavigationProperty Name="tblStoreGroup" Relationship="Self.FK_tblStoreGroupFolder_tblFolder" FromRole="tblStoreGroupFolder" ToRole="tblStoreGroup" />
+        </EntityType>
+        <EntityType Name="tblStoreSubnet">
+          <Key>
+            <PropertyRef Name="StoreSubnetID" />
+          </Key>
+          <Property Name="StoreSubnetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Store" Type="Int32" Nullable="false" />
+          <Property Name="Subnet" Type="Int32" Nullable="false" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblStore" Relationship="Self.FK_tblStoreSubnet_tblStore" FromRole="tblStoreSubnet" ToRole="tblStore" />
+          <NavigationProperty Name="tblSubnet" Relationship="Self.FK_tblStoreSubnet_tblSubnet" FromRole="tblStoreSubnet" ToRole="tblSubnet" />
+        </EntityType>
+        <EntityType Name="tblStreamServer">
+          <Key>
+            <PropertyRef Name="StreamServerID" />
+          </Key>
+          <Property Name="StreamServerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SSServer" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="BelongingSubnet" Type="Int32" />
+          <Property Name="DeploySchedule" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="LastDeployDate" Type="DateTime" Precision="3" />
+          <Property Name="LastStatusCheckDateDatetime" Type="Int64" />
+          <Property Name="DriveCTotal" Type="Int64" />
+          <Property Name="DriveCFree" Type="Int64" />
+          <Property Name="DriveDTotal" Type="Int64" />
+          <Property Name="DriveDFree" Type="Int64" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserIPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblDeploySchedule" Relationship="Self.FK_tblStreamServer_DeploySchedule" FromRole="tblStreamServer" ToRole="tblDeploySchedule" />
+          <NavigationProperty Name="tblSubnet" Relationship="Self.FK_tblStreamServer_tblSubnet" FromRole="tblStreamServer" ToRole="tblSubnet" />
+        </EntityType>
+        <EntityType Name="tblStreamServerFormat">
+          <Key>
+            <PropertyRef Name="StreamServerFormatID" />
+          </Key>
+          <Property Name="StreamServerFormatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SSFServer" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="FormatID" Type="Int32" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblStreamServerSubnet">
+          <Key>
+            <PropertyRef Name="StreamServerSubnetID" />
+          </Key>
+          <Property Name="StreamServerSubnetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SSSServer" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Subnet" Type="Int32" />
+          <Property Name="FormatID" Type="Int32" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblSubnet" Relationship="Self.FK_tblStreamServerSubnet_tblSubnet" FromRole="tblStreamServerSubnet" ToRole="tblSubnet" />
+        </EntityType>
+        <EntityType Name="tblSubnet">
+          <Key>
+            <PropertyRef Name="SubnetID" />
+          </Key>
+          <Property Name="SubnetID" Type="Int32" Nullable="false" />
+          <Property Name="SNIPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SubnetMask" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="WANBandWidth" Type="Double" Nullable="false" />
+          <Property Name="LANBandWidth" Type="Double" Nullable="false" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="tblStoreSubnets" Relationship="Self.FK_tblStoreSubnet_tblSubnet" FromRole="tblSubnet" ToRole="tblStoreSubnet" />
+          <NavigationProperty Name="tblStreamServers" Relationship="Self.FK_tblStreamServer_tblSubnet" FromRole="tblSubnet" ToRole="tblStreamServer" />
+          <NavigationProperty Name="tblStreamServerSubnets" Relationship="Self.FK_tblStreamServerSubnet_tblSubnet" FromRole="tblSubnet" ToRole="tblStreamServerSubnet" />
+        </EntityType>
+        <EntityType Name="tblUser">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Authority" Type="Int32" Nullable="false" />
+          <Property Name="Authority1" Type="Boolean" Nullable="false" />
+          <Property Name="Authority2" Type="Boolean" Nullable="false" />
+          <Property Name="Authority4" Type="Boolean" Nullable="false" />
+          <Property Name="Authority8" Type="Boolean" Nullable="false" />
+          <Property Name="Authority16" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblVideoLogReport">
+          <Key>
+            <PropertyRef Name="VideoLogID" />
+          </Key>
+          <Property Name="VideoLogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StoreName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CountryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="IPAddress" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MenuClick" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DELFG" Type="Boolean" Nullable="false" />
+          <Property Name="CRTDT" Type="DateTime" Precision="3" />
+          <Property Name="CRTCD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UPDDT" Type="DateTime" Precision="3" />
+          <Property Name="UPDCD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_tblDeployLog_MediaID">
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="0..1" />
+          <End Role="tblDeployLog" Type="Self.tblDeployLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMedia">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="tblDeployLog">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblDeployLog_Result">
+          <End Role="tblRobocopyExitcode" Type="Self.tblRobocopyExitcode" Multiplicity="0..1" />
+          <End Role="tblDeployLog" Type="Self.tblDeployLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblRobocopyExitcode">
+              <PropertyRef Name="RobocopyExitcodeID" />
+            </Principal>
+            <Dependent Role="tblDeployLog">
+              <PropertyRef Name="Result" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStreamServer_DeploySchedule">
+          <End Role="tblDeploySchedule" Type="Self.tblDeploySchedule" Multiplicity="0..1" />
+          <End Role="tblStreamServer" Type="Self.tblStreamServer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblDeploySchedule">
+              <PropertyRef Name="DeployScheduleID" />
+            </Principal>
+            <Dependent Role="tblStreamServer">
+              <PropertyRef Name="DeploySchedule" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblDeployStatus_FormatID">
+          <End Role="tblFormat" Type="Self.tblFormat" Multiplicity="0..1" />
+          <End Role="tblDeployStatus" Type="Self.tblDeployStatu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblFormat">
+              <PropertyRef Name="FormatID" />
+            </Principal>
+            <Dependent Role="tblDeployStatus">
+              <PropertyRef Name="FormatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblFeedback_MovieID">
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="1" />
+          <End Role="tblFeedback" Type="Self.tblFeedback" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMedia">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="tblFeedback">
+              <PropertyRef Name="MovieID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblMedia_tblFolder">
+          <End Role="tblFolder" Type="Self.tblFolder" Multiplicity="1" />
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblFolder">
+              <PropertyRef Name="FolderID" />
+            </Principal>
+            <Dependent Role="tblMedia">
+              <PropertyRef Name="FolderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStoreGroupFolder_tblFolder1">
+          <End Role="tblFolder" Type="Self.tblFolder" Multiplicity="0..1" />
+          <End Role="tblStoreGroupFolder" Type="Self.tblStoreGroupFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblFolder">
+              <PropertyRef Name="FolderID" />
+            </Principal>
+            <Dependent Role="tblStoreGroupFolder">
+              <PropertyRef Name="FolderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblMediaFormatInfo_MediaID">
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="0..1" />
+          <End Role="tblMediaFormatInfo" Type="Self.tblMediaFormatInfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMedia">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="tblMediaFormatInfo">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblMediaViewLog_MediaID">
+          <End Role="tblMedia" Type="Self.tblMedia" Multiplicity="1" />
+          <End Role="tblMediaViewLog" Type="Self.tblMediaViewLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblMedia">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="tblMediaViewLog">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStore_tblStore">
+          <End Role="tblStoreGroup" Type="Self.tblStoreGroup" Multiplicity="0..1" />
+          <End Role="tblStore" Type="Self.tblStore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStoreGroup">
+              <PropertyRef Name="StoreGroupID" />
+            </Principal>
+            <Dependent Role="tblStore">
+              <PropertyRef Name="StoreGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStoreSubnet_tblStore">
+          <End Role="tblStore" Type="Self.tblStore" Multiplicity="1" />
+          <End Role="tblStoreSubnet" Type="Self.tblStoreSubnet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStore">
+              <PropertyRef Name="StoreID" />
+            </Principal>
+            <Dependent Role="tblStoreSubnet">
+              <PropertyRef Name="Store" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStoreGroupFolder_tblFolder">
+          <End Role="tblStoreGroup" Type="Self.tblStoreGroup" Multiplicity="0..1" />
+          <End Role="tblStoreGroupFolder" Type="Self.tblStoreGroupFolder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblStoreGroup">
+              <PropertyRef Name="StoreGroupID" />
+            </Principal>
+            <Dependent Role="tblStoreGroupFolder">
+              <PropertyRef Name="StoreGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStoreSubnet_tblSubnet">
+          <End Role="tblSubnet" Type="Self.tblSubnet" Multiplicity="1" />
+          <End Role="tblStoreSubnet" Type="Self.tblStoreSubnet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSubnet">
+              <PropertyRef Name="SubnetID" />
+            </Principal>
+            <Dependent Role="tblStoreSubnet">
+              <PropertyRef Name="Subnet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStreamServer_tblSubnet">
+          <End Role="tblSubnet" Type="Self.tblSubnet" Multiplicity="0..1" />
+          <End Role="tblStreamServer" Type="Self.tblStreamServer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSubnet">
+              <PropertyRef Name="SubnetID" />
+            </Principal>
+            <Dependent Role="tblStreamServer">
+              <PropertyRef Name="BelongingSubnet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblStreamServerSubnet_tblSubnet">
+          <End Role="tblSubnet" Type="Self.tblSubnet" Multiplicity="0..1" />
+          <End Role="tblStreamServerSubnet" Type="Self.tblStreamServerSubnet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSubnet">
+              <PropertyRef Name="SubnetID" />
+            </Principal>
+            <Dependent Role="tblStreamServerSubnet">
+              <PropertyRef Name="Subnet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="mujiEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblDeployLogs" EntityType="Self.tblDeployLog" />
+          <EntitySet Name="tblDeploySchedules" EntityType="Self.tblDeploySchedule" />
+          <EntitySet Name="tblDeployStatus" EntityType="Self.tblDeployStatu" />
+          <EntitySet Name="tblFeedbacks" EntityType="Self.tblFeedback" />
+          <EntitySet Name="tblFolders" EntityType="Self.tblFolder" />
+          <EntitySet Name="tblFormats" EntityType="Self.tblFormat" />
+          <EntitySet Name="tblMedias" EntityType="Self.tblMedia" />
+          <EntitySet Name="tblMediaFormatInfoes" EntityType="Self.tblMediaFormatInfo" />
+          <EntitySet Name="tblMediaViewLogs" EntityType="Self.tblMediaViewLog" />
+          <EntitySet Name="tblRobocopyExitcodes" EntityType="Self.tblRobocopyExitcode" />
+          <EntitySet Name="tblStores" EntityType="Self.tblStore" />
+          <EntitySet Name="tblStoreGroups" EntityType="Self.tblStoreGroup" />
+          <EntitySet Name="tblStoreGroupFolders" EntityType="Self.tblStoreGroupFolder" />
+          <EntitySet Name="tblStoreSubnets" EntityType="Self.tblStoreSubnet" />
+          <EntitySet Name="tblStreamServers" EntityType="Self.tblStreamServer" />
+          <EntitySet Name="tblStreamServerFormats" EntityType="Self.tblStreamServerFormat" />
+          <EntitySet Name="tblStreamServerSubnets" EntityType="Self.tblStreamServerSubnet" />
+          <EntitySet Name="tblSubnets" EntityType="Self.tblSubnet" />
+          <EntitySet Name="tblUsers" EntityType="Self.tblUser" />
+          <EntitySet Name="tblVideoLogReports" EntityType="Self.tblVideoLogReport" />
+          <AssociationSet Name="FK_tblDeployLog_MediaID" Association="Self.FK_tblDeployLog_MediaID">
+            <End Role="tblMedia" EntitySet="tblMedias" />
+            <End Role="tblDeployLog" EntitySet="tblDeployLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblDeployLog_Result" Association="Self.FK_tblDeployLog_Result">
+            <End Role="tblRobocopyExitcode" EntitySet="tblRobocopyExitcodes" />
+            <End Role="tblDeployLog" EntitySet="tblDeployLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStreamServer_DeploySchedule" Association="Self.FK_tblStreamServer_DeploySchedule">
+            <End Role="tblDeploySchedule" EntitySet="tblDeploySchedules" />
+            <End Role="tblStreamServer" EntitySet="tblStreamServers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblDeployStatus_FormatID" Association="Self.FK_tblDeployStatus_FormatID">
+            <End Role="tblFormat" EntitySet="tblFormats" />
+            <End Role="tblDeployStatus" EntitySet="tblDeployStatus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblFeedback_MovieID" Association="Self.FK_tblFeedback_MovieID">
+            <End Role="tblMedia" EntitySet="tblMedias" />
+            <End Role="tblFeedback" EntitySet="tblFeedbacks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblMedia_tblFolder" Association="Self.FK_tblMedia_tblFolder">
+            <End Role="tblFolder" EntitySet="tblFolders" />
+            <End Role="tblMedia" EntitySet="tblMedias" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStoreGroupFolder_tblFolder1" Association="Self.FK_tblStoreGroupFolder_tblFolder1">
+            <End Role="tblFolder" EntitySet="tblFolders" />
+            <End Role="tblStoreGroupFolder" EntitySet="tblStoreGroupFolders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblMediaFormatInfo_MediaID" Association="Self.FK_tblMediaFormatInfo_MediaID">
+            <End Role="tblMedia" EntitySet="tblMedias" />
+            <End Role="tblMediaFormatInfo" EntitySet="tblMediaFormatInfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblMediaViewLog_MediaID" Association="Self.FK_tblMediaViewLog_MediaID">
+            <End Role="tblMedia" EntitySet="tblMedias" />
+            <End Role="tblMediaViewLog" EntitySet="tblMediaViewLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStore_tblStore" Association="Self.FK_tblStore_tblStore">
+            <End Role="tblStoreGroup" EntitySet="tblStoreGroups" />
+            <End Role="tblStore" EntitySet="tblStores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStoreSubnet_tblStore" Association="Self.FK_tblStoreSubnet_tblStore">
+            <End Role="tblStore" EntitySet="tblStores" />
+            <End Role="tblStoreSubnet" EntitySet="tblStoreSubnets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStoreGroupFolder_tblFolder" Association="Self.FK_tblStoreGroupFolder_tblFolder">
+            <End Role="tblStoreGroup" EntitySet="tblStoreGroups" />
+            <End Role="tblStoreGroupFolder" EntitySet="tblStoreGroupFolders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStoreSubnet_tblSubnet" Association="Self.FK_tblStoreSubnet_tblSubnet">
+            <End Role="tblSubnet" EntitySet="tblSubnets" />
+            <End Role="tblStoreSubnet" EntitySet="tblStoreSubnets" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStreamServer_tblSubnet" Association="Self.FK_tblStreamServer_tblSubnet">
+            <End Role="tblSubnet" EntitySet="tblSubnets" />
+            <End Role="tblStreamServer" EntitySet="tblStreamServers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblStreamServerSubnet_tblSubnet" Association="Self.FK_tblStreamServerSubnet_tblSubnet">
+            <End Role="tblSubnet" EntitySet="tblSubnets" />
+            <End Role="tblStreamServerSubnet" EntitySet="tblStreamServerSubnets" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MujiModelStoreContainer" CdmEntityContainer="mujiEntities1">
+          <EntitySetMapping Name="tblDeployLogs">
+            <EntityTypeMapping TypeName="MujiModel.tblDeployLog">
+              <MappingFragment StoreEntitySet="tblDeployLog">
+                <ScalarProperty Name="DeployLogID" ColumnName="DeployLogID" />
+                <ScalarProperty Name="Server" ColumnName="Server" />
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="ElapsedTime" ColumnName="ElapsedTime" />
+                <ScalarProperty Name="CopiedBytes" ColumnName="CopiedBytes" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDeploySchedules">
+            <EntityTypeMapping TypeName="MujiModel.tblDeploySchedule">
+              <MappingFragment StoreEntitySet="tblDeploySchedule">
+                <ScalarProperty Name="DeployScheduleID" ColumnName="DeployScheduleID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Schedule" ColumnName="Schedule" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblDeployStatus">
+            <EntityTypeMapping TypeName="MujiModel.tblDeployStatu">
+              <MappingFragment StoreEntitySet="tblDeployStatus">
+                <ScalarProperty Name="DeployStatusID" ColumnName="DeployStatusID" />
+                <ScalarProperty Name="DSServer" ColumnName="DSServer" />
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="IsExists" ColumnName="IsExists" />
+                <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="UserIPAddress" ColumnName="UserIPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFeedbacks">
+            <EntityTypeMapping TypeName="MujiModel.tblFeedback">
+              <MappingFragment StoreEntitySet="tblFeedback">
+                <ScalarProperty Name="FeedbackID" ColumnName="FeedbackID" />
+                <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+                <ScalarProperty Name="WriterName" ColumnName="WriterName" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="WriterDatetime" ColumnName="WriterDatetime" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFolders">
+            <EntityTypeMapping TypeName="MujiModel.tblFolder">
+              <MappingFragment StoreEntitySet="tblFolder">
+                <ScalarProperty Name="FolderID" ColumnName="FolderID" />
+                <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblFormats">
+            <EntityTypeMapping TypeName="MujiModel.tblFormat">
+              <MappingFragment StoreEntitySet="tblFormat">
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RequiredBandWidth" ColumnName="RequiredBandWidth" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMedias">
+            <EntityTypeMapping TypeName="MujiModel.tblMedia">
+              <MappingFragment StoreEntitySet="tblMedia">
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Video" ColumnName="Video" />
+                <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="FolderID" ColumnName="FolderID" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="UploadType" ColumnName="UploadType" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="PhysicalDELFG" ColumnName="PhysicalDELFG" />
+                <ScalarProperty Name="PhysicalDELFGCRTCD" ColumnName="PhysicalDELFGCRTCD" />
+                <ScalarProperty Name="PhysicalDELFGCRTDT" ColumnName="PhysicalDELFGCRTDT" />
+                <ScalarProperty Name="PhysicalDELIpAddress" ColumnName="PhysicalDELIpAddress" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="Registerer" ColumnName="Registerer" />
+                <ScalarProperty Name="Accepter" ColumnName="Accepter" />
+                <ScalarProperty Name="ApprovalStatus" ColumnName="ApprovalStatus" />
+                <ScalarProperty Name="ConvertStatus" ColumnName="ConvertStatus" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMediaFormatInfoes">
+            <EntityTypeMapping TypeName="MujiModel.tblMediaFormatInfo">
+              <MappingFragment StoreEntitySet="tblMediaFormatInfo">
+                <ScalarProperty Name="MediaFormatInfoID" ColumnName="MediaFormatInfoID" />
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMediaViewLogs">
+            <EntityTypeMapping TypeName="MujiModel.tblMediaViewLog">
+              <MappingFragment StoreEntitySet="tblMediaViewLog">
+                <ScalarProperty Name="MediaViewLogID" ColumnName="MediaViewLogID" />
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ClientIP" ColumnName="ClientIP" />
+                <ScalarProperty Name="UserAgent" ColumnName="UserAgent" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="StoreIPAddress" ColumnName="StoreIPAddress" />
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="ClientSubnetID" ColumnName="ClientSubnetID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblRobocopyExitcodes">
+            <EntityTypeMapping TypeName="MujiModel.tblRobocopyExitcode">
+              <MappingFragment StoreEntitySet="tblRobocopyExitcode">
+                <ScalarProperty Name="RobocopyExitcodeID" ColumnName="RobocopyExitcodeID" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStores">
+            <EntityTypeMapping TypeName="MujiModel.tblStore">
+              <MappingFragment StoreEntitySet="tblStore">
+                <ScalarProperty Name="StoreID" ColumnName="StoreID" />
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+                <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="StoreIPAddress" ColumnName="StoreIPAddress" />
+                <ScalarProperty Name="StoreGroupID" ColumnName="StoreGroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStoreGroups">
+            <EntityTypeMapping TypeName="MujiModel.tblStoreGroup">
+              <MappingFragment StoreEntitySet="tblStoreGroup">
+                <ScalarProperty Name="StoreGroupID" ColumnName="StoreGroupID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStoreGroupFolders">
+            <EntityTypeMapping TypeName="MujiModel.tblStoreGroupFolder">
+              <MappingFragment StoreEntitySet="tblStoreGroupFolder">
+                <ScalarProperty Name="StoreGroupFolderID" ColumnName="StoreGroupFolderID" />
+                <ScalarProperty Name="StoreGroupID" ColumnName="StoreGroupID" />
+                <ScalarProperty Name="FolderID" ColumnName="FolderID" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStoreSubnets">
+            <EntityTypeMapping TypeName="MujiModel.tblStoreSubnet">
+              <MappingFragment StoreEntitySet="tblStoreSubnet">
+                <ScalarProperty Name="StoreSubnetID" ColumnName="StoreSubnetID" />
+                <ScalarProperty Name="Store" ColumnName="Store" />
+                <ScalarProperty Name="Subnet" ColumnName="Subnet" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStreamServers">
+            <EntityTypeMapping TypeName="MujiModel.tblStreamServer">
+              <MappingFragment StoreEntitySet="tblStreamServer">
+                <ScalarProperty Name="StreamServerID" ColumnName="StreamServerID" />
+                <ScalarProperty Name="SSServer" ColumnName="SSServer" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="BelongingSubnet" ColumnName="BelongingSubnet" />
+                <ScalarProperty Name="DeploySchedule" ColumnName="DeploySchedule" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="LastDeployDate" ColumnName="LastDeployDate" />
+                <ScalarProperty Name="LastStatusCheckDateDatetime" ColumnName="LastStatusCheckDateDatetime" />
+                <ScalarProperty Name="DriveCTotal" ColumnName="DriveCTotal" />
+                <ScalarProperty Name="DriveCFree" ColumnName="DriveCFree" />
+                <ScalarProperty Name="DriveDTotal" ColumnName="DriveDTotal" />
+                <ScalarProperty Name="DriveDFree" ColumnName="DriveDFree" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="UserIPAddress" ColumnName="UserIPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStreamServerFormats">
+            <EntityTypeMapping TypeName="MujiModel.tblStreamServerFormat">
+              <MappingFragment StoreEntitySet="tblStreamServerFormat">
+                <ScalarProperty Name="StreamServerFormatID" ColumnName="StreamServerFormatID" />
+                <ScalarProperty Name="SSFServer" ColumnName="SSFServer" />
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblStreamServerSubnets">
+            <EntityTypeMapping TypeName="MujiModel.tblStreamServerSubnet">
+              <MappingFragment StoreEntitySet="tblStreamServerSubnet">
+                <ScalarProperty Name="StreamServerSubnetID" ColumnName="StreamServerSubnetID" />
+                <ScalarProperty Name="SSSServer" ColumnName="SSSServer" />
+                <ScalarProperty Name="Subnet" ColumnName="Subnet" />
+                <ScalarProperty Name="FormatID" ColumnName="FormatID" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSubnets">
+            <EntityTypeMapping TypeName="MujiModel.tblSubnet">
+              <MappingFragment StoreEntitySet="tblSubnet">
+                <ScalarProperty Name="SubnetID" ColumnName="SubnetID" />
+                <ScalarProperty Name="SNIPAddress" ColumnName="SNIPAddress" />
+                <ScalarProperty Name="SubnetMask" ColumnName="SubnetMask" />
+                <ScalarProperty Name="WANBandWidth" ColumnName="WANBandWidth" />
+                <ScalarProperty Name="LANBandWidth" ColumnName="LANBandWidth" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblUsers">
+            <EntityTypeMapping TypeName="MujiModel.tblUser">
+              <MappingFragment StoreEntitySet="tblUser">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="Authority" ColumnName="Authority" />
+                <ScalarProperty Name="Authority1" ColumnName="Authority1" />
+                <ScalarProperty Name="Authority2" ColumnName="Authority2" />
+                <ScalarProperty Name="Authority4" ColumnName="Authority4" />
+                <ScalarProperty Name="Authority8" ColumnName="Authority8" />
+                <ScalarProperty Name="Authority16" ColumnName="Authority16" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblVideoLogReports">
+            <EntityTypeMapping TypeName="MujiModel.tblVideoLogReport">
+              <MappingFragment StoreEntitySet="tblVideoLogReport">
+                <ScalarProperty Name="VideoLogID" ColumnName="VideoLogID" />
+                <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="MenuClick" ColumnName="MenuClick" />
+                <ScalarProperty Name="DELFG" ColumnName="DELFG" />
+                <ScalarProperty Name="CRTDT" ColumnName="CRTDT" />
+                <ScalarProperty Name="CRTCD" ColumnName="CRTCD" />
+                <ScalarProperty Name="UPDDT" ColumnName="UPDDT" />
+                <ScalarProperty Name="UPDCD" ColumnName="UPDCD" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

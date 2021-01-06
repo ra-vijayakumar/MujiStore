@@ -1,0 +1,57 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+   
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  
+}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+    background-color:#fff;
+}
+/*.textbox {
+    max-width: 280px
+}*/
+form-control {
+    display: block;
+    width: 33%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #bb6180;
+    border-radius: 4px;
+}
+input[type="Password"] {
+    display: block;
+    width: 81%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #bb6180;
+    border-radius: 4px;
+}

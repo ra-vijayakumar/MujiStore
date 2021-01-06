@@ -1,0 +1,155 @@
+﻿@model MujiStore.Models.tblSubnet
+@{
+    var subnet = ViewData["subnet"] as string;
+    var stre = ViewData["stre"] as string;
+    var stredtl = ViewData["stredtl"] as IEnumerable<MujiStore.Models.tblStore>;
+    var mediadtl = ViewData["mediadtl"] as MujiStore.Models.tblMedia;
+    var Search = ViewData["Search"] as string;
+    var WANWidth = ViewData["WANBandWidth"] as string;
+    var samesnetdtl = ViewData["samesnetdtl"] as string;
+    var diffsnetdtl = ViewData["diffsnetdtl"] as string;
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <style>
+        div.content {
+            padding: 4px 16px 8px 16px;
+        }
+        .enhance {
+            font-weight: bold;
+            color: #EE2211;
+        }
+
+        .danger {
+            font-weight: bold;
+            color: #EE2211;
+        }
+
+        .safe {
+            font-weight: bold;
+            color: #6666BB;
+        }
+        .stysty {
+            margin-top: 5px;
+            margin-left: 0px;
+        }
+        
+    </style>
+    <div class="content">
+        <h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VieSearchH2</h2>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="content">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                    @MujiStore.Resources.Resource.VieSearchIPAddress
+                </font>
+            </font>
+            <br />
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                    @MujiStore.Resources.Resource.VieSearchClientIP:
+                </font>
+            </font>
+
+            @Html.EditorFor(model => model.SNIPAddress, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SNIPAddress, "", new { @class = "text-danger" })
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit; margin-top: 5px; margin-left: 0px;">
+                    <input type="submit" value=@MujiStore.Resources.Resource.VieSearchGoButton class="stysty btn btn-default " />
+                </font>
+            </font>
+
+        </div>
+
+        @if (Search == "1")
+        {
+
+
+            <h2>@MujiStore.Resources.Resource.VieSearchSurveyResult</h2>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                    @MujiStore.Resources.Resource.VieSearchCheckSubnet:
+                </font>
+            </font>
+
+            if (subnet == "0")
+            {
+                <span class="danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.VieSearchCheckSubnet0 </font></font></span>
+            }
+            else if (subnet == "1")
+            {
+                <span class="safe"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.VieSearchCheckSubnet1_1</font></font></span>
+                <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> @MujiStore.Resources.Resource.VieSearchCheckSubnet1_2 </font></font>
+            }
+            <br>
+            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.VieSearchCheckStoreDefin: </font></font>
+            if (stre == "0")
+            {
+                <span class="danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.VieSearchCheckStoreDefin0 </font><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.VieSearchCheckStoreDefin0_1 </font></font></span>
+            }
+            else if (stre == "1")
+            {
+                foreach (var item in stredtl)
+                {
+                    <span class="safe">@MujiStore.Resources.Resource.VieSearchCheckStoreDefin1 (@item.StoreID : @item.StoreName)</span>
+                }
+            }
+
+            <br>
+
+            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> @MujiStore.Resources.Resource.VieSearchSelect: </font></font>
+
+            if (mediadtl == null)
+            {
+                <span class="danger">
+                    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.VieSearchSelectNull </font></font>
+                </span>
+            }
+            else
+            {
+                <span class="safe"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.VieSearchSelectNotNull_1 ( @mediadtl.Title / ID = @mediadtl.MediaID) @MujiStore.Resources.Resource.VieSearchSelectNotNull_2</font></font></span>
+            }
+
+            <br>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">@MujiStore.Resources.Resource.SubnetDataAcquisitionWANBandwidth </font>
+            </font>
+            <span class="safe">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">@WANWidth</font>
+                </font>
+            </span>
+
+            <br>
+
+            if (samesnetdtl == null)
+            {
+                <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.SameSubnet </font></font>
+                <span class="danger">
+                    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.No </font></font>
+                </span>
+                <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.distributionisnotcompleted </font></font>
+            }
+            else
+            {
+                <span class="safe"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.SameSubnet  ( @mediadtl.Title / ID = @mediadtl.MediaID) @MujiStore.Resources.Resource.VieSearchSelectNotNull_2</font></font></span>
+            }
+            <br>
+
+            if (diffsnetdtl == null)
+            {
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> @MujiStore.Resources.Resource.Videodistributionserver </font><span class="danger"><font style="vertical-align: inherit;">@MujiStore.Resources.Resource.No</font></span><font style="vertical-align: inherit;">
+                       @MujiStore.Resources.Resource.Thedeliveryisnotover
+                    </font>
+                </font>
+            }
+            else
+            {
+                <span class="safe"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> @MujiStore.Resources.Resource.videodeliveryserveronanother  ( @mediadtl.Title / ID = @mediadtl.MediaID) @MujiStore.Resources.Resource.VieSearchSelectNotNull_2</font></font></span>
+            }
+        }
+    </div>
+}

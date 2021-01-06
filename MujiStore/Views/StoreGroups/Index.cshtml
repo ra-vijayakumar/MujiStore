@@ -1,0 +1,52 @@
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<MujiStore.Models.tblStoreGroup>
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieStoreGroupsIndexBrowTitle;
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VieStoreGroupsIndexH2</h2>
+
+<p>
+    @Html.ActionLink(MujiStore.Resources.Resource.VieStoreGroupsIndexCreate, "Create")
+</p>
+<table class="table" style="background-color:#ffffff; ">
+    <tr style="background-color:#bf5e6e; color:#ffffff;">
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DELFG)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="background-color:#EEE;">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DELFG)
+            </td>
+            <td>
+                @Html.ActionLink(MujiStore.Resources.Resource.CommonEdit, "Edit", new { id = item.StoreGroupID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+<div>
+    @MujiStore.Resources.Resource.CommonPage @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @MujiStore.Resources.Resource.CommonOf @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+         new { page }))
+</div>
+}

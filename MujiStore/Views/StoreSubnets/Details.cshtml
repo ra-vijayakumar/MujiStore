@@ -1,0 +1,82 @@
+﻿@model MujiStore.Models.tblStoreSubnet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">Details</h2>
+
+<div>
+    <h4>tblStoreSubnet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DELFG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IPAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblStore.StoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblStore.StoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSubnet.SNIPAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSubnet.SNIPAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StoreSubnetID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

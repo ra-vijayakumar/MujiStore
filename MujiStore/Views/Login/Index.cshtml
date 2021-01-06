@@ -1,0 +1,45 @@
+﻿@model MujiStore.Models.tblUser
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieLoginIndexBrowTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table>
+    <tr>
+        <td NOWRAP>
+            <h2>@MujiStore.Resources.Resource.VieLoginIndexH2</h2>
+        </td>
+    </tr>
+</table>
+
+@using (Html.BeginForm("SignIn", "Login", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true)
+
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.VieLoginIndexUsername, new { @class = "control-label col-md-2" })
+        <div class="col-md-4" style="white-space: nowrap;">
+            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.UserName, null, new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.VieLoginIndexPassword, new { @class = "control-label col-md-2" })
+        <div class="col-md-4" style="white-space: nowrap;">
+            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @type = "password" })
+            @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSubmit class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+}
+

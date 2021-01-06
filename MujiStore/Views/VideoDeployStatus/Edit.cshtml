@@ -1,0 +1,250 @@
+﻿@model MujiStore.Models.tblMedia
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VietblMediaEditBrowTitle;
+    var VidDur = "";
+    int i = 0;
+    //var MediaServer = ViewData["MediaServer"].ToString();
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+<h2 style="color:#ec2213; background-color:lavenderblush;">@MujiStore.Resources.Resource.VietblMediaEditBrowH2</h2>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#UpdateImage").click(function () {
+            if (location.hostname != 'localhost') {
+                $("form").attr("action", "/" + window.location.href.split('/')[3] + "/VideoDeployStatus/SaveThumbnailImage");
+            }
+            else {
+                $("form").attr("action", "/VideoDeployStatus/SaveThumbnailImage");
+            }
+
+        });
+
+        $("#UpdateVidDetail").click(function () {
+            if (location.hostname != 'localhost') {
+                $("form").attr("action", "/" + window.location.href.split('/')[3] + "/VideoDeployStatus/SaveVideoDetails");
+            }
+            else {
+                $("form").attr("action", "/VideoDeployStatus/SaveVideoDetails");
+            }
+        });
+
+    });
+
+</script>
+<style type="text/css">
+    .maxwidth {
+        max-width: 100%
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+</style>
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.MediaID)
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoID, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.MediaID.ToString(), new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.Title.ToString(), new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.Description, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+          
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoFolderName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.FolderName, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+           
+        </div>
+    </div>
+   
+        <div class="form-group">
+            @Html.Label(MujiStore.Resources.Resource.DeployStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div style="box-shadow:1px 3px 9px 2px; height:245px; width:112%;background-color:#eee">
+
+
+
+                    <table class="table fixed_header" style="background-color:#ffffff; width:100%;">
+
+                        <thead style="width:1425px;">
+                            <tr style="background-color:#bf5e6e; color:#ffffff; ">
+
+                                <td class="Upload" style="font-weight:bold; ">
+                                    @MujiStore.Resources.Resource.IsExists
+                                </td>
+                                <td class="Filename" style="font-weight:bold;">
+                                    @MujiStore.Resources.Resource.StreamServerName
+                                </td>
+                                <td class="Filename" style="font-weight:bold; text-align:center;">
+                                    @MujiStore.Resources.Resource.RobocopyExitcodeContent
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody style="width:100%;">
+
+
+                            @foreach (var model in Model.deployStatus)
+                            {
+                                <tr style="background-color:#eee; margin-left:10px" id="blkupload">
+                                    <td class="isUpload  Upload">
+                                        @Html.Hidden("deployStatus[" + i + "].DeployStatusID", model.DeployStatusID)
+                                        @Html.Hidden("deployStatus[" + i + "].DeployLogID", model.DeployLogID)
+                                        @Html.Hidden("deployStatus[" + i + "].MediaID", model.MediaID)
+                                        @Html.Hidden("deployStatus[" + i + "].FormatID", model.FormatID)
+                                        @Html.Hidden("deployStatus[" + i + "].DSServer", model.DSServer)
+                                        @Html.Hidden("deployStatus[" + i + "].Duration", model.Duration)
+                                        @Html.Hidden("deployStatus[" + i + "].FileSize", model.FileSize)
+                                        @Html.CheckBox("deployStatus[" + i + "].DELFG", model.DELFG)
+                                    </td>
+                                    <td style="background-color:#EEE;" class="Filename">
+                                        @Html.Label("deployStatus[" + i + "].DSServer", model.DSServer, new { @class = "textbox1", @readonly = "readonly" })
+                                    </td>
+                                    <td style="background-color:#EEE;" class="Filename">
+                                        @*@Html.DropDownList("deployStatus[" + i + "].Result", null, "Select", htmlAttributes: new { @class = "form-control" })*@
+                                        @Html.DropDownList("deployStatus[" + i + "].Result", new SelectList((System.Collections.IEnumerable)ViewData["roboResult"], "Value", "Text", model.Result), null, new { @id = "ddlroboCode" })
+                                        @Html.ValidationMessage("deployStatus[" + i + "].Result", "", new { @class = "text-danger" })
+                                        @*@Html.DropDownListFor(
+                                            m => model.Result,
+                                            ViewBag.Result, new { @class = "form-control" })*@
+                                        @*@Html.DropDownListFor(model => model.FolderID, (List<SelectListItem>)ViewData["FolderDtl"])*@
+                                        @*@Html.DropDownList("deployStatus[" + i + "].Result", null, "Select", htmlAttributes: new { @class = "form-control" })*@
+                                    </td>
+                                </tr>
+                                i = i + 1;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.Video, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-5">
+            
+            @Html.HiddenFor(model => model.Title)
+            @Html.HiddenFor(model => model.Description)
+            @Html.HiddenFor(model => model.FolderName)
+            @Html.HiddenFor(model => model.Video)
+            @Html.HiddenFor(model => model.Thumbnail)
+            @Html.HiddenFor(model => model.ApprovalStatus)
+
+           
+            @*@if (MediaServer != "")
+            {*@
+                @*<video id="video" src="@Url.Content("http://" + MediaServer +"/Media/" + Model.Video + "")" controls="true"
+                   width="400" height="350" />
+            @MujiStore.Resources.Resource.VietblMediaEditBrowSupport
+            <canvas id="myCanvas" width="352" height="352"
+                    style="border: 1px solid #d3d3d3;"></canvas>*@
+
+                <video id="video" src="@Url.Content("~/Video/" + Model.Video + "")" controls="true"
+            width="400" height="350" style="height:250px;"/>
+                @*<video id="video" src="@Url.Content("http://" + MediaServer +"/Media/" + Model.Video + "")"  controls="true"
+                       width="400" height="350" />*@
+
+                <canvas id="myCanvas" width="352" height="352"
+                        style="border: 1px solid #d3d3d3;">
+                    @MujiStore.Resources.Resource.VietblMediaEditBrowSupport
+                </canvas>
+            @*}
+            else
+            {
+                <div id="player" class="loading" width="352" height="352"
+                     style="border: 1px solid #d3d3d3;"><span class="loading">Server Or File Not found</span></div>
+            }*@
+
+
+
+        </div>
+
+        <div class="col-md-5">
+            @if (Model.Thumbnail != "" && Model.Thumbnail != null)
+            {
+                if (File.Exists(Server.MapPath("~/Video/" + Model.Thumbnail)))
+                {
+                    <img src="@Url.Content("~/Video/" + Model.Thumbnail + "")" style="margin-top:135px; width:200px; height:137px;">
+                }
+                else
+                {
+                    <img src="@Url.Content("~/img/Imagenotfound.jpg")" style="margin-top:246px; width:200px;height:137px;">
+                }
+
+            }
+            else
+            {
+                <img src="@Url.Content("~/img/Thumbnailnotgenerated.jpg")" style="margin-top:246px; width:200px;height:137px;">
+            }
+
+
+        </div>
+    </div>
+    <div class="form-group">
+
+        <div class="col-md-5" style="padding-left:208px;">
+            <input type="submit" id="UpdateVidDetail" style="width: 180px; height:35px; border: solid 1px #ccc; border-radius:5px; background-color:#822433;color:#fff;" value=@MujiStore.Resources.Resource.CntVideoDemoVideoUpdateVideoInfo />
+        </div>
+
+        <div class="col-md-5" style="padding-left:212px;">
+         
+
+        </div>
+
+    </div>
+
+    
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoApprovalStatus, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @if (Model.ApprovalStatus == 3)
+            {
+                @Html.LabelForModel("Approved", new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            }
+            else if (Model.ApprovalStatus == 0)
+            {
+                @Html.LabelForModel("Un Approved", new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            }
+            
+         
+
+        </div>
+    </div>
+  
+   
+    
+</div>
+
+}
+<div>
+    @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+}

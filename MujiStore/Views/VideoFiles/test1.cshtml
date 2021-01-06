@@ -1,0 +1,441 @@
+﻿
+@using VideoSample.Models;
+@{
+    //   Layout = null;
+    var viddtl = ViewData["VideoFileDetails"] as IEnumerable<VideoSample.Models.tblVideoDemo>;
+    var FielDtl = (VideoSample.Models.tblVideoDemo)ViewData["FileDetails"];
+    var headerFolStructure = ViewData["headFolderStructue"] as IEnumerable<VideoSample.Models.Folder>;
+    var childFolderDtl = ViewData["ChildFolderDtl"] as IEnumerable<VideoSample.Models.Folder>;
+    var folidx = 0;
+    //if (ViewData["VFeedback"] != null)
+    //{
+    //    var VFeedback = (VideoSample.Models.VideoFeedBack)ViewData["VFeedback"];
+    //}
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <title>ViewUploadDetailsNew</title>
+    <meta content=" " name="description">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/style-pc.css">
+
+    @*<script type="text/jscript">
+            // Setting "onlyOnImages" to "true" will disable right-clicking only for
+            // images
+            var onlyOnImages = false;
+
+            // Detect the browser we have to handle with
+            var isIE5 = document.all && document.getElementById;  // IE 5 or higher
+            var isMoz = !isIE5 && document.getElementById;  // Mozilla/Firefox
+
+            function cancelContextMenu(e) {
+                // Here you can add additional code that is executed when the context menu
+                // is blocked. For instance you can use the following code to display a
+                // message to the user:
+                //alert("Please respect our copyright. Thank you!");
+
+                if (e && e.stopPropagation)
+                    e.stopPropagation();
+
+                return false;
+            }
+
+            /* This function is fired every time a user clicks the right mouse button to
+            open the browser's context menu. */
+            function onContextMenu(e) {
+                // Depending on the "onlyOnImages" variable the context menu is either
+                // blocked for the complete page or only for
+
+                if (!onlyOnImages
+                    || (isIE5 && event.srcElement.tagName == "IMG")
+                    || (IsMoz && e.target.tagName == "IMG")) {
+                    return cancelContextMenu(e);
+                }
+            }
+
+            if (document.getElementById) {
+                // Register event handler
+                document.oncontextmenu = onContextMenu;
+            }
+
+
+        </script>*@
+
+    <style type="text/css">
+        .maxlen {
+            max-width: 100%
+        }
+
+        textarea {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            padding: 1px;
+        }
+        /*fbphoto{
+            width:120px;
+            height:100px;
+
+        }*/
+        img {
+            vertical-align: top;
+            cursor: default;
+            width: 120px;
+            height: 100px;
+        }
+
+        .column {
+            float: left;
+            width: 10px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .oneline {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        .floatoneline {
+            width: 210px;
+            height: 20px;
+            float: left;
+        }
+
+        .fbroot {
+            border: solid 2px #FFFFFF;
+            background: #f2dbd9;
+            padding: 10px;
+            font-size: 16px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            height: auto;
+            margin-top: -39px;
+        }
+
+        .command {
+            padding: 10px;
+            display: contents;
+            font-family: Verdana;
+            font-size: smaller;
+        }
+    </style>
+
+</head>
+<body>
+
+
+
+    <div id="main-container">
+        <header id="header">
+
+            <section style="font-size:24px;">Sample Video Screen </section>
+
+        </header>
+
+        <div class="folderouter">
+
+            <div class="foldergap" style="color:black">フォルダー</div>
+            @foreach (var item in headerFolStructure)
+            {
+                @*<div class="foldergap"> &gt; </div>*@
+                @*<div class="foldercurrent"> @item.Name</div>*@
+                folidx = folidx + 1;
+                <div class="foldergap"> &raquo; </div>
+                if (headerFolStructure.Count() == folidx)
+                {
+                    <div class="foldercurrent">
+                        @Html.ActionLink(item.Name, "ShowFloderDetails", new { folderID = item.ID }, new { style = "color: #fff;font-weight: bold;" })
+                        @*<a  class="foldercurrent" href=@Url.Action("ShowFloderDetails","VideoFiles", new { folderID = item.ID})>
+                                @item.Name
+                            </a>*@
+
+                    </div>
+                }
+                else
+                {
+                    <div class="folder">
+                        @Html.ActionLink(item.Name, "ShowFloderDetails", new { folderID = item.ID }, new { style = "color: #000; background-color:#e7bebb; font-weight: normal; text-decoration:underline;" })
+                        @*<a class="folder" href=@Url.Action("ShowFloderDetails","VideoFiles", new { folderID = item.ID})>
+                                @item.Name
+                            </a>*@
+
+                    </div>
+                    @*<div class="folder" onClick="movePage(<%= folID(folidx) %>);"><%= folName(folidx) %></div>;*@
+                }
+            }
+
+        </div>
+
+        <div class="mainwrap">
+            <div class="leftpart">
+
+
+
+                @foreach (var item in childFolderDtl)
+                {
+                    <a style="padding:0px;" href=@Url.Action("ShowFloderDetails","VideoFiles", new {folderID = item.ID})>
+                        <div class="movieouter" style="vertical-align:top;">
+
+                            <img src="~/img/folder-close.png" class="moviefolder" />
+
+                            <div class="moviecaption">
+                                <strong style="color: chocolate; font-size:120%;">@item.Name</strong><br><br>
+                                <small style="color: chocolate; font-family: ＭＳ Ｐゴシック, Meiryo UI, MS UI Gothic, Sans-Serif; font-size:large;">フォルダー</small><br><br>
+
+
+                            </div>
+
+                        </div>
+                    </a>
+                }
+                @foreach (var item in viddtl)
+                {
+                    <a style="padding:0px;" href=@Url.Action("ViewUploadDetailsByID","VideoFiles", new {ID=item.VideoId,folderID=item.FoderID})>
+                        <div class="movieouter">
+                            <img src="@Url.Content("~/Video/" + item.Thumbnail + "")" class="moviethumb">
+                            <div class="moviecaption">
+                                <strong style="color: white; font-size:120%;color: chocolate;">@item.Title</strong><br>
+                                <small style="color: white; font-family: ＭＳ Ｐゴシック, Meiryo UI, MS UI Gothic, Sans-Serif;"></small>
+                            </div>
+                            @*<div class="movieproperty">@item.ConDuration</div>*@
+                        </div>
+                    </a>
+                }
+
+
+
+            </div>
+            <div class="rightpart">
+                @if (FielDtl != null)
+                {
+
+                    <h2 id="contenttitle" sstyle="font-weight: 900;">@FielDtl.Title</h2>
+
+                    <div id="contentbody" class="videoarea">
+                        <div id="player" class="loading">
+                            <span class="loading">
+                                <video class="loading" playsinline controls="controls" autoplay="autoplay" controlsList="nodownload" id="myVideoOne">
+                                    <source src="@Url.Content("~/Video/" + FielDtl.Video +"")" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="movieinfo"><h2>@FielDtl.Description </h2></div>
+                    <br />
+                    <div id="admininfo"></div>
+
+                    <h2 style="font-weight: 900;">フィードバック</h2>
+                }
+                else
+                {
+                    <h2 id="contenttitle">（動画未選択）</h2>
+                    <div id="contentbody" class="videoarea">
+                        <div id="player" class="loading"><span class="loading">動画が選択されていません</span></div>
+                    </div>
+                    <div id="movieinfo" style="text-align: center;"></div>
+
+                    <div id="admininfo"></div>
+
+                    <h2 style="font-weight: 900;">フィードバック</h2>
+                }
+
+                @*@using (Html.BeginForm("SaveThumbnailImage", "VideoFiles", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @model VideoSample.Models.Feedback
+
+
+                        if (ViewData["VFeedback"] != null)
+                        {
+                            var VFeedback = (VideoSample.Models.VideoFeedBack)ViewData["VFeedback"];
+
+                            @Html.Hidden("FoderID", VFeedback.FoderID.ToString())
+                            @Html.Hidden("MovieID", VFeedback.VideoId.ToString())
+
+                            @Html.AntiForgeryToken()
+                            <div class="fbouter" id="fbform">
+
+                                <p>
+
+
+                                    <div class="fbnotes">
+                                        @Html.TextAreaFor(model => model.Comments, 10, 1000, new { htmlAttributes = new { @class = "fbnotes textarea" }, @maxlength = "4000" })
+                                        @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
+                                    </div>
+                                    <div>
+                                        "作家名"
+                                        @Html.EditorFor(model => model.WriterName, new { htmlAttributes = new { @class = "fbnotesvid" }, @maxlength = "50" })
+                                        @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
+                                    </div>
+
+                                    <div class="fbbuttons">
+                                        写真の添付 <input type="file" name="file" class="fbnotesfile"> <br />
+                                        <input type="submit" value="投稿">
+                                    </div>
+
+                                </p>
+                            </div>
+                        }
+                    }*@
+                @*<p>
+                        <div class="fbouter">
+                            <input type="hidden" name="mediaid">
+                            <textarea name="notes" class="fbnotes"></textarea>
+                            </br></br>
+                            写真の添付<input type="text" name="ipmask" size="50" value="">
+                            <div class="fbbuttons">
+                                写真の添付 <input type="file" name="file"> <input type="submit" value="投稿">
+                            </div>
+                        </div>
+                    </p>
+                        <div id="feedbacks"></div>*@
+
+
+                <p id="feedback">
+                    @using (Html.BeginForm("SaveThumbnailImage", "VideoFiles", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @model VideoSample.Models.Feedback
+
+
+                        if (ViewData["VFeedback"] != null)
+                        {
+                            var VFeedback = (VideoSample.Models.VideoFeedBack)ViewData["VFeedback"];
+
+
+
+                            @Html.AntiForgeryToken()
+
+                            <div class="fbouter">
+
+
+                                @Html.Hidden("FoderID", VFeedback.FoderID.ToString())
+                                @Html.Hidden("MovieID", VFeedback.VideoId.ToString())
+
+
+                                @Html.TextAreaFor(model => model.Comments, 10, 1000, new { htmlAttributes = new { @class = "fbnotes" }, @maxlength = "4000" })
+                                @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
+                                <br />
+                                <br />
+                                <div class="row">
+                                    <div class="floatoneline">@Html.Label("作家名", new { @style = "display:inline-block;font-weight: bold; padding-left: 15px;" })</div>
+
+                                    <div class="floatoneline">
+                                        @if (@HttpContext.Current.Session["UserName"] == null || @HttpContext.Current.Session["UserName"] == "")
+                                        {
+                                            @Html.EditorFor(model => model.WriterName, new { htmlAttributes = new { @maxlength = "50" } })
+                                        }
+                                        else
+                                        {
+                                            @Html.EditorFor(model => model.WriterName, new { htmlAttributes = new { @maxlength = "50", @Value = @HttpContext.Current.Session["UserName"].ToString(), @disabled = "disabled" } })
+                                        }
+                                        @Html.ValidationMessageFor(model => model.WriterName, "", new { @class = "text-danger" })
+                                    </div>
+
+                                </div>
+
+
+                                <br />
+                                <div class="floatoneline">
+
+                                    @Html.Label("写真の添付", new { @style = "display:contents;font-weight:bold;height:35px;min-width:0%; padding-left: 3px; " })
+                                </div>
+                                <div class="floatoneline">
+                                    @Html.TextBoxFor(m => m.PostedFile, new { type = "file" })
+                                    @Html.ValidationMessageFor(m => m.PostedFile, "", new { @class = "text-danger" })
+                                    <input type="submit" value="投稿" style="width:100px;height:35px;min-width:0%; padding-top: 5px; color: #fff;
+                              background-color: #822433; border-radius: 4px; padding: 6px 12px; border: 1px solid transparent;">
+
+
+                                </div>
+
+                            </div>
+
+                            @*<div class="fbouter">
+                                <div class="form-group">
+                                    @Html.Label("作家名", htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+
+                                        @if (@HttpContext.Current.Session["UserName"] == null || @HttpContext.Current.Session["UserName"] == "")
+                                        {
+                                            @Html.EditorFor(model => model.WriterName, new { htmlAttributes = new { @class = "form-control", @maxlength = "50" } })
+                                        }
+                                        else
+                                        {
+                                            @Html.EditorFor(model => model.WriterName, new { htmlAttributes = new { @class = "form-control", @maxlength = "50", @Value = @HttpContext.Current.Session["UserName"].ToString(), @readonly = "readonly" } })
+                                        }
+
+                                        @Html.ValidationMessageFor(model => model.WriterName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <br />
+                                <div class="form-group">
+                                    @Html.Label("ファイルを選択：", htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                    @Html.TextBoxFor(m => m.PostedFile, new { type = "file", @class = "control-label col-md-2" })
+                                    @Html.ValidationMessageFor(m => m.PostedFile, "", new { @class = "text-danger" })
+
+                                </div>
+                                <br />
+                                <br />
+                                <br />
+                                <div class="form-group">
+                                    <div class="col-md-10">
+                                        <input type="submit" id="btnsubmit" value="投稿" />
+                                    </div>
+                                </div>
+                                </div>*@
+                        }
+
+                        @section Scripts {
+                            @Scripts.Render("~/bundles/jqueryval")
+                        }
+
+                    }
+                </p>
+                @if (ViewData["feedBackDtl"] != null)
+                {
+
+                    var VFeedback = ViewData["feedBackDtl"] as IEnumerable<VideoSample.Models.Feedback>;
+                    foreach (var item in VFeedback)
+                    {
+                        <div id="feedbacks">
+                            <div class="fbroot">
+                                <div class="fbphoto img" style="font-family:Verdana;font-size:smaller;">
+                                    <img src="@Url.Content("~/FeedBack/" + item.FileName + "")" />
+                                </div>
+                                <div class="command">
+                                    @item.Comments
+                                </div>
+
+
+                                <div style="clear: both;"></div>
+                                <div class="fbfooter" style="font-family:Verdana; font-size:smaller;">
+                                    @item.WriterDatetime / @item.WriterName
+
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                }
+
+
+            </div>
+
+
+        </div>
+</body>
+</html>

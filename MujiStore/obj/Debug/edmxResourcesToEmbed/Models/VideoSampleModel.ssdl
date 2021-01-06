@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mujiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblVideoDemo">
+    <Key>
+      <PropertyRef Name="VideoId" />
+    </Key>
+    <Property Name="VideoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="VideoName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Thumbnail" Type="nvarchar" MaxLength="500" />
+    <Property Name="IpAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="DelFlg" Type="bit" />
+    <Property Name="CrDate" Type="smalldatetime" />
+    <Property Name="UdDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityContainer Name="mujiModelStoreContainer">
+    <EntitySet Name="tblVideoDemo" EntityType="Self.tblVideoDemo" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

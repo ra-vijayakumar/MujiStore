@@ -1,0 +1,71 @@
+﻿@model MujiStore.Models.tblMedia
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VietblMediaCreateBrowTitle;
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush;">@MujiStore.Resources.Resource.VietblMediaCreateBrowH2</h2>
+
+
+<style type="text/css">
+    .maxlen {
+        max-width: 100%
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+</style>
+
+@using (Html.BeginForm("Create", "VideoDemo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control maxlen textarea", @maxlength = "500" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description, 10, 1000, new { htmlAttributes = new { @class = "form-control textarea" }, @maxlength = "4000" })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Video, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.PostedFile, new { type = "file", @class = "choosenfile2" })
+                @Html.ValidationMessageFor(m => m.PostedFile, "", new { @class = "text-danger", @style = "display:contents;" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoFolderName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.FolderID, ViewBag.FolderList as SelectList, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value=@MujiStore.Resources.Resource.CommonCreate class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,63 @@
+﻿@model PagedList.PagedList<MujiStore.Models.ViewLogDetails>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieViewLogsIndexBrowTitle;
+}
+<style>
+    .mm-text {
+        color: blue;
+        background-color: white;
+        padding: 0.4em;
+        margin-left: -6px;
+        margin-right: -6px;
+        padding-left: 23px;
+        padding-right: 23px;
+    }
+</style>
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VieViewLogsIndexH2</h2>
+<table class="table" style="background-color:#ffffff; height:100%;">
+    <tr style="background-color:#bf5e6e; color:#ffffff;">
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.VieViewLogsIndexSno)
+
+        </th>
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.VieViewLogsIndexMenuTitle)
+
+        </th>
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.VieViewLogsIndexCount)
+
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr style="background-color:#EEE;">
+            <td>
+                @Html.DisplayFor(modelItem => item.TableID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TableDescription)
+            </td>
+            <td>
+                <a href=@Url.Action(item.MethodName, "ViewLogs")><span class="mm-text">@item.TableCount.ToString()</span></a>
+            </td>
+        </tr>
+
+    }
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page }))
+     </div>
+}

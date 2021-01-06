@@ -1,0 +1,88 @@
+﻿@model MujiStore.Models.tblFormat
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblFormat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequiredBandWidth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequiredBandWidth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DELFG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IPAddress)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

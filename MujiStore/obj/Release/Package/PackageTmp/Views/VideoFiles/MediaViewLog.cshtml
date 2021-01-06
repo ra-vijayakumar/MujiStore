@@ -1,0 +1,70 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MujiStore.Models.tblMediaViewLog>
+@{
+    var FielDtl = (MujiStore.Models.VideoFeedBack)ViewData["VFeedback"];
+   
+}
+
+<link rel="stylesheet" type="text/css" href="/Content/FtpFile-pc2.css">
+
+<h2 style="color:#ec2213; background-color:lavenderblush; width:458px; margin-left:-4px; margin-bottom:15px;">@MujiStore.Resources.Resource.VieMediaViewLogH2</h2>
+
+<h2 style="color:#ec2213; margin-left:8px; background-color:lavenderblush; float:right; margin-top:-58px; height:30px; padding-top:0px;">
+    <p style="margin-left:-3px;margin-top:-5px;">
+        <a style="padding:0px; font-size:19px;" href=@Url.Action("ViewMeidaLogDetailsByID","VideoFiles", new {ID=FielDtl.VideoId,folderID=FielDtl.FolderID})>
+            @MujiStore.Resources.Resource.VieMediaViewLogBackToVideo
+        </a>
+    </p>
+</h2>
+<h2 style="color:black; background-color:#e7bebb; margin-left:-4px; margin-bottom:15px; border-style:solid;border-width:3px;border-color:#fcf8e3;">@FielDtl.VideoTitle</h2>
+<table class="table fixed_header" style="background-color:#ffffff; width:100%; height:100px; margin-bottom:-50px; ">
+    <thead>
+        <tr style="background-color:#bf5e6e; color:#ffffff;">
+            <th class="ID">
+                @Html.DisplayName(MujiStore.Resources.Resource.VieMediaViewLogCRTDT)
+            </th>
+            <th class="Title">
+                @Html.DisplayName(MujiStore.Resources.Resource.VieMediaViewLogStoreIPAddress)
+            </th>
+            <th class="Description1">
+                @Html.DisplayName(MujiStore.Resources.Resource.VieMediaViewLogStoreName)
+            </th>
+            <th class="vid">
+                @Html.DisplayName(MujiStore.Resources.Resource.VieMediaViewLogUserName)
+            </th>
+        </tr>
+    </thead>
+    <tbody style="width:100%">
+        @foreach (var item in Model)
+        {
+            <tr style="background-color:#EEE;">
+                <td class="Title">
+                    @Html.DisplayFor(modelItem => item.CRTDT)
+                </td>
+                <td class="Description">
+                    @Html.DisplayFor(modelItem => item.StoreIPAddress)
+                </td>
+                <td class="vid">
+                    @Html.DisplayFor(modelItem => item.StoreName)
+                </td>
+                <td class="Folder">
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("MediaViewLog",
+             new { MediaID = FielDtl.VideoId, page }))
+
+    </div>
+}

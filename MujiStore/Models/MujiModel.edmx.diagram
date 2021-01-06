@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e4d7091c456548338f70784303153a55" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="MujiModel.tblDeployLog" Width="1.5" PointX="8.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblDeploySchedule" Width="1.5" PointX="13.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblDeployStatu" Width="1.5" PointX="18" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblFeedback" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblFolder" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblFormat" Width="1.5" PointX="15.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblMedia" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblMediaFormatInfo" Width="1.5" PointX="5.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblMediaViewLog" Width="1.5" PointX="5.25" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblRobocopyExitcode" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblStore" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblStoreGroup" Width="1.5" PointX="3.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblStoreGroupFolder" Width="1.5" PointX="6" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblStoreSubnet" Width="1.5" PointX="13" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblStreamServer" Width="1.5" PointX="16" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblStreamServerFormat" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblStreamServerSubnet" Width="1.5" PointX="13" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblSubnet" Width="1.5" PointX="10.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblUser" Width="1.5" PointX="7.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="MujiModel.tblVideoLogReport" Width="1.5" PointX="2.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="MujiModel.FK_tblDeployLog_MediaID" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblDeployLog_Result" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblStreamServer_DeploySchedule" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblDeployStatus_FormatID" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblFeedback_MovieID" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblMedia_tblFolder" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblStoreGroupFolder_tblFolder1" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblMediaFormatInfo_MediaID" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblMediaViewLog_MediaID" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblStore_tblStore" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblStoreSubnet_tblStore" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblStoreGroupFolder_tblFolder" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblStoreSubnet_tblSubnet" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblStreamServer_tblSubnet" ManuallyRouted="false" />
+        <AssociationConnector Association="MujiModel.FK_tblStreamServerSubnet_tblSubnet" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

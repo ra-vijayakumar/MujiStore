@@ -1,0 +1,149 @@
+﻿@model VideoSample.Models.tblFeedback
+
+@{
+    ViewBag.Title = "Feedback Approval";
+}
+
+<h2>Feedback Approval</h2>
+
+@using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Feedback Approval</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.FeedbackID)
+    @Html.HiddenFor(model => model.MovieID)
+    @Html.HiddenFor(model => model.WriterName)
+    @Html.HiddenFor(model => model.Comments)
+    @Html.HiddenFor(model => model.FileName)
+    @Html.HiddenFor(model => model.WriterDatetime)
+    @Html.HiddenFor(model => model.CRTDT)
+    @Html.HiddenFor(model => model.CRTCD)
+    <div class="form-group">
+        @Html.LabelFor(model => model.MediaTitle, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.MediaTitle, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MediaDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.MediaDescription, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MediaFileName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <video id="video" src="@Url.Content("~/Video/" + Model.MediaFileName +"")" controls="true"
+                   width="400" height="350" />
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.MediaFolderName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.MediaFolderName, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Comments, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Comments, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.WriterName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.WriterName, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.WriterDatetime, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.WriterDatetime, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.FileName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @if (Model.FileName != "")
+            {
+                <div class="fbphoto img" style="font-family:Verdana;font-size:smaller;">
+                    <img src="@Url.Content("~/FeedBack/" + Model.FileName + "")" style="width: 200px;height: 150px;" />
+
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DELFG, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.CheckBoxFor(model => model.DELFG, Session["Role"].ToString() != "A" ? new { onclick = "return false" } : (object)new { })
+                @Html.ValidationMessageFor(model => model.DELFG, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.CRTDT, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CRTDT, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CRTDT, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CRTCD, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CRTCD, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CRTCD, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UPDDT, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UPDDT, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UPDDT, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UPDCD, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UPDCD, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.UPDCD, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+
+
+
+
+
+
+
+    @if (Session["Role"].ToString() == "A")
+    {
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+    }
+
+
+    
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

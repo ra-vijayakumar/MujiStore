@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mujiModelStoreContainer" CdmEntityContainer="mujiEntities">
+    <EntitySetMapping Name="tblVideoDemoes">
+      <EntityTypeMapping TypeName="mujiModel.tblVideoDemo">
+        <MappingFragment StoreEntitySet="tblVideoDemo">
+          <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+          <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="CrDate" ColumnName="CrDate" />
+          <ScalarProperty Name="UdDate" ColumnName="UdDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

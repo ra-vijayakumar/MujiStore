@@ -1,0 +1,94 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MujiStore.Models.tblStreamServer>
+@{
+    ViewBag.Title = @MujiStore.Resources.Resource.StreamSreverIndex;
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.StreamSreverIndex1</h2>
+
+<p>
+    @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverCreateNew, "Create")
+</p>
+<table class="table" style="background-color:#ffffff; ">
+    <tr style="background-color:#bf5e6e; color:#ffffff;">
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().SSServer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().IPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().SubNetName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DeployScheduleName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DVCTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DVCFree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DVDTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DVDFree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DELFG)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="background-color:#EEE;">
+            <td>
+                @Html.DisplayFor(modelItem => item.SSServer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubNetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeployScheduleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DVCTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DVCFree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DVDTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DVDFree)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DELFG)
+            </td>
+            <td>
+                @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverEdit, "Edit", new { id = item.StreamServerID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @MujiStore.Resources.Resource.CommonOf @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page }))
+    </div>
+}

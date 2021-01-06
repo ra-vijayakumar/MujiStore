@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MujiStore.Models.tblDeployStatu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DSServer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MediaID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsExists)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserIPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblFormat.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DSServer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MediaID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsExists)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DELFG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRTDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRTCD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDCD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserIPAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblFormat.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DeployStatusID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DeployStatusID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DeployStatusID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Language";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@MujiStore.Resources.Resource.VieLanguageChange</h2>
+
+<ul>
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.VieEnglish, "Change", "Language", new { LanguageAbbrevation = "en" }, null)</li>
+    <br />
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.VieJapanese, "Change", "Language", new { LanguageAbbrevation = "ja" }, null)</li>
+  
+</ul>

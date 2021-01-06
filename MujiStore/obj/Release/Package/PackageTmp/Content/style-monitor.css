@@ -1,0 +1,74 @@
+body		{ background-color: #FFFFFF;
+		  font-size: 12pt; color:#292015;
+		  font-family: Sans-Serif;
+		  line-height: 1.2; padding: 0; margin: 4pt; }
+
+a:link		{ text-decoration: none;
+		  font-weight: bold; color: #6666BB;}
+a:visited	{ text-decoration: none;
+		  font-weight: bold; color: black;}
+a:active {
+    text-decoration: none;
+    font-weight: bold;
+    color: #822433;
+}
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #822433;
+}
+
+h1		{ border-style: none;
+		  padding: 2pt 4pt; margin: 2pt 0pt;
+		  font-size: 18pt; color: #FFFFFF; font-weight: bold; 
+		  background-color: #7F0019; }
+
+h2		{ border-style: solid; border-width: 1.5pt; border-color: #7F0019;
+		  padding: 2pt 4pt; margin: 2pt 0pt;
+		  font-size: 15pt; color: #000022; font-weight: bold;
+		  background-color: #FFEEAA; }
+
+p		{ padding: 2pt 0pt 2pt 4pt; margin: 0; }
+
+.enhance	{ font-weight: bold; color: #EE2211; }
+.danger		{ font-weight: bold; color: #EE2211; }
+.safe		{ font-weight: bold; color: #6666BB; }
+
+div.header	{  }
+div.mainwrap	{ float: left; margin: 0; padding: 0; width: 100%; }
+div.leftpart	{ margin: 1pt 0pt; padding: 0; float: left; }
+div.rightpart	{ margin: 1pt 0pt; padding: 0; float: right; width: 880px; }
+div.footer	{ clear: both; }
+
+div.subfolder	{ margin: 0 0 0 20pt; }
+div.folder	{ }
+
+div.loading	{ width: 640px; height: 360px; background-color: #000000;
+		  text-align: center; color: #FFFFFF; margin: 0; padding: 0; }
+span.loading	{ line-height: 360px; vertical-align: middle; }
+
+img.folder	{ width: 18pt; height:18pt; margin-right: 5pt; }
+span.link	{ cursor: pointer; }
+span.fakelink	{ text-decoration: none; cursor: pointer; 
+		  font-weight: bold; color: #6666BB; }
+
+div.videoarea	{ width: 100%; border: none; }
+
+div.debuginfo	{ width: 640px; height: 400px; position: absolute; 
+		  top: 50pt; left: 50pt; background: #FFFFFF;
+		  border: solid 2px #7F0019; display: block; 
+		  padding: 2pt; display: none; }
+
+table		{ border-collapse: collapse; border-spacing: 0; }
+th		{ border: 1px solid #7F0019; background-color: #FFEEAA; 
+		  vertical-align: top; text-align: center; padding: 3px;
+		  color: #000022; font-weight: bold; }
+td		{ border: 1px solid #7F0019; background-color: #FFFFFF; 
+		  vertical-align: top; text-align: left; padding: 3px;
+		  color: #000022; font-weight: normal; }
+td.inprogress	{ background-color: #77EE77; }
+td.error	{ background-color: #EE7777; }
+td.complete	{ background-color: #CCEEEE; }
+td.closed	{ background-color: #777777; }
+td.normal	{ }
+

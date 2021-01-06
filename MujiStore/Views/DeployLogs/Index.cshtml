@@ -1,0 +1,105 @@
+﻿@model IEnumerable<MujiStore.Models.tblDeployLog>
+
+@{
+    ViewBag.Title = @MujiStore.Resources.Resource.DeployLog;
+}
+
+<h2>@MujiStore.Resources.Resource.DeployLogH2</h2>
+
+<p>
+    @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverCreateNew, "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Server)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormatID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ElapsedTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CopiedBytes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblMedia.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblRobocopyExitcode.Content)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Server)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormatID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ElapsedTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CopiedBytes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DELFG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRTDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRTCD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDCD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IPAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblMedia.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblRobocopyExitcode.Content)
+        </td>
+        <td>
+            @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverFormatEdit, "Edit", new { id=item.DeployLogID }) |
+            @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverFormatDetails, "Details", new { id=item.DeployLogID }) |
+            @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverFormatDelete, "Delete", new { id=item.DeployLogID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@MujiStore.Resources.Resource.LayoutTitle </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script type="text/javascript" >
+        //function popup(pageURL, title, popupWidth, popupHeight) {
+        //    window.moveTo(0, 0);
+
+        //    var targetPop = window.open(pageURL, title, 'status=no, tmenubar=no, scrollbars=yes, maximize=yes, resizable=no, width=' + screen.availWidth + ',height=' + screen.availHeight, "_blank");
+        //    targetPop.moveTo(0, 0);
+        //    targetPop.focus();
+        //}
+       
+        
+    </script>
+</head>
+<body>
+    <style>
+
+        .footer {
+            background-color: #822433;
+            text-align: center;
+            text-decoration-color: white;
+            min-height: 25px;
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            color: white;
+            bottom: 0;
+        }
+
+        .navbar {
+            background-color: #822433;
+            border-color: black;
+        }
+
+            .navbar a {
+                background-color: transparent;
+            }
+
+            .navbar li:hover,
+            .navbar li:focus-within a {
+                background-color: #650a0a;
+                outline: none;
+            }
+
+        .displayflex {
+        }
+
+        .size {
+            margin-left: 84px;
+        }
+
+        .navbar-inverse {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        li {
+            color: red;
+            /*border-right: 0.8px solid #4f3207;*/
+            list-style: none
+        }
+
+        #nav ul {
+            display: none;
+        }
+
+        #nav li:hover > ul {
+            display: block;
+            float: left;
+        }
+
+        .mgt {
+            margin-left: 0px;
+            background-color: white;
+            border-radius: 0px;
+            padding: 0px;
+        }
+
+        .nav ul {
+            display: none;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .navbar-nav > li > ul > a {
+            display: block;
+            width: 170px;
+            border-radius: 0px;
+            border: 0.5px solid white;
+            background-color: #650a0a;
+        }
+
+        .navbar li ul :hover {
+            background-color: #860e23;
+            color: white;
+            text-decoration: none;
+            border: 1px solid black;
+        }
+    </style>
+    <div id="nav_bar" class="navbar  navbar-fixed-top " style="height:52px">
+        <div class="container" style="width:88%;margin-left:10px;">
+            <div class="navbar-header ">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar" style="background-color:#fff;"></span>
+                    <span class="icon-bar" style="background-color:#fff;"></span>
+                    <span class="icon-bar" style="background-color:#fff;"></span>
+                </button>
+
+
+                @*@Html.ActionLink("All Video", "Index", "VideoFiles/ViewUploadDetails", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse size">
+                <div>
+                    <ul class="nav navbar-nav  displayflex" id="nav">
+
+
+                        <li>@Html.ActionLink(MujiStore.Resources.Resource.VideoAll, "Index", "VideoFiles/ViewUploadDetails")</li>
+                        @*<li>@Html.ActionLink(MujiStore.Resources.Resource.Language, "Index", "Language")</li>*@
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (HttpContext.Current.Session["Role"] != null && HttpContext.Current.Session["Role"] != "")
+                            {
+
+                                if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 4 &&
+                                     Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 7) ||
+                                     (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 20 &&
+                                     Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 23)
+                                     )
+                                {
+                                    <li class="hovnr">
+                                        <a href="#">@MujiStore.Resources.Resource.VideoMgt</a>
+                                        <ul class="mgt" st>@Html.ActionLink(@MujiStore.Resources.Resource.VideoChangeRequest, "Index", "VideoDemo")</ul>
+                                    </li>
+
+                                }
+                                if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 8 &&
+                                     Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 11) ||
+                                     (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 24 &&
+                                     Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 27)
+                                     )
+                                {
+                                    <li class="hovnr">
+                                        <a href="#">@MujiStore.Resources.Resource.VideoMgt</a>
+                                        <ul class="mgt" st>@Html.ActionLink(@MujiStore.Resources.Resource.VideoChangeApproval, "Index", "MediaApproval")</ul>
+                                        <ul class="mgt" style="margin-top:28px">@Html.ActionLink(@MujiStore.Resources.Resource.VideoDeployStatusUpdate, "Index", "VideoDeployStatus")</ul>
+                                    </li>
+
+                                }
+                                if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 12 &&
+                                     Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 15) ||
+                                     (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 28 &&
+                                     Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 31)
+                                     )
+                                {
+                                    <li class="hovnr">
+                                        <a href="#">@MujiStore.Resources.Resource.VideoMgt</a>
+                                        <ul class="mgt" st>@Html.ActionLink(@MujiStore.Resources.Resource.VideoChangeRequest, "Index", "VideoDemo")</ul>
+                                        <ul class="mgt" style="margin-top:28px">@Html.ActionLink(@MujiStore.Resources.Resource.VideoChangeApproval, "Index", "MediaApproval")</ul>
+                                        <ul class="mgt" style="margin-top:56px">@Html.ActionLink(@MujiStore.Resources.Resource.VideoDeployStatusUpdate, "Index", "VideoDeployStatus")</ul>
+                                    </li>
+
+                                }
+                                if (Convert.ToInt16(HttpContext.Current.Session["Role"]) == 1 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 3 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 5 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 17 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 19 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 21 ||
+                                (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 7 &&
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 15) ||
+                                (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 23 &&
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 31)
+                                )
+                                {
+                                    <li>@Html.ActionLink(MujiStore.Resources.Resource.FeedbackMgt, "Index", "Feedbacks")</li>
+                                }
+                                if (Convert.ToInt16(HttpContext.Current.Session["Role"]) == 2 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 3 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 6 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 7 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 10 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 11 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 14 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 15 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 18 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 19 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 22 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 23 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 26 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 27 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 30 ||
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) == 31)
+                                {
+                                    <li class="hovnr">
+                                        <a href="#">@MujiStore.Resources.Resource.MenuAdministration</a>
+                                        <ul class="mgt" st>@Html.ActionLink(MujiStore.Resources.Resource.MenuAdministration, "Search", "TroubleShoot")</ul>
+                                        <ul class="mgt" style="margin-top:28px">@Html.ActionLink(MujiStore.Resources.Resource.Deliverystatusreference, "Index", "DeployStat")</ul>
+                                        <ul class="mgt" style="margin-top:56px">@Html.ActionLink(MujiStore.Resources.Resource.Estimateddeliverytimereference, "ViewExpectedDelTime", "DeployStat")</ul>
+                                        <ul class="mgt" style="margin-top:84px">@Html.ActionLink(MujiStore.Resources.Resource.InsufficientlyRegistered, "ViewInsufficientlyRegistered", "DeployStat")</ul>
+                                    </li>
+                                }
+
+                                if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 16 &&
+                                Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 31)
+                                )
+                                {
+
+
+                                    <li>@Html.ActionLink(MujiStore.Resources.Resource.UserMgt, "Index", "User")</li>
+
+                                    <li>@Html.ActionLink(MujiStore.Resources.Resource.FolderMgt, "Index", "Folders")</li>
+
+                                    <li class="hovnr">
+                                        <a href="#">@MujiStore.Resources.Resource.MenuStore</a>
+                                        <ul class="mgt" st>@Html.ActionLink(MujiStore.Resources.Resource.StoreMgt, "Index", "StoreMst")</ul>
+                                        <ul class="mgt" style="margin-top:28px">@Html.ActionLink(MujiStore.Resources.Resource.StoreGroupMgt, "Index", "StoreGroups")</ul>
+                                        <ul class="mgt" style="margin-top:56px">@Html.ActionLink(MujiStore.Resources.Resource.StoreGroupFolderMgt, "Index", "StoreGroupFolders")</ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">@MujiStore.Resources.Resource.MenuSubnet</a>
+                                        <ul class="mgt">@Html.ActionLink(MujiStore.Resources.Resource.SubnetMgt, "Index", "Subnets")</ul>
+                                        <ul class="mgt" style="margin-top:28px">@Html.ActionLink(MujiStore.Resources.Resource.StoreSubnetMgt, "Index", "StoreSubnets")</ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">@MujiStore.Resources.Resource.MenuStream</a>
+                                        <ul class="mgt">@Html.ActionLink(MujiStore.Resources.Resource.StreamServerMgt, "Index", "StreamServers")</ul>
+                                        <ul class="mgt" style="margin-top:28px">@Html.ActionLink(MujiStore.Resources.Resource.StreamServerSubnetMgt, "Index", "StreamServerSubnets")</ul>
+                                    </li>
+
+
+
+                                    <li>@Html.ActionLink(MujiStore.Resources.Resource.FormatMgt, "Index", "Formats")</li>
+
+
+                                    <li>
+                                        <a href="#">@MujiStore.Resources.Resource.BelongingSubnetSelect1</a>
+                                        <ul class="mgt">@Html.ActionLink(@MujiStore.Resources.Resource.DeployScheduleMgt, "Index", "DeploySchedules")</ul>
+                                        <ul class="mgt" style="margin-top:28px">@Html.ActionLink(@MujiStore.Resources.Resource.RoboCopyExistsCode, "Index", "RobocopyExitcodes")</ul>
+
+                                    </li>
+
+                                    <li>@Html.ActionLink(MujiStore.Resources.Resource.ViewLogs, "Index", "ViewLogs")</li>
+                                }
+
+
+                            }
+
+                        }
+
+                    </ul>
+                </div>
+                <div style=" margin-right:-585px;  float:right ">
+                    
+                        <img src="~/img/user.png" style="width:4%; height:auto; margin-top:13px; float:left" />
+                    
+
+
+
+                            <ul class="nav navbar-nav  " id="nav" style="  ">
+                                <li>
+                                    @if (HttpContext.Current.Session["UserName"] != null && HttpContext.Current.Session["UserName"] != "")
+                                    {
+                                        @Html.ActionLink(@HttpContext.Current.Session["StoreUserName"].ToString(), "SignOut", "Login")
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink(MujiStore.Resources.Resource.Login, "Index", "Login")
+
+                                    }
+
+
+                                    <ul class="mgt">@Html.ActionLink(MujiStore.Resources.Resource.Language, "Index", "Language")</ul>
+
+
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                    <ul class="mgt" style="margin-top:28px"> @Html.ActionLink(MujiStore.Resources.Resource.ChangePassword, "ChangePassword", "Login")</ul>
+
+
+                                    }
+
+                                </li>
+
+                            </ul>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="container body-content">
+        @if (TempData["ErrMsg"] != null)
+        {
+            <div class="alert alert-dismissible alert-warning">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @TempData["ErrMsg"].ToString()
+            </div>
+        }
+        @if (TempData["SuccMsg"] != null)
+        {
+            <div class="alert alert-dismissible alert-success">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                @TempData["SuccMsg"].ToString()
+            </div>
+        }
+        @RenderBody()
+        <hr /><div class="footer">
+                  <div style="visibility:hidden">
+                     IP Address : @HttpContext.Current.Session["IPAddress"].ToString() ,  Subnet ID : @HttpContext.Current.Session["SubnetID"].ToString()
+                  </div>
+                  <footer>
+
+                      
+                      <p style="font-weight:900; font: 15px arial, sans-serif;">@MujiStore.Resources.Resource.FooterText1 @DateTime.Now.Year @MujiStore.Resources.Resource.FooterText2</p>
+               
+                  </footer>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

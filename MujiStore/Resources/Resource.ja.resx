@@ -1,0 +1,2430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>パスワードを変更する</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="CntErrorBadRequestDescription" xml:space="preserve">
+    <value>構文が正しくないため、要求を実行できません。</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorBadRequestMessage" xml:space="preserve">
+    <value>要求の形式が正しくありません</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorDescription" xml:space="preserve">
+    <value>ウェブサイトで予期しないエラーが発生しました。 ウェブサイト管理者に通知されました。</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorForbiddenDescription" xml:space="preserve">
+    <value>禁止：このサーバーの[ディレクトリ]にアクセスする権限がありません。</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorForbiddenMessage" xml:space="preserve">
+    <value>403禁止</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorMessage" xml:space="preserve">
+    <value>エラーが発生しました</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorNotFoundDescription" xml:space="preserve">
+    <value>URLのスペルが間違っているか、お探しのページはご利用いただけません。</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorNotFoundMessage" xml:space="preserve">
+    <value>申し訳ありませんが、リクエストされたページが見つかりません。</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorServiceUnavailableDescription" xml:space="preserve">
+    <value>サーバーは現在、サーバーの一時的な過負荷状態またはメンテナンスのため、リクエストを処理できません。ご迷惑をおかけして申し訳ございません。</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorServiceUnavailableMessage" xml:space="preserve">
+    <value>サービスは利用できません</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorURLTooLongDescription" xml:space="preserve">
+    <value>リクエストされたURLは大きすぎるため、リクエストを処理できません。</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorURLTooLongMessage" xml:space="preserve">
+    <value>URLが長すぎる。</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntFoldersCreateErrMsg" xml:space="preserve">
+    <value>フォルダを作成できません。 フォルダ名は既に存在している。</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersCreateSuccMsg" xml:space="preserve">
+    <value>フォルダが正常に作成されました。</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersEditErrMsg1" xml:space="preserve">
+    <value>フォルダを更新できません。 フォルダ名は既に存在している。</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersEditErrMsg2" xml:space="preserve">
+    <value>フォルダを更新できません。 逆のフォルダと親フォルダが既に存在している。</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersEditErrMsg3" xml:space="preserve">
+    <value>フォルダを更新できません。</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersEditSuccMsg1" xml:space="preserve">
+    <value>フォルダが正常に更新されました。</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntLoginChangePasswordErrMsg1" xml:space="preserve">
+    <value>パスワードと古いパスワードが一致しません。</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginChangePasswordErrMsg2" xml:space="preserve">
+    <value>新パスワードと再入力パスワードが一致しません。</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginChangePasswordErrMsg3" xml:space="preserve">
+    <value>パスワードの変更を更新できません。</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginChangePasswordErrSuccMsg" xml:space="preserve">
+    <value>パスワードは正常に変更されました。</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginSignInErrMsg" xml:space="preserve">
+    <value>ログインに失敗しました。</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginUnknown" xml:space="preserve">
+    <value>不明</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersCreateErrMsg1" xml:space="preserve">
+    <value>ストアグループフォルダーを作成できません。</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersCreateErrMsg2" xml:space="preserve">
+    <value>ストアグループフォルダーを作成できません。一意キー違反があります。</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersCreateErrMsg3" xml:space="preserve">
+    <value>ストアグループフォルダーを作成できません。</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersCreateSuccMsg" xml:space="preserve">
+    <value>ストアグループフォルダーが正常に作成されました。</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersEditErrMsg1" xml:space="preserve">
+    <value>ストアグループフォルダーを更新できません。</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersEditErrMsg2" xml:space="preserve">
+    <value>ストアグループフォルダーを更新できません。 一意のキー違反があります。</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersEditErrMsg3" xml:space="preserve">
+    <value>ストアグループフォルダーを更新できません。</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersEditSuccMsg" xml:space="preserve">
+    <value>ストアグループフォルダーが正常に更新されました。</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupsCreateErrMsg1" xml:space="preserve">
+    <value>ストアグループを作成できません。</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsCreateErrMsg2" xml:space="preserve">
+    <value>ストアグループを作成できません。一意のキー違反。</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsCreateErrMsg3" xml:space="preserve">
+    <value>ストアグループを作成できません。</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsCreateSuccMsg" xml:space="preserve">
+    <value>ストアグループが正常に作成されました。</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsEditErrMsg1" xml:space="preserve">
+    <value>ストアグループを更新できません。</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsEditErrMsg2" xml:space="preserve">
+    <value>ストアグループを更新できません。一意のキー違反。</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsEditErrMsg3" xml:space="preserve">
+    <value>ストアグループを更新できません。</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsEditSuccMsg" xml:space="preserve">
+    <value>ストアグループが正常に更新されました。</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreMstCreateErrMsg1" xml:space="preserve">
+    <value>ストアを作成できません。ストア名は既に存在している。</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstCreateErrMsg2" xml:space="preserve">
+    <value>ストアを作成できません。</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstCreateErrMsg3" xml:space="preserve">
+    <value>ストアを作成できません。一意のキー違反。</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstCreateSuccMsg" xml:space="preserve">
+    <value>ストアが正常に作成されました。</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstEditErrMsg1" xml:space="preserve">
+    <value>ストアを作成できません。ストア名は既に存在している。</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstEditErrMsg2" xml:space="preserve">
+    <value>ストアを更新できません。</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstEditErrMsg3" xml:space="preserve">
+    <value>ストアを更新できません。一意のキー違反。</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstEditSuccMsg" xml:space="preserve">
+    <value>ストアが正常に更新されました。</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreSubnetsCreateErrMsg1" xml:space="preserve">
+    <value>ストアサブネットを作成できません。既に存在している。</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsCreateErrMsg2" xml:space="preserve">
+    <value>ストアサブネットを作成できません。</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsCreateErrMsg3" xml:space="preserve">
+    <value>ストアサブネットを作成できません。一意のキー違反。</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsCreateSuccMsg" xml:space="preserve">
+    <value>ストアサブネットが正常に作成されました。</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsEditErrMsg1" xml:space="preserve">
+    <value>ストアサブネットを更新できません。既に存在している。</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsEditErrMsg2" xml:space="preserve">
+    <value>ストアサブネットを更新できません。</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsEditErrMsg3" xml:space="preserve">
+    <value>ストアサブネットを更新できません。一意のキー違反。</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsEditSuccMsg" xml:space="preserve">
+    <value>ストアサブネットが正常に更新されました。</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntSubnetsCreateErrMsg1" xml:space="preserve">
+    <value>サブネットIPを作成できません。既に存在している。</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsCreateErrMsg2" xml:space="preserve">
+    <value>サブネットを作成できません。</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsCreateErrMsg3" xml:space="preserve">
+    <value>サブネットを作成できません。一意のキー違反。</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsCreateSuccMsg" xml:space="preserve">
+    <value>サブネットが正常に作成されました。</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsEditErrMsg1" xml:space="preserve">
+    <value>サブネットIPを更新できません。既に存在している。</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsEditErrMsg2" xml:space="preserve">
+    <value>サブネットを更新できません。</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsEditErrMsg3" xml:space="preserve">
+    <value>サブネットを更新できません。一意のキー違反。</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsEditSuccMsg" xml:space="preserve">
+    <value>サブネットが正常に更新されました。</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntUserCreateErrMsg1" xml:space="preserve">
+    <value>パスワードと確認パスワードが一致しません。</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserCreateErrMsg2" xml:space="preserve">
+    <value>ユーザーが作成できません。</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserCreateErrMsg3" xml:space="preserve">
+    <value>ユーザーを作成できません。ユーザー名は既に存在している。</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserCreateSuccMsg" xml:space="preserve">
+    <value>ユーザーが正常に作成されました。</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserEditErrMsg1" xml:space="preserve">
+    <value>パスワードとパスワードの確認が一致しません。</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserEditErrMsg2" xml:space="preserve">
+    <value>ユーザーは更新できません。</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserEditErrMsg3" xml:space="preserve">
+    <value>更新できません。ユーザー名は既に存在している。</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserEditSuccMsg" xml:space="preserve">
+    <value>ユーザーが更新されました。</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntVideoDemoCreate1SuccMsg" xml:space="preserve">
+    <value>動画が正常に作成されました。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateErrMsg" xml:space="preserve">
+    <value>動画を作成できません。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateFtpvideoErrMsg1" xml:space="preserve">
+    <value>動画ファイルのタイトルが見つかりません。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateFtpvideoErrMsg2" xml:space="preserve">
+    <value>動画を作成できません。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateFtpvideoSuccMsg" xml:space="preserve">
+    <value>動画変換処理中です!!! 更新変換のステータスボタンが表示されるのを待つか、他の機能を使用するか、ブラウザを閉じます。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateSuccMsg" xml:space="preserve">
+    <value>動画変換処理中です!!! 更新変換のステータスボタンが表示されるのを待つか、他の機能を使用するか、ブラウザを閉じます。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveSaveVideoDetailsErrMsg" xml:space="preserve">
+    <value>動画を更新できません。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveSaveVideoDetailsSuccMsg" xml:space="preserve">
+    <value>動画が正常に更新されました。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveThumbnailImageErrMsg" xml:space="preserve">
+    <value>動画を更新できません。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveThumbnailImageSuccMsg" xml:space="preserve">
+    <value>動画が正常に更新されました。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoUpdateVCSErrMsg" xml:space="preserve">
+    <value>ストリーミングステータスを更新できません。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoUpdateVCSSuccMsg" xml:space="preserve">
+    <value>ストリーミング変換ステータスが更新されました。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoApprovalStatus" xml:space="preserve">
+    <value>承認状況</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoCaption" xml:space="preserve">
+    <value>動画</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoDelFlg" xml:space="preserve">
+    <value>デルフラグ</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoDescription" xml:space="preserve">
+    <value>説明文</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoFolderName" xml:space="preserve">
+    <value>フォルダ名</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoID" xml:space="preserve">
+    <value>動画ID</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoPhysicalDel" xml:space="preserve">
+    <value>物理ファイルの削除</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoThambnail" xml:space="preserve">
+    <value>サムネイル</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoTitle" xml:space="preserve">
+    <value>題名</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoUpdateVideoInfo" xml:space="preserve">
+    <value>動画の詳細のみを更新する。</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CommonApproval" xml:space="preserve">
+    <value>承認</value>
+  </data>
+  <data name="CommonBack" xml:space="preserve">
+    <value>戻る</value>
+  </data>
+  <data name="CommonBackToList" xml:space="preserve">
+    <value>一覧に戻る</value>
+  </data>
+  <data name="CommonBackToViewLogs" xml:space="preserve">
+    <value>ログの表示に戻る</value>
+    <comment>Views\ViewLogs\FeedbackMgmtViewLog</comment>
+  </data>
+  <data name="CommonCreate" xml:space="preserve">
+    <value>作成する</value>
+  </data>
+  <data name="CommonCRTCD" xml:space="preserve">
+    <value>作成者</value>
+  </data>
+  <data name="CommonCRTDT" xml:space="preserve">
+    <value>作成日</value>
+  </data>
+  <data name="CommonDataAnna0of1" xml:space="preserve">
+    <value>{0}の最大文字数は{1}です。</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="CommonDelete" xml:space="preserve">
+    <value>削除する</value>
+  </data>
+  <data name="CommonDELFG" xml:space="preserve">
+    <value>DELフラグ</value>
+  </data>
+  <data name="CommonDelFlg" xml:space="preserve">
+    <value>デリートフラグ</value>
+  </data>
+  <data name="CommonEdit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="CommonFileName" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="CommonFolderName" xml:space="preserve">
+    <value>フォルダ名</value>
+  </data>
+  <data name="CommonHome" xml:space="preserve">
+    <value>ホーム</value>
+  </data>
+  <data name="CommonIpAddress" xml:space="preserve">
+    <value>IPアドレス</value>
+  </data>
+  <data name="CommonOf" xml:space="preserve">
+    <value>/</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="CommonPage" xml:space="preserve">
+    <value>ページ</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="CommonSave" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="CommonSearch" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="CommonSubmit" xml:space="preserve">
+    <value>送信</value>
+  </data>
+  <data name="CommonUPDCD" xml:space="preserve">
+    <value>更新者</value>
+  </data>
+  <data name="CommonUPDDT" xml:space="preserve">
+    <value>更新日</value>
+  </data>
+  <data name="CommonVideoTitle" xml:space="preserve">
+    <value>動画タイトル</value>
+  </data>
+  <data name="CustomException1" xml:space="preserve">
+    <value>多少の誤差があります。</value>
+    <comment>BLL\CustomExceptionHandling</comment>
+  </data>
+  <data name="CustomException2" xml:space="preserve">
+    <value>システムエラー</value>
+    <comment>BLL\CustomExceptionHandling</comment>
+  </data>
+  <data name="CustomException3" xml:space="preserve">
+    <value>管理者に連絡してください</value>
+    <comment>BLL\CustomExceptionHandling</comment>
+  </data>
+  <data name="CustomExtnDefaultErrorMessage" xml:space="preserve">
+    <value>次のファイルタイプのみが許可されています:{0}</value>
+    <comment>BLL\RegularExp</comment>
+  </data>
+  <data name="Error403Msg" xml:space="preserve">
+    <value>この操作を実行するための十分な権限がありません。</value>
+    <comment>BLL\AuthorizeIPAddressAttribute</comment>
+  </data>
+  <data name="FeedbackMgt" xml:space="preserve">
+    <value>フィードバック管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="FolderMgt" xml:space="preserve">
+    <value>フォルダ管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="FooterText1" xml:space="preserve">
+    <value>動画配信システム著作権(C)</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="FooterText2" xml:space="preserve">
+    <value>日本NCR ヘルプデスク</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>言語</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="LayoutTitle" xml:space="preserve">
+    <value>動画配信</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="ModFeedbackComments" xml:space="preserve">
+    <value>コメント</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackDataAnnaValida1" xml:space="preserve">
+    <value>作家名を入力してください。</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackDataAnnaValida2" xml:space="preserve">
+    <value>コメントを入力してください。</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackDataAnnaValida3" xml:space="preserve">
+    <value>画像ファイルのみが許可されています。</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackFileName" xml:space="preserve">
+    <value>ファイル名</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMediaDescription" xml:space="preserve">
+    <value>メディアの説明</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMediaFileName" xml:space="preserve">
+    <value>ファイル名</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMediaFolderName" xml:space="preserve">
+    <value>フォルダ名</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMediaTitle" xml:space="preserve">
+    <value>メディアタイトル</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMovieID" xml:space="preserve">
+    <value>映画ID</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackWriterDatetime" xml:space="preserve">
+    <value>日時</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackWriterName" xml:space="preserve">
+    <value>作家名</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModtblFolderName" xml:space="preserve">
+    <value>フォルダ名</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentFolderName" xml:space="preserve">
+    <value>親フォルダ名</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentID" xml:space="preserve">
+    <value>親フォルダ</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentIDDataAnnaValida1" xml:space="preserve">
+    <value>親IDが必要です</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentIDDataAnnaValida2" xml:space="preserve">
+    <value>有効な親IDを入力してください</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentIDDataAnnaValida3" xml:space="preserve">
+    <value>フォルダ名を入力してください</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentIDDataAnnaValida4" xml:space="preserve">
+    <value>{0}の最大文字数は{1}です。</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida1" xml:space="preserve">
+    <value>題名を入力してください。</value>
+    <comment>Models\tblMedia</comment>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida2" xml:space="preserve">
+    <value>{0}の最大文字数は{1}です。</value>
+    <comment>Models\tblMedia</comment>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida3" xml:space="preserve">
+    <value>mp4、3g2、3gp、avi、flv、h264、m4v、mkv、mov、mpg、mpeg、rm、swf、vob、wmv、mp3、mp2ファイルを選択してください</value>
+    <comment>Models\tblMedia</comment>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida4" xml:space="preserve">
+    <value>mp4、3g2、3gp、avi、flv、h264、m4v、mkv、mov、mpg、mpeg、rm、swf、vob、wmv、mp3、mp2ファイルのみが許可されます</value>
+    <comment>Models\tblMedia</comment>
+  </data>
+  <data name="ModtblStoreAddressLine1" xml:space="preserve">
+    <value>住所1</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreAddressLine2" xml:space="preserve">
+    <value>住所2</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreCity" xml:space="preserve">
+    <value>市</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreCountry" xml:space="preserve">
+    <value>国</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreGroupFolderFolderID" xml:space="preserve">
+    <value>フォルダ</value>
+    <comment>Models\tblStoreGroupFolder</comment>
+  </data>
+  <data name="ModtblStoreGroupFolderStoreGroupID" xml:space="preserve">
+    <value>ストアグループ</value>
+    <comment>Models\tblStoreGroupFolder</comment>
+  </data>
+  <data name="ModtblStoreGroupName" xml:space="preserve">
+    <value>ストアグループ名</value>
+    <comment>Models\tblStoreGroup</comment>
+  </data>
+  <data name="ModtblStoreState" xml:space="preserve">
+    <value>道府県</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreGroupID" xml:space="preserve">
+    <value>ストアグループ</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreGroupName" xml:space="preserve">
+    <value>ストアグループ名</value>
+    <comment>Views\StoreMst\Edit</comment>
+  </data>
+  <data name="ModtblStoreStoreIpAddress" xml:space="preserve">
+    <value>ストアIPアドレス</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreIPAddressDataAnnaValida1" xml:space="preserve">
+    <value>有効なIPアドレスを入力してください</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreName" xml:space="preserve">
+    <value>ストア名</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreNameDataAnnaValida1" xml:space="preserve">
+    <value>ストア名を入力してください</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreSubnetStoreDataAnnaValida1" xml:space="preserve">
+    <value>ストアを選択してください</value>
+    <comment>Models\tblStoreSubnet</comment>
+  </data>
+  <data name="ModtblStoreSubnetSubnetDataAnnaValida1" xml:space="preserve">
+    <value>サブネットを選択してください</value>
+    <comment>Models\tblStoreSubnet</comment>
+  </data>
+  <data name="ModtblStoreSubnetSubnetStore" xml:space="preserve">
+    <value>ストア</value>
+    <comment>Models\tblStoreSubnet</comment>
+  </data>
+  <data name="ModtblStoreSubnetSubnetSubnet" xml:space="preserve">
+    <value>サブネット</value>
+    <comment>Models\tblStoreSubnet</comment>
+  </data>
+  <data name="ModtblStoreZip" xml:space="preserve">
+    <value>郵便番号</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblSubnetLANBandW" xml:space="preserve">
+    <value>ランド帯域幅</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetLANBandWDataAnnaValida1" xml:space="preserve">
+    <value>ランド帯域幅を入力してください</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetLANBandWDataAnnaValida2" xml:space="preserve">
+    <value>ランド帯域幅は1000から50000の間でなければなりません</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSNIPAddres" xml:space="preserve">
+    <value>サブネットIPアドレス</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSNIPAddressDataAnnaValida1" xml:space="preserve">
+    <value>IPアドレスを入力してください</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSNIPAddressDataAnnaValida2" xml:space="preserve">
+    <value>有効なIPアドレスを入力してください</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSubMask" xml:space="preserve">
+    <value>サブネットマスク</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSubMaskDataAnnaValida1" xml:space="preserve">
+    <value>サブネットマスクを入力してください</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSubMaskDataAnnaValida2" xml:space="preserve">
+    <value>有効なサブネットマスクを入力してください</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetWANBandW" xml:space="preserve">
+    <value>WAN帯域幅</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetWANBandWDataAnnaValida1" xml:space="preserve">
+    <value>WAN帯域幅を入力してください</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetWANBandWDataAnnaValida2" xml:space="preserve">
+    <value>WAN帯域幅は1000から50000の間でなければなりません</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblUserConfirmNewPassword" xml:space="preserve">
+    <value>新しいパスワード（確認）</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserConfirmPasswordDataAnnaValida1" xml:space="preserve">
+    <value>再入力パスワードを入力してください</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserNewPassword" xml:space="preserve">
+    <value>新しいパスワード</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserNewPasswordDataAnnaValida1" xml:space="preserve">
+    <value>新しいパスワードを入力してください</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserOldPassword" xml:space="preserve">
+    <value>古いパスワード</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserOldPasswordDataAnnaValida1" xml:space="preserve">
+    <value>古いパスワードを入力してください</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserPassword" xml:space="preserve">
+    <value>パスワード</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserPasswordDataAnnaValida1" xml:space="preserve">
+    <value>パスワードを入力してください</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserEmail" xml:space="preserve">
+    <value>ユーザーのメール</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserEmailDataAnnaValida1" xml:space="preserve">
+    <value>メールアドレスを入力してください</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserEmailDataAnnaValida3" xml:space="preserve">
+    <value>メールが無効です</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserName" xml:space="preserve">
+    <value>ユーザー名</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserNameDataAnnaValida1" xml:space="preserve">
+    <value>ユーザー名を入力してください</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="StoreGroupFolderMgt" xml:space="preserve">
+    <value>ストアグループフォルダー管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="StoreGroupMgt" xml:space="preserve">
+    <value>ストアグループ管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="StoreMgt" xml:space="preserve">
+    <value>ストア管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="StoreSubnetMgt" xml:space="preserve">
+    <value>ストアサブネット管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="SubnetMgt" xml:space="preserve">
+    <value>サブネット管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="TroubleShooting" xml:space="preserve">
+    <value>トラブルシューティング</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="UserMgt" xml:space="preserve">
+    <value>ユーザー管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="VideoAll" xml:space="preserve">
+    <value>すべての動画</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="VideoMgt" xml:space="preserve">
+    <value>動画管理</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="VieFeedbackMgmtViewLogBrowTitle" xml:space="preserve">
+    <value>フィードバック管理のビューログ</value>
+    <comment>Views\ViewLogs\FeedbackMgmtViewLog</comment>
+  </data>
+  <data name="VieFeedbackMgmtViewLogH2" xml:space="preserve">
+    <value>フィードバック管理のビューログ</value>
+    <comment>Views\ViewLogs\FeedbackMgmtViewLog</comment>
+  </data>
+  <data name="VieFeedbacksEditBrowTitle" xml:space="preserve">
+    <value>フィードバック承認</value>
+    <comment>Views\Feedbacks\Edit</comment>
+  </data>
+  <data name="VieFeedbacksEditH2Title" xml:space="preserve">
+    <value>フィードバック管理</value>
+    <comment>Views\Feedbacks\Edit</comment>
+  </data>
+  <data name="VieFeedbacksIndexBrowTitle" xml:space="preserve">
+    <value>フィードバック一覧</value>
+    <comment>Views\Feedbacks\Index</comment>
+  </data>
+  <data name="VieFeedbacksIndexComments" xml:space="preserve">
+    <value>コメント</value>
+    <comment>Views\Feedbacks\Index</comment>
+  </data>
+  <data name="VieFeedbacksIndexH2Title" xml:space="preserve">
+    <value>フィードバック管理</value>
+    <comment>Views\Feedbacks\Index</comment>
+  </data>
+  <data name="VieFolderMgmtViewLogBrowTitle1" xml:space="preserve">
+    <value>フォルダ管理のビューログ</value>
+    <comment>Views\ViewLogs\FolderMgmtViewLog</comment>
+  </data>
+  <data name="VieFolderMgmtViewLogH2" xml:space="preserve">
+    <value>フォルダ管理のビューログ</value>
+    <comment>Views\ViewLogs\FolderMgmtViewLog</comment>
+  </data>
+  <data name="VieFoldersCreateBrowTitle" xml:space="preserve">
+    <value>フォルダ作成</value>
+    <comment>Views\Folders\Create</comment>
+  </data>
+  <data name="VieFoldersCreateH2Title" xml:space="preserve">
+    <value>フォルダ管理</value>
+    <comment>Views\Folders\Create</comment>
+  </data>
+  <data name="VieFoldersEditBrowTitle" xml:space="preserve">
+    <value>フォルダ編集</value>
+    <comment>Views\Folders\Edit</comment>
+  </data>
+  <data name="VieFoldersEditH2Title" xml:space="preserve">
+    <value>フォルダ管理</value>
+    <comment>Views\Folders\Edit</comment>
+  </data>
+  <data name="VieFoldersFolderCreateButton" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\Folders\Index</comment>
+  </data>
+  <data name="VieFoldersIndexBrowTitle" xml:space="preserve">
+    <value>フォルダ一覧</value>
+    <comment>Views\Folders\Index</comment>
+  </data>
+  <data name="VieFoldersIndexH2Title" xml:space="preserve">
+    <value>フォルダ管理</value>
+    <comment>Views\Folders\Index</comment>
+  </data>
+  <data name="VieLoginChangePwdBrowTitle" xml:space="preserve">
+    <value>パスワード変更ページ</value>
+    <comment>Views\Login\ChangePassword</comment>
+  </data>
+  <data name="VieLoginChangePwdH2" xml:space="preserve">
+    <value>パスワードを変更する</value>
+    <comment>Views\Login\ChangePassword</comment>
+  </data>
+  <data name="VieLoginIndexBrowTitle" xml:space="preserve">
+    <value>ログインページ</value>
+    <comment>Views\Login\Index</comment>
+  </data>
+  <data name="VieLoginIndexH2" xml:space="preserve">
+    <value>ログインする</value>
+    <comment>Views\Login\Index</comment>
+  </data>
+  <data name="VieLoginIndexPassword" xml:space="preserve">
+    <value>パスワード</value>
+    <comment>Views\Login\Index</comment>
+  </data>
+  <data name="VieLoginIndexUsername" xml:space="preserve">
+    <value>ユーザー名</value>
+    <comment>Views\Login\Index</comment>
+  </data>
+  <data name="VieMediaViewLogBackToVideo" xml:space="preserve">
+    <value>動画に戻る</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogCRTDT" xml:space="preserve">
+    <value>CRTDT</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogH2" xml:space="preserve">
+    <value>メディアビューログ</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogStoreIPAddress" xml:space="preserve">
+    <value>ストアIPアドレス</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogStoreName" xml:space="preserve">
+    <value>ストア名</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogUserName" xml:space="preserve">
+    <value>ユーザー名</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieSearchCheckStoreDefin" xml:space="preserve">
+    <value>ストア定義を確認する</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckStoreDefin0" xml:space="preserve">
+    <value>NG。 ストア定義が見つかりません。</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckStoreDefin0_1" xml:space="preserve">
+    <value>クライアントが属するストアがシステムに登録されていません。</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckStoreDefin1" xml:space="preserve">
+    <value>OK</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckSubnet" xml:space="preserve">
+    <value>サブネットIDを確認する</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckSubnet0" xml:space="preserve">
+    <value>NG。クライアントが属するネットワークがシステムに登録されていません。</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckSubnet1_1" xml:space="preserve">
+    <value>OK</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckSubnet1_2" xml:space="preserve">
+    <value>チェック</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchClientIP" xml:space="preserve">
+    <value>クライアントIP</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchGoButton" xml:space="preserve">
+    <value>ゴー</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchH2" xml:space="preserve">
+    <value>参照不可原因調査ツール</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchIPAddress" xml:space="preserve">
+    <value>クライアントのIPアドレスを入力すると、そのクライアントから動画を参照しようとしたとき正常に動作するか確認できます。</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSelect" xml:space="preserve">
+    <value>参照できる動画を選択してください</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSelectNotNull_1" xml:space="preserve">
+    <value>OK</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSelectNotNull_2" xml:space="preserve">
+    <value>取得する</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSelectNull" xml:space="preserve">
+    <value>NG。ストアがアクセス権を持っている動画はありません。</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSurveyResult" xml:space="preserve">
+    <value>調査結果</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieStoreGroupFoldersCreateBrowTitle" xml:space="preserve">
+    <value>ストアグループフォルダー管理-一覧</value>
+    <comment>Views\StoreGroupFolders\Create</comment>
+  </data>
+  <data name="VieStoreGroupFoldersCreateH2" xml:space="preserve">
+    <value>ストアグループフォルダー管理-作成</value>
+    <comment>Views\StoreGroupFolders\Create</comment>
+  </data>
+  <data name="VieStoreGroupFoldersEditBrowTitle" xml:space="preserve">
+    <value>ストアグループフォルダー管理-編集</value>
+    <comment>Views\StoreGroupFolders\Edit</comment>
+  </data>
+  <data name="VieStoreGroupFoldersEditH2" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StoreGroupFolders\Edit</comment>
+  </data>
+  <data name="VieStoreGroupFoldersIndexBrowTitle" xml:space="preserve">
+    <value>ストアグループフォルダー</value>
+    <comment>Views\StoreGroupFolders\Index</comment>
+  </data>
+  <data name="VieStoreGroupFoldersIndexCreate" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\StoreGroupFolders\Index</comment>
+  </data>
+  <data name="VieStoreGroupFoldersIndexH2" xml:space="preserve">
+    <value>ストアグループフォルダー管理</value>
+    <comment>Views\StoreGroupFolders\Index</comment>
+  </data>
+  <data name="VieStoreGroupsCreateBrowTitle" xml:space="preserve">
+    <value>ストアグループ管理-設定</value>
+    <comment>Views\StoreGroups\Create</comment>
+  </data>
+  <data name="VieStoreGroupsCreateH2" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\StoreGroups\Create</comment>
+  </data>
+  <data name="VieStoreGroupsEditBrowTitle" xml:space="preserve">
+    <value>ストアグループ管理-編集</value>
+    <comment>Views\StoreGroups\Edit</comment>
+  </data>
+  <data name="VieStoreGroupsEditH2" xml:space="preserve">
+    <value>ストアグループ管理</value>
+    <comment>Views\StoreGroups\Edit</comment>
+  </data>
+  <data name="VieStoreGroupsIndexBrowTitle" xml:space="preserve">
+    <value>ストアグループ</value>
+    <comment>Views\StoreGroups\Index</comment>
+  </data>
+  <data name="VieStoreGroupsIndexCreate" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\StoreGroups\Index</comment>
+  </data>
+  <data name="VieStoreGroupsIndexH2" xml:space="preserve">
+    <value>ストアグループ管理</value>
+    <comment>Views\StoreGroups\Index</comment>
+  </data>
+  <data name="VieStoreMgmtViewLogBrowTitle" xml:space="preserve">
+    <value>ストア管理ビューログ</value>
+    <comment>Views\ViewLogs\StoreMgmtViewLog</comment>
+  </data>
+  <data name="VieStoreMgmtViewLogH2" xml:space="preserve">
+    <value>ストア管理ビューログ</value>
+    <comment>Views\ViewLogs\StoreMgmtViewLog</comment>
+  </data>
+  <data name="VieStoreMstCreateBrowTitle" xml:space="preserve">
+    <value>ストア管理-設定</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreMstCreateH2" xml:space="preserve">
+    <value>ストア情報</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreMstEditBrowTitle" xml:space="preserve">
+    <value>ストア管理-変更</value>
+    <comment>Views\StoreMst\Edit</comment>
+  </data>
+  <data name="VieStoreMstEditH2" xml:space="preserve">
+    <value>ストア情報-編集</value>
+    <comment>Views\StoreMst\Edit</comment>
+  </data>
+  <data name="VieStoreMstIndexBrowTitle" xml:space="preserve">
+    <value>ストア管理</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreMstIndexCreate" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreMstIndexH2" xml:space="preserve">
+    <value>ストア管理</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreSubnetsCreateBrowTitle" xml:space="preserve">
+    <value>ストアサブネット-作成</value>
+    <comment>Views\StoreSubnets\Create</comment>
+  </data>
+  <data name="VieStoreSubnetsCreateH2" xml:space="preserve">
+    <value>ストアサブネット-作成</value>
+    <comment>Views\StoreSubnets\Create</comment>
+  </data>
+  <data name="VieStoreSubnetsEditBrowTitle" xml:space="preserve">
+    <value>ストアサブネット管理-変更</value>
+    <comment>Views\StoreSubnets\Edit</comment>
+  </data>
+  <data name="VieStoreSubnetsEditH2" xml:space="preserve">
+    <value>ストアサブネット管理-変更</value>
+    <comment>Views\StoreSubnets\Edit</comment>
+  </data>
+  <data name="VieStoreSubnetsIndexBrowTitle" xml:space="preserve">
+    <value>ストアサブネット一覧</value>
+    <comment>Views\StoreSubnets\Index</comment>
+  </data>
+  <data name="VieStoreSubnetsIndexCreate" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\StoreSubnets\Index</comment>
+  </data>
+  <data name="VieStoreSubnetsIndexEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StoreSubnets\Index</comment>
+  </data>
+  <data name="VieStoreSubnetsIndexH2" xml:space="preserve">
+    <value>ストアサブネット管理</value>
+    <comment>Views\StoreSubnets\Index</comment>
+  </data>
+  <data name="VieSubnetsCreateBrowTitle" xml:space="preserve">
+    <value>サブネット管理-設定</value>
+    <comment>Views\Subnets\Create</comment>
+  </data>
+  <data name="VieSubnetsCreateH2" xml:space="preserve">
+    <value>サブネット管理-作成</value>
+    <comment>Views\Subnets\Create</comment>
+  </data>
+  <data name="VieSubnetsEditBrowTitle" xml:space="preserve">
+    <value>サブネット管理-編集</value>
+    <comment>Views\Subnets\Edit</comment>
+  </data>
+  <data name="VieSubnetsEditH2" xml:space="preserve">
+    <value>サブネット管理</value>
+    <comment>Views\Subnets\Edit</comment>
+  </data>
+  <data name="VieSubnetsIndexBrowTitle" xml:space="preserve">
+    <value>サブネット一覧</value>
+    <comment>Views\Subnets\Index</comment>
+  </data>
+  <data name="VieSubnetsIndexCreate" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\Subnets\Index</comment>
+  </data>
+  <data name="VieSubnetsIndexH2" xml:space="preserve">
+    <value>サブネット一覧</value>
+    <comment>Views\Subnets\Index</comment>
+  </data>
+  <data name="VietblMediaCreateBrowH2" xml:space="preserve">
+    <value>動画情報</value>
+    <comment>Views\VideoDemo\Create</comment>
+  </data>
+  <data name="VietblMediaCreateBrowTitle" xml:space="preserve">
+    <value>動画情報</value>
+    <comment>Views\VideoDemo\Create</comment>
+  </data>
+  <data name="VietblMediaEditBrowH2" xml:space="preserve">
+    <value>動画の詳細を編集</value>
+    <comment>Views\VideoDemo\Edit</comment>
+  </data>
+  <data name="VietblMediaEditBrowSupport" xml:space="preserve">
+    <value>お使いのブラウザーはHTML5キャンバスタグをサポートしていません。</value>
+    <comment>Views\VideoDemo\Edit</comment>
+  </data>
+  <data name="VietblMediaEditBrowTitle" xml:space="preserve">
+    <value>動画一覧-編集</value>
+    <comment>Views\VideoDemo\Edit</comment>
+  </data>
+  <data name="VietblMediaEditUpdateDetailsButton" xml:space="preserve">
+    <value>詳細で画像を更新</value>
+    <comment>Views\VideoDemo\Edit</comment>
+  </data>
+  <data name="VietblMediaIndexBrowTitle" xml:space="preserve">
+    <value>動画タイトル</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexConvertedStatus" xml:space="preserve">
+    <value>変換されたステータス</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexConvertStatus" xml:space="preserve">
+    <value>変換ステータス</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexCreate" xml:space="preserve">
+    <value>新しい動画を追加</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexDateFrom" xml:space="preserve">
+    <value>日付から</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexDateTo" xml:space="preserve">
+    <value>へ</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexDescription" xml:space="preserve">
+    <value>説明文</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexFileName" xml:space="preserve">
+    <value>ファイル名</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexFindByTitle" xml:space="preserve">
+    <value>タイトルで探す</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexFolder" xml:space="preserve">
+    <value>フォルダ</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexFolderName" xml:space="preserve">
+    <value>フォルダ名</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexH2" xml:space="preserve">
+    <value>動画管理</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexID" xml:space="preserve">
+    <value>ID</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexInCompleted" xml:space="preserve">
+    <value>完了しました</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexInProgress" xml:space="preserve">
+    <value>進行中</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexManageThumbnail" xml:space="preserve">
+    <value>サムネイルを管理</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexSelect" xml:space="preserve">
+    <value>選択する</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexStreamVideoButton" xml:space="preserve">
+    <value>動画配信変換</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexStreamVideoH2Title" xml:space="preserve">
+    <value>動画配信ファイル管理（Webshare / FTP）</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndextblDelete" xml:space="preserve">
+    <value>削除する</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndextblDescription" xml:space="preserve">
+    <value>説明文</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexTblTitle" xml:space="preserve">
+    <value>題名</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexTitle" xml:space="preserve">
+    <value>題名</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexVideo" xml:space="preserve">
+    <value>動画</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexVideoConversionPendingButton" xml:space="preserve">
+    <value>配信変換ステータスの更新（保留）</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexVideoConversionUnderProcess" xml:space="preserve">
+    <value>動画配信変換を処理しています...</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VieUploadDetailsNewBrowTitle" xml:space="preserve">
+    <value>新しいアップロードの詳細を表示</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewbtnSubmit" xml:space="preserve">
+    <value>送信</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewFolder" xml:space="preserve">
+    <value>フォルダ</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewH2_1" xml:space="preserve">
+    <value>管理情報</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewH2_2" xml:space="preserve">
+    <value>フィードバック</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewlblAttachPhot" xml:space="preserve">
+    <value>写真を添付</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewlblClickVideo" xml:space="preserve">
+    <value>この動画のフィードバックについては、ここをクリックしてください</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewNoOfTimeView" xml:space="preserve">
+    <value>この動画が参照された回数</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewNoVideoSelect" xml:space="preserve">
+    <value>動画が選択されていません</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewViewFeedBack" xml:space="preserve">
+    <value>この動画の閲覧履歴を表示</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUserCreateAuthority" xml:space="preserve">
+    <value>権限</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateBasicManagement" xml:space="preserve">
+    <value>基本的な管理機能の使用</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateBrowTitle" xml:space="preserve">
+    <value>ユーザーページを作成</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateConfirmPassword" xml:space="preserve">
+    <value>パスワードを認証する</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateH2" xml:space="preserve">
+    <value>ユーザーを作成</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateRemovingfeedback" xml:space="preserve">
+    <value>動画に投稿されたフィードバックを削除する</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreatesystemManagement" xml:space="preserve">
+    <value>システム管理画面を参照</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateVideoChangeApp" xml:space="preserve">
+    <value>動画変更承認</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateVideoChangeReq" xml:space="preserve">
+    <value>動画変更要求</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserEditBrowTitle" xml:space="preserve">
+    <value>ユーザーページの編集</value>
+    <comment>Views\User\Edit</comment>
+  </data>
+  <data name="VieUserEditH2" xml:space="preserve">
+    <value>編集</value>
+    <comment>Views\User\Edit</comment>
+  </data>
+  <data name="VieUserIndexBrowTitle" xml:space="preserve">
+    <value>ユーザー管理ページ</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexCreateNew" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexH2" xml:space="preserve">
+    <value>ユーザー管理</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexPassword" xml:space="preserve">
+    <value>パスワード</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexUpdate" xml:space="preserve">
+    <value>更新</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexUserEmail" xml:space="preserve">
+    <value>ユーザーのメール</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexUserName" xml:space="preserve">
+    <value>ユーザー名</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserMgmtViewLogBrowTitle" xml:space="preserve">
+    <value>ユーザー管理ビューログ</value>
+    <comment>Views\ViewLogs\UserMgmtViewLog</comment>
+  </data>
+  <data name="VieUserMgmtViewLogH2" xml:space="preserve">
+    <value>ユーザー管理ビューログ</value>
+    <comment>Views\ViewLogs\UserMgmtViewLog</comment>
+  </data>
+  <data name="VieVideoMgmtViewLogBrowTitle" xml:space="preserve">
+    <value>動画管理ビューログ</value>
+    <comment>Views\ViewLogs\UserMgmtViewLog</comment>
+  </data>
+  <data name="VieVideoMgmtViewLogH2" xml:space="preserve">
+    <value>動画管理ビューログ</value>
+    <comment>Views\ViewLogs\UserMgmtViewLog</comment>
+  </data>
+  <data name="VieViewLogsIndexBrowTitle" xml:space="preserve">
+    <value>ビューログ</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="VieViewLogsIndexCount" xml:space="preserve">
+    <value>カウント</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="VieViewLogsIndexH2" xml:space="preserve">
+    <value>ビューログ履歴</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="VieViewLogsIndexMenuTitle" xml:space="preserve">
+    <value>メニュータイトル</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="VieViewLogsIndexSno" xml:space="preserve">
+    <value>通し番号</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="ViewLogs" xml:space="preserve">
+    <value>ビューログ</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="VieEnglish" xml:space="preserve">
+    <value>英語</value>
+    <comment>Views\Language\Index</comment>
+  </data>
+  <data name="VieJapanese" xml:space="preserve">
+    <value>日本語</value>
+    <comment>Views\Language\Index</comment>
+  </data>
+  <data name="VieLanguageChange" xml:space="preserve">
+    <value>言語を変更</value>
+    <comment>Views\Language\Index</comment>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>ログイン</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="CntDeployeDeleteFlag" xml:space="preserve">
+    <value>DELフラグ</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="CntDeploySchedule" xml:space="preserve">
+    <value>スケジュール</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="CntDeployScheduleName" xml:space="preserve">
+    <value>導入スケジュール名</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="DeployScheduleMgt" xml:space="preserve">
+    <value>配備スケジュール管理</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="DSServer" xml:space="preserve">
+    <value>DSサーバー</value>
+  </data>
+  <data name="FormatMgt" xml:space="preserve">
+    <value>フォーマット管理</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="FormatName" xml:space="preserve">
+    <value>フォーマット名</value>
+  </data>
+  <data name="ModtblDeployScheduleDataAnnaValida1" xml:space="preserve">
+    <value>配備スケジュールを入力してください。</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="ModtblDriveDFreeDataAnnaValida2" xml:space="preserve">
+    <value>有効なドライブDフリーを入力してください</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblDriverCTotalDataAnnaValida2" xml:space="preserve">
+    <value>有効なドライブCの合計を入力してください</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblEnterDeployNameDataAnnaValida1" xml:space="preserve">
+    <value>配備名を入力してください。</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="ModtblEnterIpAddressDataAnnaValida1" xml:space="preserve">
+    <value>IPアドレスを入力してください</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblEnterValidDriverCFreeDataAnnaValida2" xml:space="preserve">
+    <value>有効なドライブCフリーを入力してください</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblMaxLengthDataAnnaValida1" xml:space="preserve">
+    <value>最大長60文字</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="ModtblMaxLengthDataAnnaValida2" xml:space="preserve">
+    <value>最大長500文字</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="ModtblMediaSelectSubnetDataAnnaValida" xml:space="preserve">
+    <value>サブネットを選択してください</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblMediaStreamServerMaxLenDataAnnaValida2" xml:space="preserve">
+    <value>最大長60文字</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblMediaStreamServerName" xml:space="preserve">
+    <value>ストリームサーバー名</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblMediaStreamServerNameDataAnnaValida1" xml:space="preserve">
+    <value>ストリームサーバー名を入力してください</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblMediaSubnet" xml:space="preserve">
+    <value>サブネット</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblSelectDeployeScheduleDataAnnaValida1" xml:space="preserve">
+    <value>配備スケジュールを選択してください。</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblSelectIpAddressDataAnnaValida1" xml:space="preserve">
+    <value>IPアドレスを選択してください。</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblStreamServerMaxLenCharDataAnnaValida2" xml:space="preserve">
+    <value>最大長15文字</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblStreamServerMaxLenDataAnnaValida2" xml:space="preserve">
+    <value>最大長60文字</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblStreamServerNameDataAnnaValida1" xml:space="preserve">
+    <value>ストリームサーバー名を入力してください</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblValidDriverDTotalDataAnnaValida2" xml:space="preserve">
+    <value>有効なドライブD合計を入力してください</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ServerIpAddressNotFound" xml:space="preserve">
+    <value>サーバーのIPアドレスが見つかりません</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="ServerNotFound" xml:space="preserve">
+    <value>サーバーの詳細が見つかりません</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="StreamServerMgt" xml:space="preserve">
+    <value>ストリームサーバー管理</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="StreamServerSubnetMgt" xml:space="preserve">
+    <value>ストリームサーバーサブネット管理</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="StreamSreverCreateNew" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverFormatDelete" xml:space="preserve">
+    <value>削除する</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatDetails" xml:space="preserve">
+    <value>詳細</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatIndex" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatIndex1" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatIndex2" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverIndex" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverIndex1" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverSubnetCreateNew" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\StreamServerSubnet\Index</comment>
+  </data>
+  <data name="StreamSreverSubnetEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StreamServerSubnet\Index</comment>
+  </data>
+  <data name="StreamSreverSubnetIndex" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverSubnetIndex1" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\StreamServerSubnet\Index</comment>
+  </data>
+  <data name="TblDeploySchedule" xml:space="preserve">
+    <value>配備スケジュール</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDeployScheduleName" xml:space="preserve">
+    <value>配備スケジュール名</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveCFree" xml:space="preserve">
+    <value>ドライブCフリー</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveCTotal" xml:space="preserve">
+    <value>ドライブC合計</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveDFree" xml:space="preserve">
+    <value>ドライブDフリー</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveDFree1" xml:space="preserve">
+    <value>ドライブDフリー</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveDTotal" xml:space="preserve">
+    <value>ドライブD合計</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriverCCount" xml:space="preserve">
+    <value>ドライブC合計</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriverCFree" xml:space="preserve">
+    <value>ドライブCフリー</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriverDTotal" xml:space="preserve">
+    <value>ドライブD合計</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblFormatDELFG" xml:space="preserve">
+    <value>DELフラグ</value>
+  </data>
+  <data name="TblFormatEnterNameFormat" xml:space="preserve">
+    <value>フォーマット名を入力してください。</value>
+  </data>
+  <data name="TblFormatName" xml:space="preserve">
+    <value>フォーマット名</value>
+  </data>
+  <data name="TblFormatRequiredBandWidth" xml:space="preserve">
+    <value>必要な帯域幅を入力してください。</value>
+  </data>
+  <data name="TblFormatRequiredBandWidth1" xml:space="preserve">
+    <value>必要な帯域幅</value>
+  </data>
+  <data name="TblFormatRequiredBandWidth2" xml:space="preserve">
+    <value>範囲は 1000〜60000です。</value>
+  </data>
+  <data name="TblStreamSreverIpAddress" xml:space="preserve">
+    <value>IPアドレス</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblStreamSreverName" xml:space="preserve">
+    <value>ストリームサーバー名</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblSubnet" xml:space="preserve">
+    <value>サブネット</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblSubnetName" xml:space="preserve">
+    <value>サブネット名</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TxtDangerPlayBackStart" xml:space="preserve">
+    <value>動画はセンターからダウンロードするため、再生が始まるまでに時間がかかる場合があります。</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="Txtdistribution" xml:space="preserve">
+    <value>配信サーバーからの動画</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="TxtReceiving" xml:space="preserve">
+    <value>受け取り中です。</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieFormatCreate" xml:space="preserve">
+    <value>新しく作る</value>
+    <comment>Views\Formats\Index</comment>
+  </data>
+  <data name="VieFormatsIndex" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\Formats\Index</comment>
+  </data>
+  <data name="BelongingSubnetName" xml:space="preserve">
+    <value>所属サブネット名</value>
+    <comment>Views\StreamServer\Create</comment>
+  </data>
+  <data name="BelongingSubnetSelect" xml:space="preserve">
+    <value>所属サブネット</value>
+  </data>
+  <data name="BelongingSubnetSelect1" xml:space="preserve">
+    <value>配備スケジュール</value>
+  </data>
+  <data name="CntStoreGroupUpdateCommon" xml:space="preserve">
+    <value>ストアグループが更新されました-</value>
+  </data>
+  <data name="CommonCreatedSuccessfully" xml:space="preserve">
+    <value>フォーマットが正常に作成されました。</value>
+  </data>
+  <data name="CommonCreateStreamServerSubnetServerAlExists" xml:space="preserve">
+    <value>ストリームサーバーサブネットサーバーは既に存在している。</value>
+  </data>
+  <data name="CommonCreateStreamServerUpdatedSuccess" xml:space="preserve">
+    <value>ストリームサーバーが正常に更新されました。</value>
+  </data>
+  <data name="CommonCreateSubnetAlreadyExists" xml:space="preserve">
+    <value>サブネットは既に存在している。</value>
+  </data>
+  <data name="CommonCreateSubnetUpdatedSuccess" xml:space="preserve">
+    <value>ストリームサーバーサブネットが正常に更新されました。</value>
+  </data>
+  <data name="CommonCreateUnableCreateStreamSer" xml:space="preserve">
+    <value>ストリームサーバーを作成できません。</value>
+  </data>
+  <data name="CommonCreateUnableUpdateStreamSer" xml:space="preserve">
+    <value>ストリームサーバーを更新できません。</value>
+  </data>
+  <data name="CommonCreateUnableUpdateSubnet" xml:space="preserve">
+    <value>ストリームサーバーサブネットを更新できません。</value>
+  </data>
+  <data name="CommonFolderUnableUpdateFolder" xml:space="preserve">
+    <value>フォルダを更新できません。</value>
+  </data>
+  <data name="CommonFolderUpdated" xml:space="preserve">
+    <value>フォルダが更新されました-</value>
+  </data>
+  <data name="CommonMessage" xml:space="preserve">
+    <value>アプリケーションの説明ページ</value>
+  </data>
+  <data name="CommonMessageContact" xml:space="preserve">
+    <value>連絡先ページ</value>
+  </data>
+  <data name="CommonNameAlreadyExists" xml:space="preserve">
+    <value>フォーマットを作成できません。フォーマット名は既に存在している。</value>
+  </data>
+  <data name="CommonNameAndScheduleAlreadyExist" xml:space="preserve">
+    <value>配備スケジュールを更新できません。 名前とスケジュールは既に存在している。</value>
+  </data>
+  <data name="CommonNameAndScheduleUnableDeploySchedule" xml:space="preserve">
+    <value>配備スケジュールを更新できません。</value>
+  </data>
+  <data name="CommonNameAndScheduleUpdateSuc" xml:space="preserve">
+    <value>配備スケジュールが正常に更新されました。</value>
+  </data>
+  <data name="CommonNameDeployeScheduleUpdated" xml:space="preserve">
+    <value>配備スケジュールが更新されました-</value>
+  </data>
+  <data name="CommonNameFolderCreated" xml:space="preserve">
+    <value>フォルダが作成されました -</value>
+  </data>
+  <data name="CommonNameUnableCreateDeploySchedule" xml:space="preserve">
+    <value>配備スケジュールを作成できません。</value>
+  </data>
+  <data name="CommonNameUnableCreateFolder" xml:space="preserve">
+    <value>フォルダを作成できません。</value>
+  </data>
+  <data name="CommonNameUnableCreateStreamSubnet" xml:space="preserve">
+    <value>ストリームサーバーサブネットを作成できません。</value>
+  </data>
+  <data name="CommonNameUpdateFormatNameAlreadyExists" xml:space="preserve">
+    <value>フォーマットを更新できません。 フォーマット名は既に存在している。</value>
+  </data>
+  <data name="CommonNameUpdateFormatUpdateForm" xml:space="preserve">
+    <value>フォーマットを更新できません。</value>
+  </data>
+  <data name="CommonNameUpdateFormatUpdateSuc" xml:space="preserve">
+    <value>フォーマットが正常に更新されました。</value>
+  </data>
+  <data name="CommonNmeStreamServerSubnetCreatedSuccess" xml:space="preserve">
+    <value>ストリームサーバーサブネットが正常に作成されました。</value>
+  </data>
+  <data name="CommonUnableCreateFormat" xml:space="preserve">
+    <value>フォーマットを作成できません。</value>
+  </data>
+  <data name="DeployDeployLogCreate" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\DeployLog\Create</comment>
+  </data>
+  <data name="DeployDeployLogCreateH2" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\DeployLog\Create</comment>
+  </data>
+  <data name="DeployDeployLogResult" xml:space="preserve">
+    <value>結果</value>
+    <comment>Views\DeployLog\Create</comment>
+  </data>
+  <data name="DeployLog" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\DeployLog\Index</comment>
+  </data>
+  <data name="DeployLog1" xml:space="preserve">
+    <value>メディアID</value>
+  </data>
+  <data name="DeployLog2" xml:space="preserve">
+    <value>メディアID</value>
+  </data>
+  <data name="DeployLogEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\DeployLog\Edit</comment>
+  </data>
+  <data name="DeployLogEditH2" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\DeploySchedule\Edit</comment>
+  </data>
+  <data name="DeployLogH2" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\DeployLog\Index</comment>
+  </data>
+  <data name="DeployLogResult" xml:space="preserve">
+    <value>結果</value>
+    <comment>Views\DeployLog\Edit</comment>
+  </data>
+  <data name="DeploySchedule" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\DeploySchedule\Index</comment>
+  </data>
+  <data name="DeployScheduleCreate" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\DeploySchedule\Create</comment>
+  </data>
+  <data name="DeployScheduleCreateH2" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\DeploySchedule\Create</comment>
+  </data>
+  <data name="DeployScheduleEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\DeploySchedule\Edit</comment>
+  </data>
+  <data name="DeployScheduleEditH2" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\DeploySchedule\Edit</comment>
+  </data>
+  <data name="DeployScheduleH2" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\DeploySchedule\Index</comment>
+  </data>
+  <data name="DeployScheduleName" xml:space="preserve">
+    <value>配備スケジュール名</value>
+    <comment>Views\StreamServer\Create</comment>
+  </data>
+  <data name="DeployStatuIndex" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\DeployStatus\Index</comment>
+  </data>
+  <data name="DeployStatuIndexH2" xml:space="preserve">
+    <value>索引</value>
+    <comment>Views\DeployStatus\Index</comment>
+  </data>
+  <data name="DeployStatusFormatId" xml:space="preserve">
+    <value>フォーマットID</value>
+  </data>
+  <data name="StoreGroupCreateCommon" xml:space="preserve">
+    <value>ストアグループが作成されました -</value>
+  </data>
+  <data name="StoreGroupCreateFolderCreate" xml:space="preserve">
+    <value>ストアグループフォルダーが作成されました-</value>
+  </data>
+  <data name="StreamServerEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StreamServer\Edit</comment>
+  </data>
+  <data name="StreamServerEditH2" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StreamServer\Edit</comment>
+  </data>
+  <data name="StreamServerFormatCreate" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\StreamServerFormat\Create</comment>
+  </data>
+  <data name="StreamServerFormatCreateH2" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\StreamServerFormat\Create</comment>
+  </data>
+  <data name="StreamServerFormatEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StreamServerFormat\Edit</comment>
+  </data>
+  <data name="StreamServerFormatEditH2" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\StreamServerFormat\Edit</comment>
+  </data>
+  <data name="StreamServerSelect" xml:space="preserve">
+    <value>選択する</value>
+    <comment>Views\tblStreamServerSubnet\Create</comment>
+  </data>
+  <data name="StreamServerSubnet1" xml:space="preserve">
+    <value>サブネット</value>
+  </data>
+  <data name="StreamServerSubnetBelongingSubnet" xml:space="preserve">
+    <value>所属サブネット</value>
+  </data>
+  <data name="StreamServerSubnetCreate" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\StreamServerSubnet\Create</comment>
+  </data>
+  <data name="StreamServerSubnetCreateH2" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\StreamServerSubnet\Create</comment>
+  </data>
+  <data name="StreamServerSubnetDeploySchedule" xml:space="preserve">
+    <value>配備スケジュール</value>
+  </data>
+  <data name="StreamServerSubnetEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>ViewsStreamServerSubnet\Edit</comment>
+  </data>
+  <data name="StreamServerSubnetEditH2" xml:space="preserve">
+    <value>編集する</value>
+    <comment>ViewsStreamServerSubnet\Edit</comment>
+  </data>
+  <data name="StreamServerSubnetName" xml:space="preserve">
+    <value>サブネット</value>
+    <comment>Views\tblStreamServerSubnet\Create</comment>
+  </data>
+  <data name="StreamServerSubnetSelect" xml:space="preserve">
+    <value>選択する</value>
+  </data>
+  <data name="tblDeployStatusCreate" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\DeployStatus\Create</comment>
+  </data>
+  <data name="tblDeployStatusCreateH2" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\DeployStatus\Create</comment>
+  </data>
+  <data name="tblDeployStatusEdit" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\DeployStatus\Edit</comment>
+  </data>
+  <data name="tblDeployStatusEditH2" xml:space="preserve">
+    <value>編集する</value>
+    <comment>Views\DeployStatus\Edit</comment>
+  </data>
+  <data name="tblDeployStatusFormatId" xml:space="preserve">
+    <value>フォーマットID</value>
+    <comment>Views\DeployStatus\Create</comment>
+  </data>
+  <data name="tblFormatCreate" xml:space="preserve">
+    <value>作成する</value>
+  </data>
+  <data name="tblFormatCreateH2" xml:space="preserve">
+    <value>作成する</value>
+  </data>
+  <data name="tblFormatEdit" xml:space="preserve">
+    <value>編集する</value>
+  </data>
+  <data name="tblFormatEditH2" xml:space="preserve">
+    <value>編集する</value>
+  </data>
+  <data name="UnableCreateDeployeSch" xml:space="preserve">
+    <value>配備スケジュールを作成できません。 名前とスケジュールは既に存在している。</value>
+  </data>
+  <data name="UnableCreateDeployeSchedule" xml:space="preserve">
+    <value>配備スケジュールが作成されました-</value>
+  </data>
+  <data name="UnableCreateDeployeScheduleCreateSuc" xml:space="preserve">
+    <value>配備スケジュールが正常に作成されました。</value>
+  </data>
+  <data name="VieStreamServerCreate" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\StreamServer\Create</comment>
+  </data>
+  <data name="VieStreamServerCreateH2" xml:space="preserve">
+    <value>作成する</value>
+    <comment>Views\StreamServer\Create</comment>
+  </data>
+  <data name="Deliverystatusreference" xml:space="preserve">
+    <value>配達状況照会</value>
+  </data>
+  <data name="AdministrationMenuDeliveryStatus" xml:space="preserve">
+    <value>管理メニュー・配信状態</value>
+  </data>
+  <data name="BackTothelist" xml:space="preserve">
+    <value>一覧に戻る</value>
+  </data>
+  <data name="Copyresult" xml:space="preserve">
+    <value>結果をコピーする</value>
+  </data>
+  <data name="CUsagestatus" xml:space="preserve">
+    <value>C：使用状況</value>
+  </data>
+  <data name="Dateandtime" xml:space="preserve">
+    <value>日時</value>
+  </data>
+  <data name="Deliveryschedule" xml:space="preserve">
+    <value>配達スケジュール</value>
+  </data>
+  <data name="Deliverystatus" xml:space="preserve">
+    <value>配達状況</value>
+  </data>
+  <data name="Diskusage" xml:space="preserve">
+    <value>ディスクの使用状況</value>
+  </data>
+  <data name="Distributionserver" xml:space="preserve">
+    <value>配信サーバー</value>
+  </data>
+  <data name="DUsagestatus" xml:space="preserve">
+    <value>D：使用状況</value>
+  </data>
+  <data name="Estimateddeliverytimereference" xml:space="preserve">
+    <value>推定配信時間参照</value>
+  </data>
+  <data name="EstimatedtimeRequired" xml:space="preserve">
+    <value>推定所要時間</value>
+  </data>
+  <data name="ExpectedDeliveryTime" xml:space="preserve">
+    <value>予定配信時刻</value>
+  </data>
+  <data name="FolderName" xml:space="preserve">
+    <value>フォルダ名</value>
+  </data>
+  <data name="Instalisationstore" xml:space="preserve">
+    <value>インストールストア</value>
+  </data>
+  <data name="IPaddress" xml:space="preserve">
+    <value>IPアドレス</value>
+  </data>
+  <data name="MediaID" xml:space="preserve">
+    <value>メディアID</value>
+  </data>
+  <data name="MenuAdministration" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="MenuStream" xml:space="preserve">
+    <value>ストリーム</value>
+  </data>
+  <data name="MenuSubnet" xml:space="preserve">
+    <value>サブネット</value>
+  </data>
+  <data name="Processingtimeseconds" xml:space="preserve">
+    <value>処理時間（秒）</value>
+  </data>
+  <data name="ServerName" xml:space="preserve">
+    <value>サーバー名</value>
+  </data>
+  <data name="Storename" xml:space="preserve">
+    <value>店舗名</value>
+  </data>
+  <data name="StoreNumber" xml:space="preserve">
+    <value>ストア番号</value>
+  </data>
+  <data name="SubnetDataAcquisitionWANBandwidth" xml:space="preserve">
+    <value>サブネットデータ取得：WAN帯域幅</value>
+  </data>
+  <data name="Targetfilesize" xml:space="preserve">
+    <value>目標ファイルサイズ</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>題名</value>
+  </data>
+  <data name="Totaltimerequiredforprediction" xml:space="preserve">
+    <value>予測に必要な合計時間：</value>
+  </data>
+  <data name="UnDeliveredFileSize" xml:space="preserve">
+    <value>未配信のファイルサイズ</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>動画</value>
+  </data>
+  <data name="Videodistributionstatus" xml:space="preserve">
+    <value>動画配信状況</value>
+  </data>
+  <data name="WanBandWidth" xml:space="preserve">
+    <value>WAN帯域幅</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>すべて</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>承認済み</value>
+  </data>
+  <data name="DeployStatus" xml:space="preserve">
+    <value>配置ステータス</value>
+  </data>
+  <data name="distributionisnotcompleted" xml:space="preserve">
+    <value>（または配信が完了していません）</value>
+  </data>
+  <data name="Distributionserverdetails" xml:space="preserve">
+    <value>配信サーバーの詳細</value>
+  </data>
+  <data name="IsExists" xml:space="preserve">
+    <value>存在する</value>
+  </data>
+  <data name="MenuStore" xml:space="preserve">
+    <value>ストアー</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="RobocopyExitcodeContent" xml:space="preserve">
+    <value>Robocopy終了コード内容</value>
+  </data>
+  <data name="SameSubnet" xml:space="preserve">
+    <value>同じサブネットビデオ配信サーバーはありますか：</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>選択する</value>
+  </data>
+  <data name="SelectRobocopyExitcodeContent" xml:space="preserve">
+    <value>Robocopy終了コード内容を選択してください</value>
+  </data>
+  <data name="StreamServerName" xml:space="preserve">
+    <value>ストリームサーバー名</value>
+  </data>
+  <data name="Thedeliveryisnotover" xml:space="preserve">
+    <value>または（配信は終了していません）</value>
+  </data>
+  <data name="UnApproved" xml:space="preserve">
+    <value>未承認</value>
+  </data>
+  <data name="Videodeliverylog" xml:space="preserve">
+    <value>動画配信ログ</value>
+  </data>
+  <data name="videodeliveryserveronanother" xml:space="preserve">
+    <value>別のサブネットに動画配信サーバーがある：</value>
+  </data>
+  <data name="Videodistributionserver" xml:space="preserve">
+    <value>他のサブネット上の動画配信サーバー：</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="ApprovalStatus" xml:space="preserve">
+    <value>承認状況</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編集する</value>
+  </data>
+  <data name="EnterContent" xml:space="preserve">
+    <value>内容を入力してください。</value>
+  </data>
+  <data name="FormatCreatedSuccessfully" xml:space="preserve">
+    <value>フォーマットが正常に作成されました</value>
+  </data>
+  <data name="InsufficientlyRegistered" xml:space="preserve">
+    <value>不完全な登録</value>
+  </data>
+  <data name="LengthMaximum120Charactor" xml:space="preserve">
+    <value>最大長120文字</value>
+  </data>
+  <data name="RoboCopyExistsCode" xml:space="preserve">
+    <value>Robocopy存在コード</value>
+  </data>
+  <data name="RoboCopyExistsCodescreated" xml:space="preserve">
+    <value>Robocopy存在コードが作成されました-</value>
+  </data>
+  <data name="RoboCopyExistsCodesUpdated" xml:space="preserve">
+    <value>Robocopy存在コードが更新されました-</value>
+  </data>
+  <data name="RoboCopyExitCodesUpdatedSuccessfully" xml:space="preserve">
+    <value>Robocopy存在コードが正常に更新されました</value>
+  </data>
+  <data name="UnableCreateRoboCopyExistsCodes" xml:space="preserve">
+    <value>Robocopy存在コードを作成できません。</value>
+  </data>
+  <data name="UnableCreateRoboCopyExistsCodes1" xml:space="preserve">
+    <value>Robocopy存在コードを作成できません。</value>
+  </data>
+  <data name="UnableRoboCopyExistsCodesRoboCopyExistsCodesAlreadyexists" xml:space="preserve">
+    <value>Robocopy存在コードは既に存在している。</value>
+  </data>
+  <data name="UnableUpdateRoboCopyExistsCodes" xml:space="preserve">
+    <value>Robocopy存在コードを更新できません。</value>
+  </data>
+  <data name="VideoChangeApproval" xml:space="preserve">
+    <value>動画変更承認</value>
+  </data>
+  <data name="VideoChangeRequest" xml:space="preserve">
+    <value>動画変更要求</value>
+  </data>
+  <data name="VideoDeployStatusUpdate" xml:space="preserve">
+    <value>動画配備ステータスの更新</value>
+  </data>
+  <data name="ApplicationId" xml:space="preserve">
+    <value>アプリケーションID</value>
+  </data>
+  <data name="associatedwithanystore" xml:space="preserve">
+    <value>はどのストアとも関連付けられていません。</value>
+  </data>
+  <data name="belongsdoesnotexis" xml:space="preserve">
+    <value>に属していません。</value>
+  </data>
+  <data name="doesnotcontainasubnet" xml:space="preserve">
+    <value>サブネットが含まれていません。</value>
+  </data>
+  <data name="insufficientlyregistered1" xml:space="preserve">
+    <value>登録不足と思われる項目</value>
+  </data>
+  <data name="isnotassociatedwithanystore" xml:space="preserve">
+    <value>どのストアにも関連付けられていません。</value>
+  </data>
+  <data name="isnotconfiguredtodistributetoanysubnet" xml:space="preserve">
+    <value>サブネットに配信するように設定されていません。</value>
+  </data>
+  <data name="Itemsthatseemtobeinsufficientlyregistered" xml:space="preserve">
+    <value>登録不足と思われる項目</value>
+  </data>
+  <data name="IwilllisttheitemsthatIthinkarenotenoughregistratio" xml:space="preserve">
+    <value>登録には不十分だと思う項目をリストアップします。</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>ストア</value>
+  </data>
+  <data name="subnetID" xml:space="preserve">
+    <value>サブネットID</value>
+  </data>
+  <data name="Thedistributionserver" xml:space="preserve">
+    <value>配信サーバー</value>
+  </data>
+  <data name="Thesubnettowhichdistributionserver" xml:space="preserve">
+    <value>配信サーバーのサブネット</value>
+  </data>
+  <data name="thinkarenotenoughregistration" xml:space="preserve">
+    <value>登録には不十分だと思う項目をリストアップします。</value>
+  </data>
+  <data name="underregistered" xml:space="preserve">
+    <value>登録不足のように見える項目はありません。</value>
+  </data>
+  <data name="Authorizer" xml:space="preserve">
+    <value>承認者</value>
+  </data>
+  <data name="deleterequestThevideo" xml:space="preserve">
+    <value>これは削除リクエストです。承認すると動画が削除されます。</value>
+  </data>
+  <data name="FeedbackID" xml:space="preserve">
+    <value>フィードバックID</value>
+  </data>
+  <data name="FolderId" xml:space="preserve">
+    <value>フォルダID</value>
+  </data>
+  <data name="Itisnotdeletionrequest" xml:space="preserve">
+    <value>削除リクエストではありません。</value>
+  </data>
+  <data name="memofortheapprover" xml:space="preserve">
+    <value>承認者のメッセージメモです。 申請理由の記入にご利用ください。</value>
+  </data>
+  <data name="note" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="RegisteredDate" xml:space="preserve">
+    <value>登録日</value>
+  </data>
+  <data name="Registeredperson" xml:space="preserve">
+    <value>登録者</value>
+  </data>
+  <data name="requesttochangeaproval" xml:space="preserve">
+    <value>変更要求から承認済み</value>
+  </data>
+  <data name="requesttochangeunaproval" xml:space="preserve">
+    <value>変更要求から未承認</value>
+  </data>
+  <data name="Statechange" xml:space="preserve">
+    <value>ステータス変更</value>
+  </data>
+  <data name="storeid" xml:space="preserve">
+    <value>ストアーID</value>
+  </data>
+  <data name="toapprove" xml:space="preserve">
+    <value>承認する</value>
+  </data>
+  <data name="todisavow" xml:space="preserve">
+    <value>否認する</value>
+  </data>
+  <data name="userid" xml:space="preserve">
+    <value>ユーザーID</value>
+  </data>
+  <data name="videowillbedeleted" xml:space="preserve">
+    <value>チェックして承認をリクエストする。承認された場合、このビデオは削除されます！</value>
+  </data>
+  <data name="RobocopyExitcodes" xml:space="preserve">
+    <value>Robocopy存在コード</value>
+  </data>
+  <data name="StreamServerMgt1" xml:space="preserve">
+    <value>ストリームサーバー管理</value>
+  </data>
+  <data name="StreamServerSubnetMgt1" xml:space="preserve">
+    <value>ストリームサーバーサブネット管理</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>スケジュール管理の導入</value>
+  </data>
+  <data name="VieFormats" xml:space="preserve">
+    <value>フォーマット管理</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>requesttochangeaproval</value>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Mediaid</value>
+  </data>
+</root>

@@ -1,0 +1,602 @@
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\MujiStore.dll.config
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\MujiStore.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\MujiStore.pdb
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\csc.exe
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\csc.exe.config
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\csc.rsp
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\csi.exe
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\csi.exe.config
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\csi.rsp
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.AppContext.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Console.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.IO.Compression.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.IO.Pipes.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Security.AccessControl.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Security.Claims.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.ValueTuple.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Xml.XPath.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\vbc.exe
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\vbc.exe.config
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\vbc.rsp
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\VBCSCompiler.exe
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\Antlr3.Runtime.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\EntityFramework.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\EntityFramework.SqlServer.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\Newtonsoft.Json.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.Helpers.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.Mvc.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.Optimization.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.Razor.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.WebPages.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.WebPages.Razor.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\WebGrease.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\EntityFramework.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\EntityFramework.SqlServer.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.Helpers.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.Mvc.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.Optimization.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.Razor.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.WebPages.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\System.Web.WebPages.Razor.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\Newtonsoft.Json.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\Antlr3.Runtime.pdb
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\obj\Debug\MujiStore.csproj.CoreCompileInputs.cache
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\obj\Debug\MujiStore.csproj.CopyComplete
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\obj\Debug\MujiStore.dll
+C:\Projects\NCR\VideoSampleFinal\VideoSample\MujiStore\obj\Debug\MujiStore.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\MujiStore.dll.config
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\MujiStore.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\MujiStore.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\csc.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\csc.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\csc.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\csi.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\csi.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\csi.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.AppContext.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Console.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.IO.Compression.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.IO.Pipes.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Security.AccessControl.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Security.Claims.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.ValueTuple.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Xml.XPath.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\vbc.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\vbc.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\vbc.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\VBCSCompiler.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\Antlr3.Runtime.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\EntityFramework.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\EntityFramework.SqlServer.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\Newtonsoft.Json.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.Helpers.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.Mvc.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.Optimization.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.Razor.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.WebPages.Deployment.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.WebPages.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.WebPages.Razor.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\WebGrease.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\EntityFramework.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\EntityFramework.SqlServer.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\PagedList.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\PagedList.Mvc.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.Helpers.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.Mvc.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.Optimization.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.Razor.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.WebPages.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.WebPages.Deployment.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\System.Web.WebPages.Razor.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\Newtonsoft.Json.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\bin\Antlr3.Runtime.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\obj\Debug\MujiStore.csprojAssemblyReference.cache
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\obj\Debug\MujiStore.csproj.CoreCompileInputs.cache
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\obj\Debug\MujiStore.csproj.CopyComplete
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\obj\Debug\MujiStore.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200402\20200402\MujiStore\obj\Debug\MujiStore.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\MujiStore.dll.config
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\MujiStore.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\MujiStore.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\csc.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\csc.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\csc.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\csi.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\csi.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\csi.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.AppContext.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Console.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.IO.Compression.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.IO.Pipes.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Security.AccessControl.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Security.Claims.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.ValueTuple.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Xml.XPath.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\vbc.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\vbc.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\vbc.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\VBCSCompiler.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\Antlr3.Runtime.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\EntityFramework.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\EntityFramework.SqlServer.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\Newtonsoft.Json.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.Helpers.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.Mvc.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.Optimization.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.Razor.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.WebPages.Deployment.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.WebPages.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.WebPages.Razor.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\WebGrease.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\EntityFramework.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\EntityFramework.SqlServer.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\PagedList.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\PagedList.Mvc.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.Helpers.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.Mvc.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.Optimization.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.Razor.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.WebPages.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.WebPages.Deployment.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\System.Web.WebPages.Razor.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\Newtonsoft.Json.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\Antlr3.Runtime.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\MujiStore.csprojAssemblyReference.cache
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\MujiStore.csproj.CoreCompileInputs.cache
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\MujiStore.csproj.CopyComplete
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\MujiStore.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\MujiStore.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\MujiStore.Resources.Resource.resources
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\MujiStore.csproj.GenerateResource.cache
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\bin\ja\MujiStore.resources.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\MujiStore.Resources.Resource.ja.resources
+C:\Muji\VideoSampleFinal\SourceCode\20200413\20200402\MujiStore\obj\Debug\ja\MujiStore.resources.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\MujiStore.dll.config
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\MujiStore.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\MujiStore.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\ja\MujiStore.resources.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\csc.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\csc.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\csc.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\csi.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\csi.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\csi.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.AppContext.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Console.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.IO.Compression.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.IO.Pipes.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Security.AccessControl.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Security.Claims.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.ValueTuple.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Xml.XPath.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\vbc.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\vbc.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\vbc.rsp
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\VBCSCompiler.exe
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\Antlr3.Runtime.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\EntityFramework.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\EntityFramework.SqlServer.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\Newtonsoft.Json.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.Helpers.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.Mvc.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.Optimization.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.Razor.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.WebPages.Deployment.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.WebPages.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.WebPages.Razor.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\WebGrease.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\EntityFramework.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\EntityFramework.SqlServer.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\PagedList.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\PagedList.Mvc.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.Helpers.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.Mvc.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.Optimization.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.Razor.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.WebPages.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.WebPages.Deployment.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\System.Web.WebPages.Razor.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\Newtonsoft.Json.xml
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\bin\Antlr3.Runtime.pdb
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\MujiStore.csprojAssemblyReference.cache
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\MujiStore.Resources.Resource.resources
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\MujiStore.Resources.Resource.ja.resources
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\MujiStore.csproj.GenerateResource.cache
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\MujiStore.csproj.CoreCompileInputs.cache
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\ja\MujiStore.resources.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\MujiStore.csproj.CopyComplete
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\MujiStore.dll
+C:\Muji\VideoSampleFinal\SourceCode\20200416\source\MujiStore\obj\Debug\MujiStore.pdb
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\MujiStore.csprojAssemblyReference.cache
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\MujiStore.Resources.Resource.resources
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\MujiStore.Resources.Resource.ja.resources
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\MujiStore.csproj.GenerateResource.cache
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\MujiStore.csproj.CoreCompileInputs.cache
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\MujiStore.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\MujiStore.pdb
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\MujiStore.dll.config
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\MujiStore.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\MujiStore.pdb
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\ja\MujiStore.resources.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\csc.exe
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\csc.exe.config
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\csc.rsp
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\csi.exe
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\csi.exe.config
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\csi.rsp
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.AppContext.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Collections.Immutable.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Console.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.IO.Compression.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.IO.FileSystem.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.IO.Pipes.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Security.AccessControl.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Security.Claims.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Security.Principal.Windows.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.ValueTuple.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Xml.XPath.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\vbc.exe
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\vbc.exe.config
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\vbc.rsp
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\VBCSCompiler.exe
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\roslyn\VBCSCompiler.exe.config
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\Antlr3.Runtime.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\EntityFramework.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\EntityFramework.SqlServer.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\Microsoft.Web.Infrastructure.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\Newtonsoft.Json.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\PagedList.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\PagedList.Mvc.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.Helpers.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.Mvc.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.Optimization.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.Razor.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.WebPages.Deployment.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.WebPages.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.WebPages.Razor.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\WebGrease.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\EntityFramework.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\EntityFramework.SqlServer.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\PagedList.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\PagedList.Mvc.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.Helpers.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.Mvc.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.Optimization.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.Razor.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.WebPages.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.WebPages.Deployment.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\System.Web.WebPages.Razor.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\Newtonsoft.Json.xml
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\bin\Antlr3.Runtime.pdb
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\ja\MujiStore.resources.dll
+C:\User\Mohan San\MohanTask\20200422_1\MujiStore\obj\Debug\MujiStore.csproj.CopyComplete
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\MujiStore.dll.config
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\MujiStore.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\MujiStore.pdb
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\ja\MujiStore.resources.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\csc.exe
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\csc.exe.config
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\csc.rsp
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\csi.exe
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\csi.exe.config
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\csi.rsp
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.AppContext.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Console.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.IO.Compression.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.IO.Pipes.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Security.AccessControl.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Security.Claims.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.ValueTuple.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Xml.XPath.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\vbc.exe
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\vbc.exe.config
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\vbc.rsp
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\VBCSCompiler.exe
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\Antlr3.Runtime.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\EntityFramework.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\EntityFramework.SqlServer.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\Newtonsoft.Json.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\PagedList.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\PagedList.Mvc.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.Helpers.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.Mvc.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.Optimization.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.Razor.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.WebPages.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.WebPages.Razor.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\WebGrease.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\EntityFramework.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\EntityFramework.SqlServer.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\PagedList.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\PagedList.Mvc.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.Helpers.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.Mvc.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.Optimization.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.Razor.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.WebPages.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\System.Web.WebPages.Razor.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\Newtonsoft.Json.xml
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\bin\Antlr3.Runtime.pdb
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\MujiStore.csprojAssemblyReference.cache
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\MujiStore.Resources.Resource.resources
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\MujiStore.Resources.Resource.ja.resources
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\MujiStore.csproj.GenerateResource.cache
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\MujiStore.csproj.CoreCompileInputs.cache
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\ja\MujiStore.resources.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\MujiStore.csproj.CopyComplete
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\MujiStore.dll
+C:\Projects\NCR\VideoSampleFinal\MujiStore\MujiStore\obj\Debug\MujiStore.pdb
+C:\Projects\MujiStore\MujiStore\bin\MujiStore.dll.config
+C:\Projects\MujiStore\MujiStore\bin\MujiStore.dll
+C:\Projects\MujiStore\MujiStore\bin\MujiStore.pdb
+C:\Projects\MujiStore\MujiStore\bin\ja\MujiStore.resources.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\csc.exe
+C:\Projects\MujiStore\MujiStore\bin\roslyn\csc.exe.config
+C:\Projects\MujiStore\MujiStore\bin\roslyn\csc.rsp
+C:\Projects\MujiStore\MujiStore\bin\roslyn\csi.exe
+C:\Projects\MujiStore\MujiStore\bin\roslyn\csi.exe.config
+C:\Projects\MujiStore\MujiStore\bin\roslyn\csi.rsp
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Projects\MujiStore\MujiStore\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.AppContext.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Collections.Immutable.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Console.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.IO.Compression.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.IO.FileSystem.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.IO.Pipes.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Reflection.Metadata.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Security.AccessControl.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Security.Claims.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.ValueTuple.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Xml.XPath.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Projects\MujiStore\MujiStore\bin\roslyn\vbc.exe
+C:\Projects\MujiStore\MujiStore\bin\roslyn\vbc.exe.config
+C:\Projects\MujiStore\MujiStore\bin\roslyn\vbc.rsp
+C:\Projects\MujiStore\MujiStore\bin\roslyn\VBCSCompiler.exe
+C:\Projects\MujiStore\MujiStore\bin\roslyn\VBCSCompiler.exe.config
+C:\Projects\MujiStore\MujiStore\bin\Antlr3.Runtime.dll
+C:\Projects\MujiStore\MujiStore\bin\EntityFramework.dll
+C:\Projects\MujiStore\MujiStore\bin\EntityFramework.SqlServer.dll
+C:\Projects\MujiStore\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Projects\MujiStore\MujiStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Projects\MujiStore\MujiStore\bin\Newtonsoft.Json.dll
+C:\Projects\MujiStore\MujiStore\bin\PagedList.dll
+C:\Projects\MujiStore\MujiStore\bin\PagedList.Mvc.dll
+C:\Projects\MujiStore\MujiStore\bin\System.Web.Helpers.dll
+C:\Projects\MujiStore\MujiStore\bin\System.Web.Mvc.dll
+C:\Projects\MujiStore\MujiStore\bin\System.Web.Optimization.dll
+C:\Projects\MujiStore\MujiStore\bin\System.Web.Razor.dll
+C:\Projects\MujiStore\MujiStore\bin\System.Web.WebPages.Deployment.dll
+C:\Projects\MujiStore\MujiStore\bin\System.Web.WebPages.dll
+C:\Projects\MujiStore\MujiStore\bin\System.Web.WebPages.Razor.dll
+C:\Projects\MujiStore\MujiStore\bin\WebGrease.dll
+C:\Projects\MujiStore\MujiStore\bin\EntityFramework.xml
+C:\Projects\MujiStore\MujiStore\bin\EntityFramework.SqlServer.xml
+C:\Projects\MujiStore\MujiStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Projects\MujiStore\MujiStore\bin\PagedList.xml
+C:\Projects\MujiStore\MujiStore\bin\PagedList.Mvc.xml
+C:\Projects\MujiStore\MujiStore\bin\System.Web.Helpers.xml
+C:\Projects\MujiStore\MujiStore\bin\System.Web.Mvc.xml
+C:\Projects\MujiStore\MujiStore\bin\System.Web.Optimization.xml
+C:\Projects\MujiStore\MujiStore\bin\System.Web.Razor.xml
+C:\Projects\MujiStore\MujiStore\bin\System.Web.WebPages.xml
+C:\Projects\MujiStore\MujiStore\bin\System.Web.WebPages.Deployment.xml
+C:\Projects\MujiStore\MujiStore\bin\System.Web.WebPages.Razor.xml
+C:\Projects\MujiStore\MujiStore\bin\Newtonsoft.Json.xml
+C:\Projects\MujiStore\MujiStore\bin\Antlr3.Runtime.pdb
+C:\Projects\MujiStore\MujiStore\obj\Debug\MujiStore.csprojAssemblyReference.cache
+C:\Projects\MujiStore\MujiStore\obj\Debug\MujiStore.Resources.Resource.resources
+C:\Projects\MujiStore\MujiStore\obj\Debug\MujiStore.Resources.Resource.ja.resources
+C:\Projects\MujiStore\MujiStore\obj\Debug\MujiStore.csproj.GenerateResource.cache
+C:\Projects\MujiStore\MujiStore\obj\Debug\MujiStore.csproj.CoreCompileInputs.cache
+C:\Projects\MujiStore\MujiStore\obj\Debug\ja\MujiStore.resources.dll
+C:\Projects\MujiStore\MujiStore\obj\Debug\MujiStore.csproj.CopyComplete
+C:\Projects\MujiStore\MujiStore\obj\Debug\MujiStore.dll
+C:\Projects\MujiStore\MujiStore\obj\Debug\MujiStore.pdb

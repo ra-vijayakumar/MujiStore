@@ -1,0 +1,314 @@
+﻿.isUpload {
+    background-color: #EEE;
+}
+
+.Upload {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 6%;
+    text-align:center;
+}
+
+.Filename {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 17%;
+}
+
+.wrapword {
+    white-space: pre-wrap;
+     word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.ID {
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 5%;
+    padding: 8.5px;
+}
+.IDth {
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 9%;
+    padding: 8.5px;
+}
+
+.Title {
+    word-break: break-all;   
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 10%;
+    padding: 8.5px;
+}
+.Titleth {
+    word-break: break-all;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 13%;
+    padding: 8.5px;
+}
+
+.Title1 {
+    word-break: break-all;
+    padding: 29%;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 368px;
+    margin-left: 0px;
+    text-align: justify;
+}
+
+.Description1 {
+    word-break: break-all;
+    padding: 50%;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 598px;
+    margin-left: 0px;
+    text-align: justify;
+}
+
+.Description {
+    word-break: break-all;
+ 
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 13%;
+    margin-left: 0px;
+    text-align: justify;
+    padding: 8.5px;
+}
+.Descriptionth {
+    word-break: break-all;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 10%;
+    margin-left: 0px;
+    text-align: justify;
+    padding: 8.5px;
+}
+
+.vid {
+    word-break: break-all;   
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 20%;
+    text-align: justify;
+    padding: 8.5px;
+}
+
+.vidth {
+    word-break: break-all;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 19%;
+    text-align: justify;
+    padding: 8.5px;
+}
+
+.Folder {
+    word-break: break-all;
+    padding: 8.5px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 13%;
+}
+.Folder {
+    word-break: break-all;
+    padding: 8.5px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 13%;
+}
+.converter {
+    word-break: break-all;
+    padding: 8.5px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 13%;
+}
+.converterth {
+    word-break: break-all;
+    padding: 8.5px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 16%;
+}
+
+.Folder1 {
+    word-break: break-all;
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    width: 200px;
+}
+
+.fixed_header tbody {
+    display: block;
+    overflow: auto;
+    height: 104px;
+}
+
+.fixed_header1 tbody {
+    display: inline-grid;
+    overflow: auto;
+    height: 200px;
+}
+
+.fixed_header thead tr {
+    display: block;
+}
+
+.textbox1 {
+    width: 100%;
+}
+
+.textbox2 {
+    width: 100%;
+    height: 58px;
+}
+
+.textbox3 {
+    width: 100%;
+    height: 58px;
+}
+
+.textbox4 {
+    height: 58px;
+    width: 100%;
+}
+
+.textboxsize {
+    width: 30%;
+}
+
+.Create {
+    font-weight: bold;
+    font-size: medium;
+    color: green;
+    /*float:right;*/
+    padding-left: 550px;
+}
+
+.Update {
+    font-weight: bold;
+    font-size: medium;
+    color: green;
+    /*float:right;*/
+    padding-left: 550px;
+}
+
+.Delete {
+    font-weight: bold;
+    font-size: medium;
+    color: red;
+    /*float:right;*/
+    padding-left: 550px;
+}
+
+.Warning {
+    font-weight: bold;
+    font-size: medium;
+    color: yellow;
+    /*float:right;*/
+    padding-left: 550px;
+}
+.Error {
+    font-weight: bold;
+    font-size: medium;
+    color: red;
+    /*float:right;*/
+    padding-left: 550px;
+}
+.textarea {
+    width: 100%;
+}
+.input[type=textarea] {
+    width: 100%;
+}
+
+.form-control1 {        
+        width: 20%;
+        height: 31px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+    .form-control2 {
+        width: 14%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+    .form-control3 {
+        width: 12%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+    .form-control4 {
+        width: 12%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+    .fa1 {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+.fa-unsorted:before, .fa-sort:before {
+        content: "\f0dc";
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: right;
+        padding:4px;
+    }

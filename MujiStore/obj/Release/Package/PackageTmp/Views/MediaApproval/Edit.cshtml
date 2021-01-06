@@ -1,0 +1,182 @@
+﻿@model MujiStore.Models.tblMedia
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VideoChangeApproval;
+    var VidDur = "";
+    int i = 0;
+    //var MediaServer = ViewData["MediaServer"].ToString();
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+<h2 style="color:#ec2213; background-color:lavenderblush;">@MujiStore.Resources.Resource.VideoChangeApproval</h2>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#btnDisApprove").click(function () {
+          
+            document.getElementById('NewApprovalStatus').value = 0;
+        });
+
+        $("#btnApprove").click(function () {
+            document.getElementById('NewApprovalStatus').value = 1;
+        });
+
+    });
+
+</script>
+<style type="text/css">
+    .maxwidth {
+        max-width: 100%
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+</style>
+@using (Html.BeginForm())
+
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ApplicationID)
+    @Html.HiddenFor(model => model.MediaID)
+    @Html.HiddenFor(model => model.NewApprovalStatus)
+    @Html.HiddenFor(model => model.FolderID)
+    <div class="form-group">
+        @Html.Label(@MujiStore.Resources.Resource.ApplicationId, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.ApplicationID.ToString(), new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            @if (Model.Thumbnail != "" && Model.Thumbnail != null)
+            {
+                if (File.Exists(Server.MapPath("~/Video/" + Model.Thumbnail)))
+                {
+                    <img src="@Url.Content("~/Video/" + Model.Thumbnail + "")" style="margin-top:246px; width:200px;height:137px;">
+                }
+                else
+                {
+                    <img src="@Url.Content("~/img/Imagenotfound.jpg")" style="margin-top:246px; width:200px;height:137px;">
+                }
+
+            }
+            else
+            {
+                <img src="@Url.Content("~/img/Thumbnailnotgenerated.jpg")" style="margin-top:246px; width:200px;height:137px;">
+            }
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoID, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.MediaID.ToString(), new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            <video id="video" src="@Url.Content("~/Video/" + Model.Video + "")" controls="true"
+                   width="400" height="350" />
+            <canvas id="myCanvas" width="352" height="352"
+                    style="border: 1px solid #d3d3d3;">
+                @MujiStore.Resources.Resource.VietblMediaEditBrowSupport
+            </canvas>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.Title, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.Description, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoFolderName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.FolderName, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label(@MujiStore.Resources.Resource.Statechange, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @if (Model.ApprovalStatus == 3)
+            {
+                @Html.LabelForModel(@MujiStore.Resources.Resource.requesttochangeaproval, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            }
+            else if (Model.ApprovalStatus == 0)
+            {
+                @Html.LabelForModel(@MujiStore.Resources.Resource.requesttochangeunaproval, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            }
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label(@MujiStore.Resources.Resource.CommonDelete, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10 danger" style="color:red">
+
+            @if (Model.PhysicalDELFG == true)
+            {
+                @Html.LabelForModel(@MujiStore.Resources.Resource.deleterequestThevideo, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            }
+
+        </div>
+        <div class="col-md-10">
+            @if (Model.PhysicalDELFG == false)
+            {
+                @Html.LabelForModel(@MujiStore.Resources.Resource.Itisnotdeletionrequest, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+            }
+        </div>
+
+    </div>
+    <div class="form-group">
+        @Html.Label(@MujiStore.Resources.Resource.note, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.Comments, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label(@MujiStore.Resources.Resource.Registeredperson, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.Registerer, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.Label(@MujiStore.Resources.Resource.RegisteredDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.LabelForModel(Model.CRTDT.ToString(), new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <div class="col-md-5" style="padding-left:208px;">
+            <input type="submit" id="btnApprove" style="width: 180px; height:35px; border: solid 1px #ccc; border-radius:5px; background-color:#822433;color:#fff;" value=@MujiStore.Resources.Resource.toapprove />
+        </div>
+
+        <div class="col-md-5" style="padding-left:212px;">
+
+            <input type="submit" id="btnDisApprove" style="width: 180px; height:35px; border: solid 1px #ccc; border-radius:5px; background-color:#822433;color:#fff;" value=@MujiStore.Resources.Resource.todisavow />
+
+        </div>
+
+    </div>
+
+
+
+
+
+</div>
+
+}
+<div>
+    @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mujiEntitiesStoreContainer" CdmEntityContainer="mujiEntities1">
+    <EntitySetMapping Name="tbl_User">
+      <EntityTypeMapping TypeName="mujiEntities.tbl_User">
+        <MappingFragment StoreEntitySet="tbl_User">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UpdateUserId" ColumnName="UpdateUserId" />
+          <ScalarProperty Name="UpdateDate" ColumnName="UpdateDate" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVideoDemoes">
+      <EntityTypeMapping TypeName="mujiEntities.tblVideoDemo">
+        <MappingFragment StoreEntitySet="tblVideoDemo">
+          <ScalarProperty Name="ConDuration" ColumnName="ConDuration" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="FoderID" ColumnName="FoderID" />
+          <ScalarProperty Name="VideoId" ColumnName="VideoId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="Thumbnail" ColumnName="Thumbnail" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="CrDate" ColumnName="CrDate" />
+          <ScalarProperty Name="UdDate" ColumnName="UdDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVideoDemoStoreMsts">
+      <EntityTypeMapping TypeName="mujiEntities.tblVideoDemoStoreMst">
+        <MappingFragment StoreEntitySet="tblVideoDemoStoreMst">
+          <ScalarProperty Name="StoreId" ColumnName="StoreId" />
+          <ScalarProperty Name="StoreName" ColumnName="StoreName" />
+          <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Zip" ColumnName="Zip" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="DelFlg" ColumnName="DelFlg" />
+          <ScalarProperty Name="CrDate" ColumnName="CrDate" />
+          <ScalarProperty Name="UdDate" ColumnName="UdDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feedbacks">
+      <EntityTypeMapping TypeName="mujiEntities.Feedback">
+        <MappingFragment StoreEntitySet="Feedback">
+          <ScalarProperty Name="PhotoThumbHeight" ColumnName="PhotoThumbHeight" />
+          <ScalarProperty Name="PhotoThumbWidth" ColumnName="PhotoThumbWidth" />
+          <ScalarProperty Name="PhotoHeight" ColumnName="PhotoHeight" />
+          <ScalarProperty Name="PhotoWidth" ColumnName="PhotoWidth" />
+          <ScalarProperty Name="WriterIP" ColumnName="WriterIP" />
+          <ScalarProperty Name="WriterName" ColumnName="WriterName" />
+          <ScalarProperty Name="PhotoFileName" ColumnName="PhotoFileName" />
+          <ScalarProperty Name="PhotoFileExt" ColumnName="PhotoFileExt" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="MovieID" ColumnName="MovieID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Folders">
+      <EntityTypeMapping TypeName="mujiEntities.Folder">
+        <MappingFragment StoreEntitySet="Folder">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

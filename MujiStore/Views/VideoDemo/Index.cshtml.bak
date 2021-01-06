@@ -1,0 +1,380 @@
+﻿@model IEnumerable<MujiStore.Models.BulkUploadVideo>
+
+@using PagedList.Mvc
+@{
+    var mediaDtl = ViewData["videoList"] as PagedList.PagedList<MujiStore.Models.tblMedia>;
+    ViewBag.Title = MujiStore.Resources.Resource.VietblMediaIndexBrowTitle;
+
+    int i = 0;
+    
+    if (ViewData["CvtStatus"] == null)
+    {
+        ViewData["CvtStatus"] = "4";
+    }
+    if (ViewData["FolID"] == null)
+    {
+        ViewData["FolID"] = "0";
+    }
+}
+<br />
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-top:-18px; margin-left:-2px;">@MujiStore.Resources.Resource.VideoChangeRequest</h2>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('input[type=checkbox]').change(function () {
+            if (this.checked == true) {
+                var ChkSelect = "IsUpload";
+                var chkDelete = "IsDelete"
+                var ctlName = this.name;
+                var rowIndex = $(this).closest('tr')[0].sectionRowIndex;
+
+                if (ctlName.indexOf(ChkSelect) != -1) {
+                    $(this).closest('tr')[0].cells[5].children["[" + rowIndex + "].IsDelete"].checked = false;
+
+                }
+                if (ctlName.indexOf(chkDelete) != -1) {
+                    $(this).closest('tr')[0].cells[0].children["[" + rowIndex + "].IsUpload"].checked = false;
+                    $(this).closest('tr')[0].cells[3].children["[" + rowIndex + "].UploadTitle"].value = "";
+                    $(this).closest('tr')[0].cells[4].children["[" + rowIndex + "].UploadDescription"].value = "";
+
+                }
+            }
+
+        });
+
+    });
+</script>
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .form-control1 {
+        width: 20%;
+        height: 31px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .form-control2 {
+        width: 14%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .form-control3 {
+        width: 12%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .form-control5 {
+        width: 20%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .form-control4 {
+        width: 20%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+    .form-control1 {
+        width: 19%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .fa1 {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #bf5e6e;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .fa-unsorted:before, .fa-sort:before {
+        content: "\f0dc";
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: right;
+        padding: 0px;
+        margin-left: 4px;
+    }
+
+    
+
+    .border-style {
+        border-style: solid;
+        border-color: #e7bebb;
+        border-radius: 5px;
+        padding: 8px;
+        margin-bottom: 7px;
+        box-shadow: 2px 3px 8px -3px;
+    }
+</style>
+<body>
+
+    @using (Html.BeginForm("Index", "VideoDemo", FormMethod.Post))
+    {
+    <div class="border-style">
+        <p>
+            @MujiStore.Resources.Resource.VietblMediaIndexFindByTitle: @Html.TextBox("SearchTitle", ViewBag.SearTitle as string, new { @class = "form-control1" })
+            @MujiStore.Resources.Resource.VietblMediaIndexDateFrom : @Html.TextBox("SearchFromCRTDT", String.Format("{0:d}", ViewBag.CdStDate as string),
+new { @class = "datefield form-control2", type = "date" })
+            @MujiStore.Resources.Resource.VietblMediaIndexDateTo : @Html.TextBox("SearchToCRTDT", String.Format("{0:d}", ViewBag.CdEdDate as string),
+new { @class = "datefield form-control2", type = "date" })
+            @MujiStore.Resources.Resource.VietblMediaIndexConvertedStatus :  @Html.DropDownList("ConvertStatus", null, new { @class = "form-control3" })
+            <br />
+            <br />
+            @if (Session["ApprovalFlag"].ToString() == "1")
+            {
+        <p>
+            @*@MujiStore.Resources.Resource.CommonDelFlg :@Html.DropDownList("DelFlag", null, new { @class = "form-control4" })*@
+            @MujiStore.Resources.Resource.VietblMediaIndexFolderName :  @Html.DropDownList("FolderID", null, new { @class = "form-control5" })
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="margin-bottom:6px; margin-left:37px; height:32px;" />
+        </p>
+        }
+        else
+        {
+        <p>
+            @MujiStore.Resources.Resource.VietblMediaIndexFolderName :  @Html.DropDownList("FolderID")
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="margin-bottom:6px; margin-left:37px; height:32px;" />
+        </p>
+        }
+         
+
+            
+        </div>
+                <p style="margin-top:-36px;">
+                    <br />
+                    <br />
+                    @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexCreate, "Create", "VideoDemo", null)
+
+
+                    @if (ViewBag.videoConvertedFilesCount == 1)
+                    {
+                        @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexVideoConversionPendingButton, "UpdateVideoConvertedStatus", "VideoDemo", null)
+                    }
+                    else if (ViewBag.videoConvertedFilesCount == -99)
+                    {
+                        <font color="green">@MujiStore.Resources.Resource.VietblMediaIndexVideoConversionUnderProcess</font>
+                        <progress>
+
+                        </progress>
+                    }
+
+
+                </p>
+                <style type="text/css">
+                </style>
+                <table class="table fixed_header" style="background-color:#ffffff; width:112%; height:100px; margin-bottom:0px;">
+                    <thead >
+                        <tr style="background-color:#bf5e6e; color:#ffffff; width:90%">
+
+                            <th class="IDth">
+                                @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexID, "Index", new { sortOrder = ViewBag.IDSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID }, new { @class = "fa1 fa-sort fa-unsorted:before, .fa-sort:before" })
+                            </th>
+                            <th class="Titleth">
+                                @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexTitle, "Index", new { sortOrder = ViewBag.TitleSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID }, new { @class = "fa1 fa-sort" })
+                            </th>
+                            <th class="Descriptionth">
+                                @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexDescription)
+                            </th>
+                            <th class="vidth">
+                                @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexVideo)
+                            </th>
+                            <th class="converterth">
+                                @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexConvertStatus, "Index", new { sortOrder = ViewBag.ConvertStatusSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID }, new { @class = "fa1 fa-sort" })
+                            </th>
+
+                            <th class="Folderth">
+                                @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexFolder, "Index", new { sortOrder = ViewBag.FolderSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID }, new { @class = "fa1 fa-sort" })
+
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody style="height: 400px; width:90%">
+
+                        @foreach (var item in mediaDtl)
+                        {
+                            <tr style="background-color:#EEE; width:90%">
+                                <td class="ID">
+                                    @Html.DisplayFor(modelItem => item.MediaID)
+                                </td>
+                                <td class="Title">
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </td>
+                                <td class="Description">
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td class="vid">
+                                    @Html.DisplayFor(modelItem => item.Video)
+                                </td>
+                                <td class="converter">
+                                    @if (item.ConvertStatus == 0)
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexInProgress)
+                                    }
+                                    else if (item.ConvertStatus == 3)//VJ 20200603 ConvertStatus 3 Converted  Changed
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexInCompleted)
+                                    }
+                                </td>
+
+                                <td class="Folder">
+                                    @foreach (var viddtl in ViewData["FolderDtl"] as List<SelectListItem>)
+                                    {
+                                        if (item.FolderID == Convert.ToInt32(viddtl.Value))
+                                        {
+                                            item.FolderName = viddtl.Text.Trim();
+                                            @Html.DisplayFor(modelItem => item.FolderName)
+
+                                        }
+                                    }
+
+                                </td>
+                                <td style="color:#000; width:10%;">
+                                    @if (item.ConvertStatus == 3)//VJ 20200603 ConvertStatus 3 Converted  Changed
+                                    {
+                                        @Html.ActionLink(MujiStore.Resources.Resource.CommonEdit, "Edit", new { id = item.MediaID })
+                                    }
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+                if (mediaDtl.PageSize < mediaDtl.TotalItemCount)
+                {
+                <div>
+
+                    @MujiStore.Resources.Resource.CommonPage @(mediaDtl.PageCount < mediaDtl.PageNumber ? 0 : mediaDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @mediaDtl.PageCount
+
+                    @Html.PagedListPager(mediaDtl, page => Url.Action("Index",
+                         new { page, sortOrder = ViewBag.CurrentSort, SearTitle = ViewBag.SearTitle, CdStDate= ViewBag.CdStDate, CdEdDate= ViewBag.CdEdDate,CvtStatus= ViewBag.cvtStatus,FolID = ViewBag.FolID }))
+                </div>
+                }
+                <br />
+                <br />
+                }
+                @using (Html.BeginForm("CreateFtpvideo", "VideoDemo", FormMethod.Post))
+                {
+                    if (ViewBag.VideoFilesCount > 0)
+                    {
+                        <div style="box-shadow:1px 3px 9px 2px; height:245px; width:112%; margin-top:-40px; margin-bottom:-15px;">
+
+                            <h2 style="color:#ec2213; background-color:lavenderblush;width:89%;">@MujiStore.Resources.Resource.VietblMediaIndexStreamVideoH2Title</h2>
+                            <p style="margin-left:10px;">
+                                <input type="submit" id="btnBulkUpload" style="width: 250px; height:35px; border: solid 1px #ccc; border-radius:5px; background-color:#822433;color:#fff;" value=@MujiStore.Resources.Resource.VietblMediaIndexStreamVideoButton />
+                            </p>
+                            <table class="table fixed_header" style="background-color:#ffffff; width:98%; padding-bottom:7px; margin-left:10px;height:95px">
+
+                                <thead style="width:1425px;">
+                                    <tr style="background-color:#bf5e6e; color:#ffffff; ">
+
+                                        <td class="Upload" style="font-weight:bold; text-align:center;">
+                                            @MujiStore.Resources.Resource.VietblMediaIndexSelect
+                                        </td>
+                                        <td class="Filename" style="font-weight:bold; text-align:center;">
+                                            @MujiStore.Resources.Resource.VietblMediaIndexFileName
+                                        </td>
+                                        <td class="Folder1" style="font-weight:bold; text-align:center;">
+                                            @MujiStore.Resources.Resource.VietblMediaIndexFolderName
+                                        </td>
+                                        <td class="Title1" style="font-weight:bold; text-align:center;">
+                                            @MujiStore.Resources.Resource.VietblMediaIndexTblTitle
+                                        </td>
+                                        <td class="Description1" style="font-weight:bold; text-align:center;">
+                                            @MujiStore.Resources.Resource.VietblMediaIndextblDescription
+                                        </td>
+                                        <td class="Upload" style="font-weight:bold;">
+                                            @MujiStore.Resources.Resource.VietblMediaIndextblDelete
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody style="width:100%;">
+
+
+                                    @foreach (var model in Model)
+                                    {
+                                        <tr style="background-color:#eee; margin-left:10px" id="blkupload">
+                                            <td class="isUpload  Upload">
+                                                @Html.CheckBox("[" + i + "].IsUpload", model.IsUpload, new { @class = "" })
+                                            </td>
+                                            <td style="background-color:#EEE;" class="Filename">
+                                                @Html.TextBox("[" + i + "].UploadFileName", model.UploadFileName, new { @class = "textbox1", @readonly = "readonly" })
+                                            </td>
+                                            <td style="background-color:#EEE;" class="Filename">
+                                                @Html.DropDownList("[" + i + "].UploadFolderID", ViewBag.FolderList as SelectList, new { @class = "form-control" })
+                                            </td>
+                                            <td style="background-color:#EEE;" class=" Title1">
+                                                @Html.TextArea("[" + i + "].UploadTitle", model.UploadTitle, new { @class = "textbox2" })
+                                            </td>
+                                            <td style="background-color:#EEE;" class=" Description1">
+                                                @Html.TextArea("[" + i + "].UploadDescription", model.UploadDescription, new { @class = "textbox4" })
+                                            </td>
+                                            <td class="isUpload  Upload">
+                                                @Html.CheckBox("[" + i + "].IsDelete", model.IsDelete, new { @class = "" })
+                                            </td>
+                                        </tr>
+                                        i = i + 1;
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                }
+
+        </body>

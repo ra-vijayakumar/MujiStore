@@ -1,0 +1,12 @@
+<script type="text/javascript">
+  
+        alert(window.location.hostname);
+        alert(document.location.href);
+        alert(document.location.origin);
+        alert(document.location.hostname);
+        alert(document.location.host);
+        alert(document.location.pathname);
+    var x = (<%= HttpUtility.JavaScriptStringEncode(Server.MapPath(Request.Url.LocalPath)) %>);
+    alert(x);
+
+</script>

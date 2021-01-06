@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mujiEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'muji.dbo.Feedback' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MovieID" Type="int" />
+    <Property Name="DateTime" Type="datetime" />
+    <Property Name="Text" Type="text" />
+    <Property Name="PhotoFileExt" Type="nvarchar" MaxLength="510" />
+    <Property Name="PhotoFileName" Type="nvarchar" MaxLength="510" />
+    <Property Name="WriterName" Type="nvarchar" MaxLength="510" />
+    <Property Name="WriterIP" Type="nvarchar" MaxLength="60" />
+    <Property Name="PhotoWidth" Type="int" />
+    <Property Name="PhotoHeight" Type="int" />
+    <Property Name="PhotoThumbWidth" Type="int" />
+    <Property Name="PhotoThumbHeight" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'muji.dbo.Folder' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Folder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="510" />
+  </EntityType>
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateUserId" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="UpdateUserId" Type="int" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="DelFlag" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblVideoDemo">
+    <Key>
+      <PropertyRef Name="VideoId" />
+    </Key>
+    <Property Name="VideoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Video" Type="nvarchar" MaxLength="500" />
+    <Property Name="Thumbnail" Type="nvarchar" MaxLength="500" />
+    <Property Name="IpAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="DelFlg" Type="bit" />
+    <Property Name="CrDate" Type="smalldatetime" />
+    <Property Name="UdDate" Type="smalldatetime" />
+    <Property Name="FoderID" Type="int" Nullable="false" />
+    <Property Name="Duration" Type="real" />
+    <Property Name="ConDuration" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblVideoDemoStoreMst">
+    <Key>
+      <PropertyRef Name="StoreId" />
+    </Key>
+    <Property Name="StoreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StoreName" Type="nvarchar" MaxLength="500" />
+    <Property Name="AddressLine1" Type="nvarchar" MaxLength="500" />
+    <Property Name="AddressLine2" Type="nvarchar" MaxLength="500" />
+    <Property Name="City" Type="nvarchar" MaxLength="500" />
+    <Property Name="State" Type="nvarchar" MaxLength="500" />
+    <Property Name="Zip" Type="nvarchar" MaxLength="500" />
+    <Property Name="Country" Type="nvarchar" MaxLength="500" />
+    <Property Name="IpAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="DelFlg" Type="bit" />
+    <Property Name="CrDate" Type="smalldatetime" />
+    <Property Name="UdDate" Type="smalldatetime" />
+  </EntityType>
+  <EntityContainer Name="mujiEntitiesStoreContainer">
+    <EntitySet Name="tbl_User" EntityType="Self.tbl_User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVideoDemo" EntityType="Self.tblVideoDemo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVideoDemoStoreMst" EntityType="Self.tblVideoDemoStoreMst" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Feedback" EntityType="Self.Feedback" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Feedback].[ID] AS [ID], 
+    [Feedback].[MovieID] AS [MovieID], 
+    [Feedback].[DateTime] AS [DateTime], 
+    [Feedback].[Text] AS [Text], 
+    [Feedback].[PhotoFileExt] AS [PhotoFileExt], 
+    [Feedback].[PhotoFileName] AS [PhotoFileName], 
+    [Feedback].[WriterName] AS [WriterName], 
+    [Feedback].[WriterIP] AS [WriterIP], 
+    [Feedback].[PhotoWidth] AS [PhotoWidth], 
+    [Feedback].[PhotoHeight] AS [PhotoHeight], 
+    [Feedback].[PhotoThumbWidth] AS [PhotoThumbWidth], 
+    [Feedback].[PhotoThumbHeight] AS [PhotoThumbHeight]
+    FROM [dbo].[Feedback] AS [Feedback]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Folder" EntityType="Self.Folder" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Folder].[ID] AS [ID], 
+    [Folder].[ParentID] AS [ParentID], 
+    [Folder].[Name] AS [Name]
+    FROM [dbo].[Folder] AS [Folder]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

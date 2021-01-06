@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MujiStore.Models.tblStreamServerFormat>
+
+@{
+    ViewBag.Title = @MujiStore.Resources.Resource.StreamSreverFormatIndex;
+}
+
+<h2>@MujiStore.Resources.Resource.StreamSreverFormatIndex1</h2>
+
+<p>
+    @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverFormatIndex2, "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SSFServer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormatID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SSFServer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormatID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DELFG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRTDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CRTCD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UPDCD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IPAddress)
+        </td>
+        <td>
+            @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverFormatEdit, "Edit", new { id=item.StreamServerFormatID }) |
+            @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverFormatDetails, "Details", new { id=item.StreamServerFormatID }) |
+            @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverFormatDelete, "Delete", new { id=item.StreamServerFormatID })
+        </td>
+    </tr>
+}
+
+</table>

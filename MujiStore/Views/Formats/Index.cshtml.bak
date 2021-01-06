@@ -1,0 +1,61 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MujiStore.Models.tblFormat>
+@{
+    ViewBag.Title = @MujiStore.Resources.Resource.VieFormatsIndex;
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VieFormatsIndex</h2>
+
+<p>
+    @Html.ActionLink(@MujiStore.Resources.Resource.VieFormatCreate, "Create")
+</p>
+<table class="table" style="background-color:#ffffff; height:100%;">
+    <tr style="background-color:#bf5e6e; color:#ffffff;">
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().RequiredBandWidth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DELFG)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr style="background-color:#EEE;">
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RequiredBandWidth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DELFG)
+        </td>
+
+        <td>
+            @Html.ActionLink(MujiStore.Resources.Resource.CommonEdit, "Edit", new { id = item.FormatID })
+
+        </td>
+    </tr>
+    }
+
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @MujiStore.Resources.Resource.CommonOf @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page }))
+    </div>
+}

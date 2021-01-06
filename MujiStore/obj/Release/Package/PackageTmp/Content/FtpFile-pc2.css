@@ -1,0 +1,86 @@
+﻿.Filename {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 17%;
+    }
+
+ 
+
+    .ID {
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 8%;
+    }
+
+    .Title {
+        word-break: break-all;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 10%;
+    }
+
+
+
+
+    .Description {
+        word-break: break-all;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 12%;
+        margin-left: 0px;
+        text-align: justify;
+    }
+ .Description1 {
+        word-break: break-all;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 12%;
+        margin-left: 0px;
+        text-align: justify;
+    }
+
+    .vid {
+        word-break: break-all;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 14.5%;
+        text-align: justify;
+    }
+
+    .Folder {
+        word-break: break-all;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 17%;
+    }
+
+
+    .fixed_header tbody {
+        display: block;
+        overflow: auto;
+        height: 104px;
+    }
+
+    .fixed_header1 tbody {
+        display: inline-grid;
+        overflow: auto;
+        height: 200px;
+    }
+
+    .fixed_header thead tr {
+        display: block;
+    }
+

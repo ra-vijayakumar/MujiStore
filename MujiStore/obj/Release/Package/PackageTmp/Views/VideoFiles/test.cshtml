@@ -1,0 +1,91 @@
+﻿@using MujiStore.Models;
+@{
+    ViewBag.Title = "test";
+    var FielDtl = (MujiStore.Models.tblVideoDemo)ViewData["FileDetails"];
+}
+
+<h2>test</h2>
+<section id="main-body-container">
+    <article id="main-article">
+        @if (FielDtl != null)
+        {
+            <section style="text-align: center;width:100%;">
+                <video playsinline frameborder="0" style="width:99%;height:400px;" controls="controls" autoplay="autoplay" controlsList="nodownload" id="myVideoOne">
+                    <source src="@Url.Content("~/Video/" + FielDtl.Video +"")" type="video/mp4" />
+                    @*<source src="@Url.Content("/VideoFileUpload/320x240.m4v")" type="video/ogg; codecs=theora, vorbis" />
+                        <source src="@Url.Content("/VideoFileUpload/320x240.m4v")" type="video/webm; codecs=vp8, vorbis" />*@
+                    Your browser does not support the video tag.
+                </video>
+                @*<iframe frameborder="0" style="min-width:99%;min-height:400px;" src="~/VideoDtl/_video1.html"></iframe>*@
+                @*<iframe frameborder="0" style="min-width:99%;min-height:400px;" src="@Url.Content(FielDtl.VideoFileNameStr)"></iframe>*@
+
+            </section>
+            <h1> @FielDtl.Title </h1>
+            <section> @FielDtl.Description </section>
+        }
+        else
+        {
+            <section style="text-align: center;width:100%;">
+                @*<iframe frameborder="0" style="min-width:99%;min-height:400px;" src="~/VideoDtl/_video1.html"></iframe>*@
+                @*<iframe frameborder="0" style="min-width:99%;min-height:400px;"></iframe>*@
+                <video playsinline frameborder="0" style="width:99%;height:400px;" controls="controls" controlsList="nodownload" id="myVideoOne">
+                    <source src="" type="video/mp4" />
+
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+            <h1> </h1>
+            <section> </section>
+        }
+
+    </article>
+    <aside id="sidebar">
+        @foreach (var item in viddtl)
+        {
+            <article id="slider-article">
+                <section>
+                    <a href=@Url.Action("ViewUploadDetailsByID","VideoFiles", new {ID=item.VideoId,folderID=item.FoderID})>
+
+
+                        <img src="@Url.Content("~/Video/" + item.Thumbnail +"")" width="374" height="193" style="border: 2px outset #ddd;" />
+                    </a>
+                    @*<img src='@Url.Action("Speakers", "SpeakerImage", new { ID = @Model.ID} )' />*@
+                    @*@Html.ActionLink( " " , "Index" , "Countries" , new {
+                              style = "background: url('../../Content/Images/table.png') no-repeat center right;display:block; height:24px; width:24px;"
+                        } )*@
+
+                    @*@Html.ActionLink( " " , "Index" , "Countries" , new {
+                              style = "background: url('../../Content/Images/table.png') no-repeat center right;display:block; height:24px; width:24px;"
+                        } )*@
+                    @*@Html.ActionLink("" + item.VideoFileNameOnly + "", "ViewUploadDetailsByID", new { id = item.ID })*@
+                    @*<a href="~/VideoDtl/video1.html">
+                            <img width="374" height="193" style="border: 2px outset #ddd;" src="~/VideoDtl/video/video1th.png" alt="" />
+                        </a>*@
+                </section>
+                <h6> @item.Title </h6>
+                @*<section> @item.Description </section>*@
+            </article>
+        }
+        @*<article id="slider-article">
+                <section> <a href="~/VideoDtl/video2.htm"> <img width="374" height="193" style="border: 2px outset #ddd;" src="~/VideoDtl/video/video2th.png" alt="" /> </a></section>
+                <h1>セグロアジサシ　陸はちょっと苦手？</h1>
+            </article>
+
+            <article id="slider-article">
+                <section><a href="~/VideoDtl/video3.htm">  <img width="374" height="193" style="border: 2px outset #ddd;" src="~/VideoDtl/video/video3th.png" alt="" /></a> </section>
+                <h1> 横浜市周回（空撮）  </h1>
+            </article>
+
+            <article id="slider-article">
+                <section> <a href="~/VideoDtl/video4.htm"> <img width="374" height="193" style="border: 2px outset #ddd;" src="~/VideoDtl/video/video4th.png" alt="" /> </a></section>
+                <h1> 様々な業種でプリペイドカード </h1>
+            </article>
+            <article id="slider-article">
+                <section> <a href="~/VideoDtl/video5.htm"> <img width="374" height="193" style="border: 2px outset #ddd;" src="~/VideoDtl/video/video5th.png" alt="" /> </a></section>
+                <h1> 風力発電の風車 </h1>
+            </article>*@
+    </aside>
+</section>
+
+
+

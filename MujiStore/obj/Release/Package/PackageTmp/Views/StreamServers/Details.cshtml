@@ -1,0 +1,154 @@
+﻿@model MujiStore.Models.tblStreamServer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-2px; margin-bottom:14px;">Details</h2>
+
+<div>
+    <h4>tblStreamServer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SSServer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSServer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IPAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastDeployDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastDeployDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastStatusCheckDateDatetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastStatusCheckDateDatetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriveCTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriveCTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriveCFree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriveCFree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriveDTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriveDTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DriveDFree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DriveDFree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DELFG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DELFG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CRTCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CRTCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UPDCD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UPDCD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserIPAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserIPAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblDeploySchedule.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblDeploySchedule.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSubnet.SNIPAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSubnet.SNIPAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.StreamServerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,64 @@
+﻿
+@{
+    //var test = (System.Data.DataTable)ViewData["VidDistStatus"];
+
+    var snlist = ViewData["snlist"] as IEnumerable<MujiStore.Models.tblSubnet>;
+    var sslist1 = ViewData["sslist1"] as IEnumerable<MujiStore.Models.tblStreamServer>;
+    var sslist2 = ViewData["sslist2"] as IEnumerable<MujiStore.Models.tblStreamServer>;
+    var storelist = ViewData["storelist"] as IEnumerable<MujiStore.Models.tblStore>;
+    var IsRecExists = ViewData["RecExists"];
+}
+<div class="content">
+
+    <h2>Items that seem to be insufficiently registered</h2>
+    <div class="content">
+
+        I will list the items that I think are not enough registration.
+        <br></br>
+        @if (snlist != null && snlist.Count() > 0)
+        {
+            foreach (var item in snlist)
+            {
+                <p style="color:red">
+                    subnet ID @item.SubnetID is not associated with any store.
+                </p>
+            }
+        }
+
+        @if (sslist1 != null && sslist1.Count() > 0)
+        {
+            foreach (var item in sslist1)
+            {
+                <p style="color:red">
+                    The distribution server @item.SSServer  is not configured to distribute to any subnet.
+                </p>
+            }
+        }
+        @if (sslist2 != null && sslist2.Count() > 0)
+        {
+            foreach (var item in sslist2)
+            {
+                <p style="color:red">
+
+                    The subnet to which distribution server @item.SSServer belongs does not exist.
+                </p>
+            }
+        }
+        @if (storelist != null && storelist.Count() > 0)
+        {
+            foreach (var item in storelist)
+            {
+                <p style="color:red">
+                   store @item.StoreID :@item.StoreName does not contain a subnet.
+                </p>
+            }
+        }
+    </div>
+    @if (Convert.ToBoolean(IsRecExists) == false)
+    {
+        <p><span style="color:blue">There are no items that appear to be under-registered.</span></p>
+
+    }
+</div>
+   
+

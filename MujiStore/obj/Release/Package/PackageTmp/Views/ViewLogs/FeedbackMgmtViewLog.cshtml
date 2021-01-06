@@ -1,0 +1,92 @@
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<MujiStore.Models.tblFeedback>
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieFeedbackMgmtViewLogBrowTitle;
+}
+
+
+<h2 style="color:#ec2213; background-color:lavenderblush; width:477px; margin-left:-4px; margin-bottom:15px;">@MujiStore.Resources.Resource.VieFeedbackMgmtViewLogH2</h2>
+<h2 style="color:#ec2213; margin-left:8px; background-color:lavenderblush; float:right; margin-top:-58px; height:30px; padding-top:0px;">
+    <p style="margin-left:-3px;margin-top:-5px;">
+        <a style="padding:0px; font-size:19px;" href=@Url.Action("Index","ViewLogs")>
+            @MujiStore.Resources.Resource.CommonBackToViewLogs
+        </a>
+    </p>
+</h2>
+
+<table class="table fixed_header" style="background-color:#ffffff; width:100%; height:100px; margin-bottom:-50px; ">
+    <thead>
+        <tr style="background-color:#bf5e6e; color:#ffffff;">
+            <th class="Title">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().FeedbackID)
+            </th>
+            <th class="Title">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().WriterName)
+            </th>
+            <th class="Description1">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().IPAddress)
+            </th>
+            <th class="Description1">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().WriterDatetime)
+            </th>
+            <th class="vid">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().CRTDT)
+            </th>
+            <th class="vid">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().CRTCD)
+            </th>
+            <th class="vid">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().UPDDT)
+            </th>
+            <th class="vid">
+                @Html.DisplayNameFor(model => model.FirstOrDefault().UPDCD)
+            </th>
+        </tr>
+    </thead>
+
+    <tbody style="width:100%">
+        @foreach (var item in Model)
+        {
+            <tr style="background-color:#EEE;">
+                <td class="Description">
+                    @Html.DisplayFor(modelItem => item.FeedbackID)
+                </td>
+                <td class="Description">
+                    @Html.DisplayFor(modelItem => item.WriterName)
+                </td>
+                <td class="vid" style="font-weight:normal;">
+                    @Html.DisplayFor(modelItem => item.IPAddress)
+                </td>
+                <td class="vid" style="font-weight:normal;">
+                    @Html.DisplayFor(modelItem => item.WriterDatetime)
+                </td>
+                <td class="vid" style="font-weight:normal;">
+                    @Html.DisplayFor(modelItem => item.CRTDT)
+                </td>
+                <th class="vid" style="font-weight:normal;">
+                    @Html.DisplayFor(ModelItem => item.CRTCD)
+                </th>
+                <th class="vid" style="font-weight:normal;">
+                    @Html.DisplayFor(ModelItem => item.UPDDT)
+                </th>
+                <th class="vid" style="font-weight:normal;">
+                    @Html.DisplayFor(ModelItem => item.UPDCD)
+                </th>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+<div>
+    @MujiStore.Resources.Resource.CommonPage @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @MujiStore.Resources.Resource.CommonOf @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("FeedbackMgmtViewLog",
+         new { page }))
+</div>
+}

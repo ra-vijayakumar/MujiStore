@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mujiEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreateUserId" Type="Int32" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateUserId" Type="Int32" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="DelFlag" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblVideoDemo">
+    <Key>
+      <PropertyRef Name="VideoId" />
+    </Key>
+    <Property Name="VideoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Video" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Thumbnail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlg" Type="Boolean" />
+    <Property Name="CrDate" Type="DateTime" Precision="0" />
+    <Property Name="UdDate" Type="DateTime" Precision="0" />
+    <Property Name="FoderID" Type="Int32" Nullable="false" />
+    <Property Name="Duration" Type="Single" />
+    <Property Name="ConDuration" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblVideoDemoStoreMst">
+    <Key>
+      <PropertyRef Name="StoreId" />
+    </Key>
+    <Property Name="StoreId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine1" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="AddressLine2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Zip" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IpAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DelFlg" Type="Boolean" />
+    <Property Name="CrDate" Type="DateTime" Precision="0" />
+    <Property Name="UdDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="mujiEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_User" EntityType="Self.tbl_User" />
+    <EntitySet Name="tblVideoDemoes" EntityType="Self.tblVideoDemo" />
+    <EntitySet Name="tblVideoDemoStoreMsts" EntityType="Self.tblVideoDemoStoreMst" />
+    <EntitySet Name="Feedbacks" EntityType="mujiEntities.Feedback" />
+    <EntitySet Name="Folders" EntityType="mujiEntities.Folder" />
+  </EntityContainer>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MovieID" Type="Int32" />
+    <Property Name="DateTime" Type="DateTime" Precision="3" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PhotoFileExt" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoFileName" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="WriterName" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+    <Property Name="WriterIP" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoWidth" Type="Int32" />
+    <Property Name="PhotoHeight" Type="Int32" />
+    <Property Name="PhotoThumbWidth" Type="Int32" />
+    <Property Name="PhotoThumbHeight" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Folder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="510" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

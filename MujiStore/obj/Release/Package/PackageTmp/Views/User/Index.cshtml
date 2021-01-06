@@ -1,0 +1,64 @@
+﻿@using PagedList.Mvc
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieUserIndexBrowTitle;
+    var userDtl = ViewData["UserInfo"] as PagedList.PagedList<MujiStore.Models.tblUser>;
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-left:-4px; margin-bottom:15px;">@MujiStore.Resources.Resource.VieUserIndexH2</h2>
+<p>
+    @Html.ActionLink(MujiStore.Resources.Resource.VieUserIndexCreateNew, "Create")
+</p>
+<table class="table" style="background-color:#ffffff;">
+    <tr style="background-color:#bf5e6e; color:#ffffff;">
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.VieUserIndexUserName)
+        </th>
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.VieUserIndexUserEmail)
+        </th>
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.VieUserIndexPassword)
+        </th>
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.CommonDELFG)
+        </th>
+        <th></th>
+    </tr>
+    <tbody style="width:100%">
+        @foreach (var item in userDtl)
+        {
+            <tr style="background-color:#EEE;">
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserEmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.DELFG)
+                </td>
+                <td>
+                    @Html.ActionLink(MujiStore.Resources.Resource.VieUserIndexUpdate, "Edit", new { id = item.UserID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (userDtl.PageSize < userDtl.TotalItemCount)
+{
+<div>
+    @MujiStore.Resources.Resource.CommonPage @(userDtl.PageCount < userDtl.PageNumber ? 0 : userDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @userDtl.PageCount
+
+    @Html.PagedListPager(userDtl, page => Url.Action("Index",
+         new { page }))
+
+</div>
+}

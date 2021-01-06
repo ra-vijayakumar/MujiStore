@@ -1,0 +1,274 @@
+﻿
+@using PagedList.Mvc
+@{
+    var mediaDtl = ViewData["videoList"] as PagedList.PagedList<MujiStore.Models.tblMedia>;
+    ViewBag.Title = MujiStore.Resources.Resource.VideoChangeApproval;
+
+
+    if (ViewData["CvtStatus"] == null)
+    {
+        ViewData["CvtStatus"] = "4";
+    }
+    if (ViewData["FolID"] == null)
+    {
+        ViewData["FolID"] = "0";
+    }
+    if (ViewData["MedID"] == null)
+    {
+        ViewData["MedID"] = "0";
+    }
+}
+<br />
+
+<h2 style="color:#ec2213; background-color:lavenderblush; margin-top:-18px; margin-left:-2px;">@MujiStore.Resources.Resource.VideoChangeApproval</h2>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .form-control1 {
+        width: 20%;
+        height: 31px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .form-control2 {
+        width: 14%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .form-control3 {
+        width: 12%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .form-control5 {
+        width: 20%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .form-control4 {
+        width: 20%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+    .form-control1 {
+        width: 19%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #bb6180;
+        border-radius: 4px;
+    }
+
+    .fa1 {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #bf5e6e;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .fa-unsorted:before, .fa-sort:before {
+        content: "\f0dc";
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: right;
+        padding: 0px;
+        margin-left: 4px;
+    }
+
+    
+
+    .border-style {
+        border-style: solid;
+        border-color: #e7bebb;
+        border-radius: 5px;
+        padding: 8px;
+        margin-bottom: 7px;
+        box-shadow: 2px 3px 8px -3px;
+    }
+
+    .blank {
+        word-break: break-all;
+        padding: 8.5px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 13%;
+    }
+
+</style>
+<body>
+
+    @using (Html.BeginForm("Index", "MediaApproval", FormMethod.Post))
+    {
+    <div class="border-style">
+        <p>
+            @MujiStore.Resources.Resource.VietblMediaIndexFindByTitle: @Html.TextBox("SearchTitle", ViewBag.SearTitle as string, new { @class = "form-control1" })
+            @MujiStore.Resources.Resource.VietblMediaIndexDateFrom : @Html.TextBox("SearchFromCRTDT", String.Format("{0:d}", ViewBag.CdStDate as string),
+new { @class = "datefield form-control2", type = "date" })
+            @MujiStore.Resources.Resource.VietblMediaIndexDateTo : @Html.TextBox("SearchToCRTDT", String.Format("{0:d}", ViewBag.CdEdDate as string),
+new { @class = "datefield form-control2", type = "date" })
+            @MujiStore.Resources.Resource.VietblMediaIndexConvertedStatus :  @Html.DropDownList("ConvertStatus", null, new { @class = "form-control3" })
+            <br />
+            <br />
+          
+        <p>
+            Media Ids :@Html.DropDownList("MediaID", null, new { @class = "form-control4" })
+            @MujiStore.Resources.Resource.VietblMediaIndexFolderName :  @Html.DropDownList("FolderID", null, new { @class = "form-control5" })
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="margin-bottom:6px; margin-left:37px; height:32px;" />
+        </p>
+       
+        
+         
+
+            
+        </div>
+                <p style="margin-top:-36px;">
+                    <br />
+                    <br />
+                    
+
+                </p>
+                <style type="text/css">
+                </style>
+                <table class="table" style="background-color:#ffffff; ">
+                    <tr style="background-color:#bf5e6e; color:#ffffff;">
+                        <th >
+                            @Html.ActionLink(MujiStore.Resources.Resource.ApplicationId, "Index", new { sortOrder = ViewBag.ApplicationIDSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "fa1 fa-sort fa-unsorted:before, .fa-sort:before" })
+                        </th>
+                        <th class="">
+                            @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexID, "Index", new { sortOrder = ViewBag.MediaIDSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "fa1 fa-sort fa-unsorted:before, .fa-sort:before" })
+                        </th>
+                        <th class="">
+                            @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexTitle, "Index", new { sortOrder = ViewBag.TitleSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "fa1 fa-sort" })
+                        </th>
+                        <th class="">
+                            @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexDescription)
+                        </th>
+                        <th class="">
+                            @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexVideo)
+                        </th>
+                        <th class="">
+                            @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexConvertStatus, "Index", new { sortOrder = ViewBag.ConvertStatusSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "fa1 fa-sort" })
+                        </th>
+
+                        <th class="">
+                            @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexFolder, "Index", new { sortOrder = ViewBag.FolderSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "fa1 fa-sort" })
+
+                        </th>
+                        <th class=""></th>
+                    </tr>
+                   
+                    <tbody style="width:100%">
+
+                        @foreach (var item in mediaDtl)
+                        {
+                            <tr style="background-color:#EEE;">
+                                <td class="">
+                                    @Html.DisplayFor(modelItem => item.ApplicationID)
+                                </td>
+                                <td class="">
+                                    @Html.DisplayFor(modelItem => item.MediaID)
+                                </td>
+                                <td class="">
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </td>
+                                <td class="">
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td class="">
+                                    @Html.DisplayFor(modelItem => item.Video)
+                                </td>
+                                <td class="">
+                                    @if (item.ApprovalStatus == 0)
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.UnApproved)
+                                    }
+                                    else if (item.ApprovalStatus == 3)//VJ 20200603 ConvertStatus 3 Converted  Changed
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.Approved)
+                                    }
+                                </td>
+
+                                <td class="">
+                                    @Html.DisplayFor(modelItem => item.FolderName)
+
+
+                                </td>
+                                <td style="color:#000; width:10%;">
+
+                                    @Html.ActionLink(MujiStore.Resources.Resource.CommonApproval, "Edit", new { id = item.ApplicationID })
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+                if (mediaDtl.PageSize < mediaDtl.TotalItemCount)
+                {
+                <div>
+
+                    @MujiStore.Resources.Resource.CommonPage @(mediaDtl.PageCount < mediaDtl.PageNumber ? 0 : mediaDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @mediaDtl.PageCount
+
+                    @Html.PagedListPager(mediaDtl, page => Url.Action("Index",
+                         new { page, sortOrder = ViewBag.CurrentSort, SearTitle = ViewBag.SearTitle, CdStDate= ViewBag.CdStDate, CdEdDate= ViewBag.CdEdDate,CvtStatus= ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID= ViewBag.MedID }))
+                </div>
+                }
+                <br />
+                <br />
+                }
+                
+
+        </body>

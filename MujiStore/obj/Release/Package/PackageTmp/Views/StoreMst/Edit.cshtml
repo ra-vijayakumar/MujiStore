@@ -1,0 +1,103 @@
+﻿@model MujiStore.Models.tblStore
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieStoreMstEditBrowTitle;
+}
+
+<h2 style="color:#ec2213; background-color:lavenderblush;">@MujiStore.Resources.Resource.VieStoreMstEditH2</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.StoreID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.StoreName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.StoreName, new { htmlAttributes = new { @class = "form-control textbox" } })
+            @Html.ValidationMessageFor(model => model.StoreName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.AddressLine1, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.AddressLine1, new { htmlAttributes = new { @class = "form-control textbox" } })
+            @Html.ValidationMessageFor(model => model.AddressLine1, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.AddressLine2, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.AddressLine2, new { htmlAttributes = new { @class = "form-control textbox" } })
+            @Html.ValidationMessageFor(model => model.AddressLine2, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control textbox" } })
+            @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control textbox" } })
+            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Zip, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Zip, new { htmlAttributes = new { @class = "form-control textbox" } })
+            @Html.ValidationMessageFor(model => model.Zip, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control textbox" } })
+            @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(model => model.DELFG, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox">
+                @Html.HiddenFor(model => model.CRTCD)
+                @Html.HiddenFor(model => model.CRTDT)
+                @Html.EditorFor(model => model.DELFG)
+                @Html.ValidationMessageFor(model => model.DELFG, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.StoreGroupID, MujiStore.Resources.Resource.ModtblStoreStoreGroupName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("StoreGroupID", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.StoreGroupID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSave class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index")
+</div>
