@@ -21,6 +21,7 @@ namespace MujiStore.BLL
             {
                 throw new NotImplementedException();
             }
+            // From Github 2021-01-06 07
         }
 
         public override bool ChangePassword(string username, string oldPassword, string newPassword)
