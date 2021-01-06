@@ -76,6 +76,7 @@ namespace MujiStore.Controllers
                 Log.Error(LogInfo.LogMsg, ex);
                 return View("Error", new HandleErrorInfo(ex, LogInfo.ControllerName, LogInfo.ActionName));
             }
+            //test folder
         }
 
         // GET: Folders/Details/5
